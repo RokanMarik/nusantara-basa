@@ -1,10 +1,4 @@
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-const LanguageMap = dynamic(
-  () => import("@/components/map/LanguageMap").then((m) => ({ default: m.LanguageMap })),
-  { ssr: false, loading: () => <div className="absolute inset-0 bg-earth-200" /> }
-);
 
 async function getStats() {
   const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
@@ -41,18 +35,14 @@ export default async function HomePage() {
         </div>
       </nav>
 
-      {/* ===== HERO WITH MAP BACKGROUND ===== */}
-      <section className="relative h-[70vh] overflow-hidden">
-        {/* Map background */}
-        <div className="absolute inset-0">
-          <LanguageMap markers={[]} center={[-2.5, 118.0]} zoom={5} />
-        </div>
+      {/* ===== HERO ===== */}
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        {/* Decorative pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-earth-100/80 via-earth-100/60 to-[#faf8f5]" />
-
-        {/* Hero content */}
-        <div className="relative h-full flex flex-col items-center justify-center px-4 text-center">
+        <div className="max-w-4xl mx-auto text-center relative">
           <h1 className="text-5xl md:text-7xl font-black tracking-[-0.03em] leading-[1.05] mb-6 text-[#1a1209]">
             Bahasa Daerah<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-red-700 to-amber-800">
@@ -65,7 +55,7 @@ export default async function HomePage() {
             Dari yang aman hingga terancam punah.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/explore/map" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1a1209] text-earth-100 rounded-full font-bold hover:bg-[#2d1f0e] transition-colors shadow-lg">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
               Mulai Jelajahi
