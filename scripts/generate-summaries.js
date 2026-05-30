@@ -23,15 +23,19 @@ async function call9Router(prompt) {
       "Authorization": `Bearer ${NINEROUTER_KEY}`,
     },
     body: JSON.stringify({
-      model: "kr/claude-sonnet-4.5",
+      model: "openrouter/moonshotai/kimi-k2.6:free",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
       max_tokens: 500,
+      stream: false,
     }),
     signal: AbortSignal.timeout(30000),
   });
 
-  if (!response.ok) throw new Error(`9Router error: ${response.status}`);
+  if (!response.ok) {
+    const errText = await response.text();
+    throw new Error(`9Router error: ${response.status} ${errText}`);
+  }
   const data = await response.json();
   return data.choices?.[0]?.message?.content || "";
 }
@@ -99,8 +103,8 @@ Jawab dalam bahasa Indonesia. 3 paragraf saja, tanpa heading.`;
       console.log(`   ✅ Summary generated (${summary.length} chars)`);
       success++;
 
-      // Rate limit
-      await new Promise(r => setTimeout(r, 2000));
+      // Rate limit - 45 detik antar request (hindari 429)
+      await new Promise(r => setTimeout(r, 45000));
 
     } catch (err) {
       console.log(`   ❌ Failed: ${err.message}`);
