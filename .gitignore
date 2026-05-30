@@ -10,5 +10,11 @@ web/node_modules/
 web/.next/
 web/out/
 web/*.tsbuildinfo
+node_modules/
+.next/
+out/
+.env*.local
+*.tsbuildinfo
 
 .worktrees/
+
