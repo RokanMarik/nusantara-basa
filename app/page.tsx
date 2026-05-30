@@ -1,5 +1,11 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Logo } from "@/components/shared/Logo";
+
+const LanguageMap = dynamic(
+  () => import("@/components/map/LanguageMap").then((m) => ({ default: m.LanguageMap })),
+  { ssr: false, loading: () => <div className="absolute inset-0 bg-[#0a0a0f]" /> }
+);
 
 async function getStats() {
   const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
@@ -14,25 +20,6 @@ async function getLanguages() {
   if (!res.ok) return [];
   const data = await res.json();
   return data.data || [];
-}
-
-// Keyboard key component
-function Key({ letter }: { letter: string }) {
-  return (
-    <div className="inline-flex items-center justify-center w-10 h-12 md:w-14 md:h-16 bg-[#12121a] border border-[#2a2a40] rounded-lg text-[#4b9cf5] font-mono text-lg md:text-2xl font-bold shadow-[0_2px_0_#1a1a2e] hover:border-[#4b9cf5] hover:bg-[#1a1a2e] transition-all cursor-default select-none">
-      {letter}
-    </div>
-  );
-}
-
-function Word({ word }: { word: string }) {
-  return (
-    <div className="flex gap-1.5 md:gap-2 justify-center flex-wrap">
-      {word.split("").map((l, i) => (
-        <Key key={i} letter={l.toUpperCase()} />
-      ))}
-    </div>
-  );
 }
 
 export default async function HomePage() {
@@ -57,17 +44,18 @@ export default async function HomePage() {
         </div>
       </nav>
 
-      {/* ===== HERO ===== */}
-      <section className="relative pt-32 pb-20 px-4">
-        {/* Subtle gradient */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#4b9cf5]/5 rounded-full blur-3xl" />
+      {/* ===== HERO WITH MAP BACKGROUND ===== */}
+      <section className="relative h-[70vh] overflow-hidden">
+        {/* Map background */}
+        <div className="absolute inset-0">
+          <LanguageMap markers={[]} center={[-2.5, 118.0]} zoom={5} />
+        </div>
 
-        <div className="max-w-4xl mx-auto text-center relative">
-          {/* Keyboard word */}
-          <div className="mb-8">
-            <Word word="NUSANTARA" />
-          </div>
+        {/* Gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/80 via-[#0a0a0f]/60 to-[#0a0a0f]" />
 
+        {/* Hero content */}
+        <div className="relative h-full flex flex-col items-center justify-center px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-black tracking-[-0.03em] leading-[1.05] mb-6 text-[#e8e8e0]">
             Bahasa Daerah<br/>
             <span className="text-[#4b9cf5]">Warisan Indonesia</span>
@@ -78,7 +66,7 @@ export default async function HomePage() {
             Dari yang aman hingga terancam punah.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/explore/map" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#4b9cf5] text-[#0a0a0f] rounded-full font-bold hover:bg-[#3a8ae5] transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
               Mulai Jelajahi
@@ -92,7 +80,7 @@ export default async function HomePage() {
       </section>
 
       {/* ===== STATS ===== */}
-      <section className="py-16 px-4 border-t border-[#2a2a40]">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
             { label: "Bahasa", value: (stats?.totalBahasa || 20).toString(), tag: "bahasa daerah" },
