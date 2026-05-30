@@ -163,9 +163,9 @@ export async function POST(request: NextRequest) {
 
   // Apply sort
   if (filters.sort === "penutur_asc") {
-    supabaseQuery = supabaseQuery.order("jumlah_penutur", { ascending: true, nullsLast: true });
+    supabaseQuery = supabaseQuery.order("jumlah_penutur", { ascending: true });
   } else if (filters.sort === "penutur_desc") {
-    supabaseQuery = supabaseQuery.order("jumlah_penutur", { ascending: false, nullsLast: true });
+    supabaseQuery = supabaseQuery.order("jumlah_penutur", { ascending: false });
   } else {
     supabaseQuery = supabaseQuery.order("nama_bahasa", { ascending: true });
   }
