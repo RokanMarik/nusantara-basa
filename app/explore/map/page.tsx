@@ -8,7 +8,7 @@ import type { BahasaMarker } from "@/lib/types";
 
 const LanguageMap = dynamic(
   () => import("@/components/map/LanguageMap").then((m) => ({ default: m.LanguageMap })),
-  { ssr: false, loading: () => <div className="absolute inset-0 bg-earth-200 flex items-center justify-center">Memuat peta...</div> }
+  { ssr: false, loading: () => <div className="absolute inset-0 bg-[#0a0a0f] flex items-center justify-center"><span className="text-[#666680] font-mono text-xs">loading map...</span></div> }
 );
 
 export default function MapPage() {
@@ -75,15 +75,10 @@ export default function MapPage() {
 
   return (
     <div className="h-screen relative">
-      {/* Header floating */}
       <Header />
-
-      {/* Full-screen map */}
       <div className="absolute inset-0">
         <LanguageMap markers={bahasaList} />
       </div>
-
-      {/* Bottom panel */}
       <div className="absolute bottom-0 left-0 right-0 z-[1000]">
         <BottomPanel
           search={search}

@@ -1,5 +1,4 @@
 import { SearchInput } from "@/components/ui/SearchInput";
-import { RUMPUN_COLORS, VITALITAS_COLORS } from "@/lib/types";
 import Link from "next/link";
 
 interface BottomPanelProps {
@@ -24,16 +23,15 @@ export function BottomPanel({
 }: BottomPanelProps) {
   return (
     <div className="mx-3 mb-3">
-      {/* Glassmorphism container */}
-      <div className="bg-earth-50/90 backdrop-blur-md rounded-xl border border-earth-300/50 shadow-lg overflow-hidden">
+      <div className="bg-[#12121a]/95 backdrop-blur-md rounded-xl border border-[#2a2a40] overflow-hidden">
         {/* Search + Filters */}
-        <div className="px-4 py-3 border-b border-earth-300/30">
+        <div className="px-4 py-3 border-b border-[#2a2a40]">
           <div className="flex gap-2 items-center">
             <div className="flex-1">
               <SearchInput value={search} onChange={onSearchChange} onSearch={onSmartSearch} loading={searchLoading} placeholder="Cari bahasa, daerah, rumpun..." />
             </div>
             <select
-              className="input-field w-auto text-sm rounded-lg bg-earth-100/50 border-earth-300/30"
+              className="w-auto text-sm rounded-lg bg-[#0a0a0f] border border-[#2a2a40] text-[#e8e8e0] px-3 py-2 focus:outline-none focus:border-[#4b9cf5]"
               value={rumpunFilter}
               onChange={(e) => onRumpunChange(e.target.value)}
             >
@@ -43,7 +41,7 @@ export function BottomPanel({
               ))}
             </select>
             <select
-              className="input-field w-auto text-sm rounded-lg bg-earth-100/50 border-earth-300/30"
+              className="w-auto text-sm rounded-lg bg-[#0a0a0f] border border-[#2a2a40] text-[#e8e8e0] px-3 py-2 focus:outline-none focus:border-[#4b9cf5]"
               value={vitalitasFilter}
               onChange={(e) => onVitalitasChange(e.target.value)}
             >
@@ -56,7 +54,7 @@ export function BottomPanel({
             </select>
           </div>
           {searchResultInfo && (
-            <p className="text-xs text-earth-600 mt-1.5">{searchResultInfo}</p>
+            <p className="text-[10px] font-mono text-[#666680] mt-1.5">{searchResultInfo}</p>
           )}
         </div>
 
@@ -64,52 +62,41 @@ export function BottomPanel({
         <div className="px-4 py-3">
           {loading ? (
             <div className="flex items-center justify-center py-6">
-              <div className="flex items-center gap-2 text-earth-600">
-                <div className="w-4 h-4 border-2 border-earth-400 border-t-earth-700 rounded-full animate-spin" />
-                <span className="text-sm">Memuat...</span>
+              <div className="flex items-center gap-2 text-[#666680]">
+                <div className="w-4 h-4 border-2 border-[#2a2a40] border-t-[#4b9cf5] rounded-full animate-spin" />
+                <span className="text-xs font-mono">loading...</span>
               </div>
             </div>
           ) : bahasaList.length === 0 ? (
-            <p className="text-center text-sm text-earth-600 py-4">Tidak ada bahasa yang sesuai filter.</p>
+            <p className="text-center text-xs text-[#666680] py-4 font-mono">tidak ada hasil</p>
           ) : (
             <>
-              <p className="text-xs text-earth-600 mb-2">{bahasaList.length} bahasa</p>
+              <p className="text-[10px] font-mono text-[#666680] mb-2">{bahasaList.length} bahasa</p>
               <div className="flex gap-2.5 overflow-x-auto pb-1 snap-x snap-mandatory" style={{ scrollbarWidth: 'thin' }}>
                 {bahasaList.map((b) => {
-                  const rumpunColor = RUMPUN_COLORS[b.rumpunNama || ''] || '#6b5b8a';
-                  const vitalitasColor = VITALITAS_COLORS[b.statusVitalitas || ''] || '#9ca3af';
+                  const color = b.rumpunNama === "Papua" ? "#e74c3c" : b.rumpunNama === "Trans-New Guinea" ? "#2ecc71" : "#4b9cf5";
                   return (
                     <div key={b.id} className="snap-start flex-shrink-0 w-52">
                       <Link
                         href={`/explore/bahasa/${b.id}`}
-                        className="block p-3 rounded-lg border border-earth-300/40 hover:border-earth-400 hover:bg-earth-100/50 transition-all bg-earth-100/30 group"
+                        className="block p-3 rounded-lg border border-[#2a2a40] hover:border-[#4b9cf5] transition-colors bg-[#0a0a0f] group"
                       >
                         <div className="flex items-start gap-2.5">
-                          {/* Rumpun color dot */}
-                          <div
-                            className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-white text-xs font-bold"
-                            style={{ backgroundColor: rumpunColor }}
-                          >
+                          <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-[#0a0a0f] text-xs font-bold" style={{ backgroundColor: color }}>
                             {b.namaBahasa.charAt(0)}
                           </div>
                           <div className="min-w-0 flex-1">
-                            <h3 className="font-semibold text-earth-700 text-sm truncate group-hover:text-earth-800 transition-colors">{b.namaBahasa}</h3>
+                            <h3 className="font-semibold text-[#e8e8e0] text-sm truncate group-hover:text-white transition-colors">{b.namaBahasa}</h3>
                             {b.namaLokal && (
-                              <p className="text-xs text-earth-600 truncate italic">{b.namaLokal}</p>
+                              <p className="text-[10px] text-[#666680] truncate font-mono">{b.namaLokal}</p>
                             )}
                           </div>
-                          {/* Vitalitas indicator */}
-                          <div
-                            className="flex-shrink-0 w-2 h-2 rounded-full mt-1"
-                            style={{ backgroundColor: vitalitasColor }}
-                            title={b.statusVitalitas || ''}
-                          />
                         </div>
-                        <div className="mt-2 flex items-center gap-2 text-xs text-earth-600">
-                          <span className="font-medium">
+                        <div className="mt-2 flex items-center gap-2 text-[10px] font-mono text-[#666680]">
+                          <span className="text-[#4b9cf5]">
                             {b.jumlahPenutur ? (b.jumlahPenutur >= 1000000 ? `${(b.jumlahPenutur / 1000000).toFixed(1)}M` : `${(b.jumlahPenutur / 1000).toFixed(0)}K`) : '—'}
                           </span>
-                          <span className="w-1 h-1 rounded-full bg-earth-400" />
+                          <span>·</span>
                           <span className="truncate">{b.rumpunNama}</span>
                         </div>
                       </Link>

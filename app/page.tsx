@@ -16,159 +16,131 @@ async function getLanguages() {
   return data.data || [];
 }
 
-// Custom SVG Icons
-const Icons = {
-  Languages: () => (
-    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10">
-      <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="2" />
-      <path d="M14 20h20M14 28h20M24 14v20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.3" />
-    </svg>
-  ),
-  Rumpun: () => (
-    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10">
-      <path d="M24 6v36M24 6c-8 8-16 14-16 22M24 6c8 8 16 14 16 22M24 14c-5 5-10 9-10 14M24 14c5 5 10 9 10 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  ),
-  Map: () => (
-    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10">
-      <path d="M6 10l12-4 12 4 12-4v28l-12 4-12-4-12 4V10z" stroke="currentColor" strokeWidth="2" />
-      <path d="M18 6v28M30 10v28" stroke="currentColor" strokeWidth="2" />
-      <circle cx="24" cy="22" r="3" fill="currentColor" opacity="0.3" />
-    </svg>
-  ),
-  Vitality: () => (
-    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10">
-      <rect x="8" y="28" width="6" height="14" rx="1" fill="currentColor" opacity="0.3" />
-      <rect x="17" y="20" width="6" height="22" rx="1" fill="currentColor" opacity="0.5" />
-      <rect x="26" y="14" width="6" height="28" rx="1" fill="currentColor" opacity="0.7" />
-      <rect x="35" y="6" width="6" height="36" rx="1" fill="currentColor" />
-    </svg>
-  ),
-  Arrow: () => (
-    <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 inline-block ml-1">
-      <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  ),
-  Explore: () => (
-    <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
-      <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2" />
-      <path d="M24 12l4 12-12-4 12-4-4 12" fill="currentColor" opacity="0.2" />
-      <circle cx="24" cy="24" r="3" fill="currentColor" />
-    </svg>
-  ),
-};
+// Keyboard key component
+function Key({ letter }: { letter: string }) {
+  return (
+    <div className="inline-flex items-center justify-center w-10 h-12 md:w-14 md:h-16 bg-[#12121a] border border-[#2a2a40] rounded-lg text-[#4b9cf5] font-mono text-lg md:text-2xl font-bold shadow-[0_2px_0_#1a1a2e] hover:border-[#4b9cf5] hover:bg-[#1a1a2e] transition-all cursor-default select-none">
+      {letter}
+    </div>
+  );
+}
+
+function Word({ word }: { word: string }) {
+  return (
+    <div className="flex gap-1.5 md:gap-2 justify-center flex-wrap">
+      {word.split("").map((l, i) => (
+        <Key key={i} letter={l.toUpperCase()} />
+      ))}
+    </div>
+  );
+}
 
 export default async function HomePage() {
   const stats = await getStats();
   const languages = await getLanguages();
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-[#0a0a0f] text-[#e8e8e0]">
       {/* ===== NAV ===== */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-[#0a0a0f]/80 backdrop-blur-xl border border-[#2a2a40] rounded-full px-6 py-2.5">
+        <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2">
-            <div className="bg-white/5 rounded-xl px-3 py-1.5 border border-white/10">
+            <div className="bg-[#12121a] border border-[#2a2a40] rounded-lg px-2 py-1">
               <Logo size="sm" />
             </div>
           </Link>
-          <div className="flex items-center gap-4">
-            <Link href="/explore/map" className="text-sm text-white/60 hover:text-white transition-colors">Peta</Link>
-            <Link href="#bahasa" className="text-sm text-white/60 hover:text-white transition-colors">Bahasa</Link>
-            <Link href="/explore/map" className="px-5 py-2 bg-white text-[#0a0a0a] rounded-full text-sm font-semibold hover:bg-white/90 transition-colors">
-              Jelajahi
-            </Link>
-          </div>
+          <Link href="/explore/map" className="text-sm text-[#666680] hover:text-[#e8e8e0] transition-colors">Peta</Link>
+          <Link href="#bahasa" className="text-sm text-[#666680] hover:text-[#e8e8e0] transition-colors">Bahasa</Link>
+          <Link href="/explore/map" className="px-4 py-1.5 bg-[#4b9cf5] text-[#0a0a0f] rounded-full text-sm font-bold hover:bg-[#3a8ae5] transition-colors">
+            Jelajahi
+          </Link>
         </div>
       </nav>
 
       {/* ===== HERO ===== */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        {/* Gradient blobs */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl" />
-        <div className="absolute top-40 right-1/4 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-20 px-4">
+        {/* Subtle gradient */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#4b9cf5]/5 rounded-full blur-3xl" />
 
         <div className="max-w-4xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/60 mb-8">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            {stats?.totalBahasa || 20} bahasa terdokumentasi
+          {/* Keyboard word */}
+          <div className="mb-8">
+            <Word word="NUSANTARA" />
           </div>
 
-          <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-[0.95] mb-8">
+          <h1 className="text-5xl md:text-7xl font-black tracking-[-0.03em] leading-[1.05] mb-6 text-[#e8e8e0]">
             Bahasa Daerah<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-red-400">
-              Warisan Nusantara
-            </span>
+            <span className="text-[#4b9cf5]">Warisan Indonesia</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-base md:text-lg text-[#666680] max-w-xl mx-auto mb-10 leading-relaxed">
             Peta interaktif yang mendokumentasikan keragaman bahasa daerah Indonesia.
-            Dari yang aman hingga terancam punah — setiap bahasa menyimpan cerita.
+            Dari yang aman hingga terancam punah.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/explore/map" className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-[#0a0a0a] rounded-full font-bold text-lg hover:bg-white/90 transition-all shadow-2xl shadow-white/10">
-              <Icons.Explore />
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/explore/map" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#4b9cf5] text-[#0a0a0f] rounded-full font-bold hover:bg-[#3a8ae5] transition-colors">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
               Mulai Jelajahi
             </Link>
-            <Link href="#bahasa" className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-white/5 border border-white/10 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+            <Link href="#bahasa" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#12121a] border border-[#2a2a40] text-[#666680] rounded-full font-bold hover:border-[#4b9cf5] hover:text-[#e8e8e0] transition-all">
               Lihat Bahasa
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </Link>
           </div>
         </div>
       </section>
 
       {/* ===== STATS ===== */}
-      <section className="py-16 px-4 border-t border-white/5">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+      <section className="py-16 px-4 border-t border-[#2a2a40]">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            { label: "Bahasa Daerah", value: (stats?.totalBahasa || 20).toString(), Icon: Icons.Languages },
-            { label: "Rumpun Bahasa", value: (stats?.totalRumpun || 3).toString(), Icon: Icons.Rumpun },
-            { label: "Wilayah Sebaran", value: (stats?.totalLokasi || 20).toString(), Icon: Icons.Map },
-            { label: "Status Vitalitas", value: Object.keys(stats?.vitalitasBreakdown || {}).length.toString(), Icon: Icons.Vitality },
+            { label: "Bahasa", value: (stats?.totalBahasa || 20).toString(), tag: "bahasa daerah" },
+            { label: "Rumpun", value: (stats?.totalRumpun || 3).toString(), tag: "keluarga bahasa" },
+            { label: "Wilayah", value: (stats?.totalLokasi || 20).toString(), tag: "sebaran" },
+            { label: "Vitalitas", value: Object.keys(stats?.vitalitasBreakdown || {}).length.toString(), tag: "status" },
           ].map((s, i) => (
-            <div key={i} className="group bg-white/[0.03] border border-white/5 rounded-2xl p-6 hover:bg-white/[0.06] hover:border-white/10 transition-all">
-              <div className="text-amber-400 mb-3 group-hover:scale-110 transition-transform"><s.Icon /></div>
-              <div className="text-3xl font-black text-white">{s.value}</div>
-              <div className="text-sm text-white/40 mt-1">{s.label}</div>
+            <div key={i} className="group bg-[#12121a] border border-[#2a2a40] rounded-xl p-5 hover:border-[#4b9cf5] transition-colors">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#4b9cf5]/60">{s.tag}</span>
+              <div className="text-3xl font-black text-[#e8e8e0] mt-1 tracking-[-0.02em]">{s.value}</div>
+              <div className="text-xs text-[#666680] mt-0.5">{s.label}</div>
             </div>
           ))}
         </div>
       </section>
 
       {/* ===== BAHASA GRID ===== */}
-      <section id="bahasa" className="py-20 px-4 border-t border-white/5">
+      <section id="bahasa" className="py-20 px-4 border-t border-[#2a2a40]">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2 block">Koleksi</span>
-              <h2 className="text-3xl md:text-4xl font-black text-white">Bahasa Daerah</h2>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#4b9cf5]/60 mb-1 block">koleksi</span>
+              <h2 className="text-2xl md:text-3xl font-black text-[#e8e8e0] tracking-[-0.02em]">Bahasa Daerah</h2>
             </div>
-            <Link href="/explore/map" className="text-sm text-white/40 hover:text-white transition-colors flex items-center gap-1">
-              Lihat semua <Icons.Arrow />
+            <Link href="/explore/map" className="text-xs font-mono text-[#666680] hover:text-[#4b9cf5] transition-colors flex items-center gap-1">
+              semua →
             </Link>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {languages.map((lang: any) => {
-              const color = lang.rumpunNama === "Papua" ? "#dc2626" : lang.rumpunNama === "Trans-New Guinea" ? "#16a34a" : "#d97706";
+              const color = lang.rumpunNama === "Papua" ? "#e74c3c" : lang.rumpunNama === "Trans-New Guinea" ? "#2ecc71" : "#4b9cf5";
               const penutur = lang.jumlahPenutur ? lang.jumlahPenutur >= 1000000 ? `${(lang.jumlahPenutur / 1000000).toFixed(1)}M` : `${(lang.jumlahPenutur / 1000).toFixed(0)}K` : '—';
               return (
                 <Link key={lang.id} href={`/explore/bahasa/${lang.id}`}
-                  className="group bg-white/[0.03] border border-white/5 rounded-2xl p-4 hover:bg-white/[0.06] hover:border-white/10 transition-all">
+                  className="group bg-[#12121a] border border-[#2a2a40] rounded-xl p-4 hover:border-[#4b9cf5] transition-colors">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: color }}>
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[#0a0a0f] font-bold text-xs" style={{ backgroundColor: color }}>
                       {lang.namaBahasa.charAt(0)}
                     </div>
                     <div className="min-w-0">
-                      <h3 className="font-bold text-white text-sm truncate">{lang.namaBahasa}</h3>
-                      {lang.namaLokal && <p className="text-xs text-white/30 truncate">{lang.namaLokal}</p>}
+                      <h3 className="font-bold text-[#e8e8e0] text-sm truncate">{lang.namaBahasa}</h3>
+                      {lang.namaLokal && <p className="text-[10px] text-[#666680] truncate font-mono">{lang.namaLokal}</p>}
                     </div>
                   </div>
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-white/40">{penutur} penutur</span>
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-medium" style={{ backgroundColor: color + "20", color }}>{lang.rumpunNama}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-[#666680]">{penutur}</span>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-md" style={{ backgroundColor: color + "15", color }}>{lang.rumpunNama}</span>
                   </div>
                 </Link>
               );
@@ -178,29 +150,28 @@ export default async function HomePage() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="py-24 px-4 border-t border-white/5">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-            Siap Menjelajahi<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Nusantara?</span>
+      <section className="py-24 px-4 border-t border-[#2a2a40]">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-black text-[#e8e8e0] tracking-[-0.02em] mb-4">
+            Mulai <span className="text-[#4b9cf5]">Eksplorasi</span>
           </h2>
-          <p className="text-white/40 mb-10 max-w-md mx-auto">
-            Buka peta interaktif dan temukan bahasa daerah di seluruh Indonesia.
+          <p className="text-[#666680] mb-8 max-w-sm mx-auto text-sm">
+            Buka peta interaktif dan temukan bahasa daerah di seluruh Nusantara.
           </p>
-          <Link href="/explore/map" className="inline-flex items-center gap-2 px-12 py-5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-bold text-lg hover:from-amber-600 hover:to-orange-600 transition-all shadow-2xl shadow-amber-500/20">
+          <Link href="/explore/map" className="inline-flex items-center gap-2 px-10 py-4 bg-[#4b9cf5] text-[#0a0a0f] rounded-full font-bold hover:bg-[#3a8ae5] transition-colors">
             Buka Peta Interaktif
-            <Icons.Arrow />
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
           </Link>
         </div>
       </section>
 
       {/* ===== FOOTER ===== */}
-      <footer className="py-12 px-4 border-t border-white/5">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="bg-white/5 rounded-xl px-4 py-2 border border-white/10">
+      <footer className="py-8 px-4 border-t border-[#2a2a40]">
+        <div className="max-w-5xl mx-auto flex items-center justify-between">
+          <div className="bg-[#12121a] border border-[#2a2a40] rounded-lg px-3 py-1.5">
             <Logo size="sm" />
           </div>
-          <p className="text-sm text-white/30">© 2026 Nusantara Basa</p>
+          <span className="text-[10px] font-mono text-[#666680]">© 2026 NUSANTARA BASA</span>
         </div>
       </footer>
     </div>
