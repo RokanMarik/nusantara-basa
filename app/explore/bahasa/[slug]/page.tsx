@@ -1,34 +1,24 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { createClient } from "@supabase/supabase-js";
 import { Header } from "@/components/layout/Header";
 import { VitalityBadge } from "@/components/ui/VitalityBadge";
 
-interface BahasaDetailData {
-  id: string;
-  namaBahasa: string;
-  namaLokal: string | null;
-  kodeIso639: string | null;
-  autoSummary: string | null;
-  jumlahPenutur: number | null;
-  statusVitalitas: string | null;
-  rumpun: { namaRumpun: string | null; subRumpun: string | null } | null;
-  lokasi: { provinsi: string | null; kabupaten: string | null; tipeWilayah: string | null }[];
-  fiturLinguistik: { sistemTulisan: string | null; tipeMorfologi: string | null; urutanKata: string | null; jumlahVokal: number | null; jumlahKonsonan: number | null } | null;
-  kosakata: { kata: string; artiIndonesia: string; fonetikIpa: string | null }[];
-}
-
-async function getBahasa(id: string): Promise<BahasaDetailData | null> {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/bahasa/${id}`, { cache: "no-store" });
-  if (!res.ok) return null;
-  return res.json();
-}
+const supabase = createClient(
+  "https://hkeheukewxsvaarxaket.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrZWhldWtld3hzdmFhcnhha2V0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDEzOTkzMywiZXhwIjoyMDk1NzE1OTMzfQ.36yS86na5jZYaJEguPDREzrx_qpPOL15zNNxMaeCg20"
+);
 
 export default async function BahasaDetailPage({ params }: { params: { slug: string } }) {
-  const bahasa = await getBahasa(params.slug);
-  if (!bahasa) notFound();
+  const { data: bahasa, error } = await supabase
+    .from("bahasa")
+    .select("*, rumpun_bahasa(nama_rumpun, sub_rumpun), lokasi(provinsi, kabupaten, tipe_wilayah), fitur_linguistik(sistem_tulisan, tipe_morfologi, urutan_kata, jumlah_vokal, jumlah_konsonan), kosakata(kata, arti_indonesia, fonetik_ipa)")
+    .eq("id", params.slug)
+    .single();
 
-  const penuturFormatted = bahasa.jumlahPenutur ? bahasa.jumlahPenutur.toLocaleString("id-ID") : "Tidak diketahui";
+  if (error || !bahasa) notFound();
+
+  const penuturFormatted = bahasa.jumlah_penutur ? bahasa.jumlah_penutur.toLocaleString("id-ID") : "Tidak diketahui";
 
   return (
     <div className="min-h-screen">
@@ -38,54 +28,53 @@ export default async function BahasaDetailPage({ params }: { params: { slug: str
         <div className="mb-8">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-earth-700">{bahasa.namaBahasa}</h1>
-              {bahasa.namaLokal && <p className="text-lg text-earth-600 italic mt-1">{bahasa.namaLokal}</p>}
+              <h1 className="text-3xl font-bold text-earth-700">{bahasa.nama_bahasa}</h1>
+              {bahasa.nama_lokal && <p className="text-lg text-earth-600 italic mt-1">{bahasa.nama_lokal}</p>}
             </div>
-            <VitalityBadge status={bahasa.statusVitalitas} size="md" />
+            <VitalityBadge status={bahasa.status_vitalitas} size="md" />
           </div>
         </div>
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="glass-panel p-5">
             <h2 className="font-semibold text-earth-700 mb-3">Informasi Dasar</h2>
             <dl className="space-y-2 text-sm">
-              <div className="flex justify-between"><dt className="text-earth-600">ISO 639-3</dt><dd className="font-mono text-earth-700">{bahasa.kodeIso639 ?? "—"}</dd></div>
-              <div className="flex justify-between"><dt className="text-earth-600">Rumpun</dt><dd className="text-earth-700">{bahasa.rumpun?.namaRumpun ?? "—"}</dd></div>
-              {bahasa.rumpun?.subRumpun && <div className="flex justify-between"><dt className="text-earth-600">Sub-rumpun</dt><dd className="text-earth-700">{bahasa.rumpun.subRumpun}</dd></div>}
+              <div className="flex justify-between"><dt className="text-earth-600">ISO 639-3</dt><dd className="font-mono text-earth-700">{bahasa.kode_iso_639 ?? "—"}</dd></div>
+              <div className="flex justify-between"><dt className="text-earth-600">Rumpun</dt><dd className="text-earth-700">{bahasa.rumpun_bahasa?.nama_rumpun ?? "—"}</dd></div>
               <div className="flex justify-between"><dt className="text-earth-600">Jumlah Penutur</dt><dd className="font-semibold text-earth-700">{penuturFormatted}</dd></div>
             </dl>
           </div>
           <div className="glass-panel p-5">
             <h2 className="font-semibold text-earth-700 mb-3">Fitur Linguistik</h2>
-            {bahasa.fiturLinguistik ? (
+            {bahasa.fitur_linguistik ? (
               <dl className="space-y-2 text-sm">
-                <div className="flex justify-between"><dt className="text-earth-600">Sistem Tulisan</dt><dd className="text-earth-700">{bahasa.fiturLinguistik.sistemTulisan ?? "—"}</dd></div>
-                <div className="flex justify-between"><dt className="text-earth-600">Tipe Morfologi</dt><dd className="text-earth-700">{bahasa.fiturLinguistik.tipeMorfologi ?? "—"}</dd></div>
-                <div className="flex justify-between"><dt className="text-earth-600">Urutan Kata</dt><dd className="font-mono text-earth-700">{bahasa.fiturLinguistik.urutanKata ?? "—"}</dd></div>
+                <div className="flex justify-between"><dt className="text-earth-600">Sistem Tulisan</dt><dd className="text-earth-700">{bahasa.fitur_linguistik.sistem_tulisan ?? "—"}</dd></div>
+                <div className="flex justify-between"><dt className="text-earth-600">Tipe Morfologi</dt><dd className="text-earth-700">{bahasa.fitur_linguistik.tipe_morfologi ?? "—"}</dd></div>
+                <div className="flex justify-between"><dt className="text-earth-600">Urutan Kata</dt><dd className="font-mono text-earth-700">{bahasa.fitur_linguistik.urutan_kata ?? "—"}</dd></div>
               </dl>
             ) : (<p className="text-sm text-earth-600">Data fitur linguistik belum tersedia.</p>)}
           </div>
         </div>
-        {bahasa.lokasi.length > 0 && (
+        {bahasa.lokasi?.length > 0 && (
           <div className="glass-panel p-5 mb-8">
             <h2 className="font-semibold text-earth-700 mb-3">Lokasi Sebaran</h2>
             <div className="flex flex-wrap gap-2">
-              {bahasa.lokasi.map((loc, i) => (<span key={i} className="px-3 py-1 bg-earth-200 text-earth-700 rounded-full text-sm">{loc.provinsi}{loc.kabupaten && `, ${loc.kabupaten}`}</span>))}
+              {bahasa.lokasi.map((loc: any, i: number) => (<span key={i} className="px-3 py-1 bg-earth-200 text-earth-700 rounded-full text-sm">{loc.provinsi}{loc.kabupaten && `, ${loc.kabupaten}`}</span>))}
             </div>
           </div>
         )}
-        {bahasa.autoSummary && (
+        {bahasa.auto_summary && (
           <div className="glass-panel p-5 mb-8">
             <h2 className="font-semibold text-earth-700 mb-3">Ringkasan</h2>
-            <div className="text-sm text-earth-600">{bahasa.autoSummary.split("\n").map((p, i) => (<p key={i}>{p}</p>))}</div>
+            <div className="text-sm text-earth-600">{bahasa.auto_summary.split("\n").map((p: string, i: number) => (<p key={i}>{p}</p>))}</div>
           </div>
         )}
-        {bahasa.kosakata.length > 0 && (
+        {bahasa.kosakata?.length > 0 && (
           <div className="glass-panel p-5">
             <h2 className="font-semibold text-earth-700 mb-3">Kosakata Sampel</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead><tr className="border-b border-earth-300"><th className="text-left py-2 text-earth-600 font-medium">Kata</th><th className="text-left py-2 text-earth-600 font-medium">Arti</th><th className="text-left py-2 text-earth-600 font-medium">Fonetik (IPA)</th></tr></thead>
-                <tbody>{bahasa.kosakata.map((k, i) => (<tr key={i} className="border-b border-earth-200"><td className="py-2 font-medium text-earth-700">{k.kata}</td><td className="py-2 text-earth-600">{k.artiIndonesia}</td><td className="py-2 font-mono text-earth-600">{k.fonetikIpa ?? "—"}</td></tr>))}</tbody>
+                <tbody>{bahasa.kosakata.map((k: any, i: number) => (<tr key={i} className="border-b border-earth-200"><td className="py-2 font-medium text-earth-700">{k.kata}</td><td className="py-2 text-earth-600">{k.arti_indonesia}</td><td className="py-2 font-mono text-earth-600">{k.fonetik_ipa ?? "—"}</td></tr>))}</tbody>
               </table>
             </div>
           </div>
