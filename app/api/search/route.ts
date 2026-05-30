@@ -44,7 +44,7 @@ Respond with JSON only:`;
   const content = data.choices?.[0]?.message?.content || "";
 
   // Extract JSON from response
-  const jsonMatch = content.match(/\{[^}]+\}/s);
+  const jsonMatch = content.match(/\{[\s\S]*?\}/);
   if (!jsonMatch) throw new Error("No JSON in response");
 
   return JSON.parse(jsonMatch[0]);
