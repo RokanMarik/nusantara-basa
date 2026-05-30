@@ -37,9 +37,7 @@ function Main {
 
         # ── Header ──────────────────────────────────────────────────────────────────
         Write-Host ""
-        Write-Host "╔══════════════════════════════════════════════╗" -ForegroundColor Cyan
-        Write-Host "║     9Router Combo Model Creation             ║" -ForegroundColor Cyan
-        Write-Host "╚══════════════════════════════════════════════╝" -ForegroundColor Cyan
+        Write-Host "=== 9Router Combo Model Creation ===" -ForegroundColor Cyan
         Write-Host ""
 
         # ── Health Check ────────────────────────────────────────────────────────────
@@ -91,7 +89,7 @@ function Main {
                         Write-Host "      WARNING: Dashboard session auth required" -ForegroundColor Yellow
                         Write-Host "      Create combos via Dashboard → Combos → Create New" -ForegroundColor Yellow
                         Write-Host "      Or disable requireLogin in 9Router settings." -ForegroundColor Yellow
-                        exit 0
+                        exit 2
                     }
                     # Some other error — still try with no-auth and let per-combo errors surface.
                     $Headers = $NoAuthHeaders

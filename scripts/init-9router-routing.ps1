@@ -18,16 +18,14 @@ $keywordRouterLoaded = $false
 try {
     # ── Header ──────────────────────────────────────────────────────────────────
     Write-Host ""
-    Write-Host "╔══════════════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║     9Router Auto-Routing Initialization          ║" -ForegroundColor Cyan
-    Write-Host "╚══════════════════════════════════════════════════╝" -ForegroundColor Cyan
+    Write-Host "=== 9Router Auto-Routing Initialization ===" -ForegroundColor Cyan
     Write-Host ""
 
     # ── Step 1/4: Health Check ──────────────────────────────────────────────────
     Write-Host "[1/4] Checking 9Router health..." -ForegroundColor Cyan
 
     try {
-        $health = Invoke-RestMethod -Uri "http://localhost:20128/api/health" -TimeoutSec 5 -ErrorAction Stop
+        $null = Invoke-RestMethod -Uri "http://localhost:20128/api/health" -TimeoutSec 5 -ErrorAction Stop
         Write-Host "      9Router is healthy" -ForegroundColor Green
     }
     catch {

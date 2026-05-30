@@ -75,7 +75,7 @@ try {
     }
 
     $response   = Invoke-RestMethod -Uri "$NineRouterBaseUrl/v1/models" -Headers $headers -Method Get -ErrorAction Stop
-    $modelIds   = $response.data.id  # OpenAI-compatible list response
+    [array]$modelIds = @($response.data.id)
 
     foreach ($combo in $combos) {
         if ($modelIds -contains $combo) {
