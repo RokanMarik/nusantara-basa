@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Logo } from "@/components/shared/Logo";
 
 async function getStats() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"}/api/stats`, { cache: "no-store" });
+  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/stats`, { cache: "no-store" });
   if (!res.ok) return null;
   return res.json();
 }

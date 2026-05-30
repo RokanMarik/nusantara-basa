@@ -18,7 +18,8 @@ interface BahasaDetailData {
 }
 
 async function getBahasa(id: string): Promise<BahasaDetailData | null> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"}/api/bahasa/${id}`, { cache: "no-store" });
+  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/bahasa/${id}`, { cache: "no-store" });
   if (!res.ok) return null;
   return res.json();
 }
