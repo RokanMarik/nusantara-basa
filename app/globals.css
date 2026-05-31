@@ -78,3 +78,18 @@ html {
 .leaflet-control-attribution a {
   @apply text-amber-700;
 }
+
+/* Accessibility: Focus states */
+*:focus-visible {
+  @apply outline-none ring-2 ring-amber-500/50 ring-offset-2 ring-offset-[#faf8f5];
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
