@@ -23,7 +23,7 @@ async function call9Router(prompt) {
       "Authorization": `Bearer ${NINEROUTER_KEY}`,
     },
     body: JSON.stringify({
-      model: "FreeModel/https://cc.freemodel.dev",
+      model: "auto-ringan",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
       max_tokens: 500,
