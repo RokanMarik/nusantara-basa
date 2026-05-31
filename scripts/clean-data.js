@@ -12,15 +12,32 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const GARBAGE_PATTERNS = [
   /^rumpun\b/i,           // "Rumpun bahasa..."
   /^di\s/i,               // "di Papua Nugini"
-  /^bahasa\s+daerah/i,   // "Bahasa daerah..." (too generic)
+  /^bahasa\s+daerah/i,   // "Bahasa daerah..."
+  /^daftar\b/i,           // "Daftar bahasa..."
+  /^suku\b/i,             // "Suku Bali"
+  /^kelompok\b/i,         // "Kelompok etnik..."
+  /^wilayah\b/i,          // "Wilayah administratif..."
+  /^dialek\b/i,           // "Dialek bahasa Sunda"
+  /^surat\b/i,            // "Surat Lampung" (writing system)
   /filipina/i,            // Not Indonesian
   /nugini/i,              // Papua New Guinea
-  /alkitab/i,             // Biblical Aramaic - not Indonesian
-  /klasik$/i,             // "Sunda Klasik" - not a living language
-  /serang$/i,             // "Sunda Serang" - variant, not separate
-  /lumajang$/i,           // "Madura Lumajang" - dialect
-  /situbondo$/i,          // "Madura Situbondo" - dialect
-  /belitung$/i,           // "Melayu Belitung" - dialect
+  /alkitab/i,             // Biblical
+  /klasik$/i,             // "Sunda Klasik"
+  /serang$/i,             // "Sunda Serang"
+  /lumajang$/i,           // "Madura Lumajang"
+  /situbondo$/i,          // "Madura Situbondo"
+  /belitung$/i,           // "Melayu Belitung"
+  /^belanda/i,            // "Belanda Indonesia" - not local language
+  /^inggris$/i,           // "Inggris" - not Indonesian
+  /^indonesia$/i,         // "Indonesia" - not a language name
+  /^indonesia\s/i,        // "Indonesia gaul"
+  /^jawa\s+timur$/i,      // Province, not language
+  /^daerah$/i,            // Just "daerah"
+  /^loncong$/i,           // Not a language
+  /^newar$/i,             // Nepal language
+  /^tsat$/i,              // Not Indonesian
+  /^umbria$/i,            // Italy
+  /^moronene$/i,          // Already covered by other sources
 ];
 
 function isGarbage(name) {

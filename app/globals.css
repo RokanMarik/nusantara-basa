@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Noto+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +14,13 @@ html {
   }
 
   body {
-    @apply bg-[#faf8f5] text-[#1a1209] font-sans antialiased;
+    @apply bg-[#faf8f5] text-[#1a1209] antialiased;
+    font-family: 'Noto Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', Georgia, serif;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -24,21 +30,25 @@ html {
   }
 
   .btn-primary {
-    @apply px-4 py-2 bg-[#1a1209] text-earth-100 rounded-xl hover:bg-[#2d1f0e] transition-colors font-semibold;
+    @apply px-4 py-2 bg-[#1a1209] text-earth-100 rounded-xl hover:bg-[#2d1f0e] transition-all duration-200 cursor-pointer font-semibold;
   }
 
   .btn-secondary {
-    @apply px-4 py-2 bg-earth-200 text-earth-700 rounded-xl hover:bg-earth-300 transition-colors font-semibold;
+    @apply px-4 py-2 bg-earth-200 text-earth-700 rounded-xl hover:bg-earth-300 transition-all duration-200 cursor-pointer font-semibold;
   }
 
   .input-field {
-    @apply w-full px-3 py-2 bg-earth-50 border border-earth-400 rounded-xl text-[#1a1209] placeholder-earth-600 focus:outline-none focus:ring-2 focus:ring-amber-500/30 focus:border-amber-500 transition-colors;
+    @apply w-full px-3 py-2 bg-earth-50 border border-earth-400 rounded-xl text-[#1a1209] placeholder-earth-600 focus:outline-none focus:ring-2 focus:ring-amber-500/30 focus:border-amber-500 transition-all duration-200;
+  }
+
+  .card-interactive {
+    @apply cursor-pointer transition-all duration-200 hover:shadow-md hover:border-earth-400;
   }
 }
 
 /* Leaflet overrides */
 .leaflet-container {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: 'Noto Sans', system-ui, sans-serif;
 }
 
 .leaflet-popup-content-wrapper {
@@ -54,11 +64,11 @@ html {
 }
 
 .leaflet-popup-close-button {
-  @apply text-earth-600 hover:text-earth-800;
+  @apply text-earth-600 hover:text-earth-800 cursor-pointer;
 }
 
 .leaflet-control-zoom a {
-  @apply bg-white text-[#1a1209] border-earth-300 hover:bg-earth-100;
+  @apply bg-white text-[#1a1209] border-earth-300 hover:bg-earth-100 cursor-pointer transition-colors duration-200;
 }
 
 .leaflet-control-attribution {

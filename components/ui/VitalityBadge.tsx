@@ -7,11 +7,11 @@ interface VitalityBadgeProps {
 
 export function VitalityBadge({ status, size = "sm" }: VitalityBadgeProps) {
   if (!status) return null;
-  const color = VITALITAS_COLORS[status] ?? "#666680";
+  const color = VITALITAS_COLORS[status] ?? "#9ca3af";
   const sizeClasses = size === "sm" ? "text-[10px] px-2 py-0.5" : "text-xs px-3 py-1";
   return (
-    <span className={`inline-flex items-center gap-1.5 rounded-full font-medium text-[#0a0a0f] ${sizeClasses}`} style={{ backgroundColor: color }}>
-      <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0f]/40" />
+    <span className={`inline-flex items-center gap-1.5 rounded-full font-medium text-[#0a0a0f] ${sizeClasses}`} style={{ backgroundColor: color }} role="status" aria-label={`Vitality status: ${status}`}>
+      <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0f]/40" aria-hidden="true" />
       {status.charAt(0).toUpperCase() + status.slice(1)}
     </span>
   );
