@@ -23,13 +23,13 @@ async function call9Router(prompt) {
       "Authorization": `Bearer ${NINEROUTER_KEY}`,
     },
     body: JSON.stringify({
-      model: "openrouter/moonshotai/kimi-k2.6:free",
+      model: "FreeModel/https://cc.freemodel.dev",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
       max_tokens: 500,
       stream: false,
     }),
-    signal: AbortSignal.timeout(30000),
+    signal: AbortSignal.timeout(300000),
   });
 
   if (!response.ok) {
@@ -104,7 +104,7 @@ Jawab dalam bahasa Indonesia. 3 paragraf saja, tanpa heading.`;
       success++;
 
       // Rate limit - 45 detik antar request (hindari 429)
-      await new Promise(r => setTimeout(r, 45000));
+      await new Promise(r => setTimeout(r, 10000));
 
     } catch (err) {
       console.log(`   ❌ Failed: ${err.message}`);
