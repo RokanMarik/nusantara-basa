@@ -67,70 +67,86 @@ async function qdExtract(content, prompt) {
   }
 }
 
+const JINA_API_KEY = "jina_0c540aa7efef42229075a6c58bd5bfbcAAKAJglySqUEUW1yoifWMPN1SN8Z";
+
+async function jinaFetch(url) {
+  try {
+    const res = await fetch(`https://r.jina.ai/${url}`, {
+      headers: {
+        "Authorization": `Bearer ${JINA_API_KEY}`,
+        "Accept": "text/plain",
+      },
+      signal: AbortSignal.timeout(30000),
+    });
+    if (!res.ok) throw new Error(`Jina error: ${res.status}`);
+    return await res.text();
+  } catch (err) {
+    console.log(`   Jina failed: ${err.message}`);
+    return null;
+  }
+}
+
 async function getLanguageList() {
-  console.log("\n1. Getting language list from Wikipedia...\n");
+  console.log("\n1. Getting comprehensive language list...\n");
 
-  const results = await wikipediaSearch("bahasa daerah Indonesia", 30);
-  if (results.length === 0) return [];
+  // Use Jina to fetch Ethnologue Indonesia page
+  const content = await jinaFetch("https://www.ethnologue.com/country/ID/languages");
+  if (content) {
+    const extracted = await qdExtract(content,
+      "Extract ALL Indonesian languages. Return JSON array: [{nama: string, iso: string}]. Include every language mentioned."
+    );
+    if (extracted && Array.isArray(extracted) && extracted.length > 10) {
+      console.log(`   Extracted ${extracted.length} languages from Ethnologue via Jina`);
+      return extracted;
+    }
+  }
 
-  console.log(`   Found ${results.length} Wikipedia articles`);
-
-  // Extract language names from search results
-  const languages = results
-    .filter(r => r.title.includes("Bahasa") || r.title.includes("Suku"))
-    .map(r => ({ nama: r.title.replace(/^Bahasa\s*/, ''), snippet: r.snippet }));
-
-  // Deduplicate
-  const seen = new Set();
-  const unique = languages.filter(l => {
-    const key = l.nama.toLowerCase().substring(0, 10);
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-
-  console.log(`   ${unique.length} unique languages`);
-  return unique.slice(0, 30); // Limit to 30 for now
+  // Fallback: Wikipedia search
+  console.log("   Falling back to Wikipedia search...");
+  const results = await wikipediaSearch("daftar bahasa di Indonesia menurut rumpun", 50);
+  return results.map(r => ({ nama: r.title.replace(/^Bahasa\s*/, ''), snippet: r.snippet })).slice(0, 50);
 }
 
 async function getLanguageDetails(lang) {
   console.log(`   Getting details for ${lang.nama}...`);
 
-  // Get Wikipedia page content
-  const pageContent = await wikipediaGetPage(lang.nama.startsWith("Bahasa ") ? lang.nama : `Bahasa ${lang.nama}`);
+  // Try Jina fetch from multiple sources
+  const urls = [
+    `https://id.wikipedia.org/wiki/Bahasa_${encodeURIComponent(lang.nama)}`,
+    `https://id.wikipedia.org/wiki/${encodeURIComponent(lang.nama)}`,
+    `https://www.ethnologue.com/language/${lang.iso || ''}`,
+  ].filter(u => !u.includes('/language/'));
 
+  for (const url of urls) {
+    const content = await jinaFetch(url);
+    if (content && content.length > 200) {
+      const details = await qdExtract(content,
+        `Extract data about "${lang.nama}". Return JSON:
+        {
+          "jumlah_penutur": number|null,
+          "status_vitalitas": "aman"|"rentan"|"terancam"|"sangat terancam"|"kritis"|null,
+          "provinsi": string|null,
+          "kabupaten": string|null,
+          "sistem_tulisan": string|null,
+          "tipe_morfologi": string|null,
+          "urutan_kata": string|null
+        }`
+      );
+      if (details && (details.jumlah_penutur || details.provinsi)) {
+        console.log(`   ✅ Got details from Jina (${url})`);
+        return details;
+      }
+    }
+  }
+
+  // Fallback: Wikipedia API
+  const pageContent = await wikipediaGetPage(lang.nama.startsWith("Bahasa ") ? lang.nama : `Bahasa ${lang.nama}`);
   if (pageContent) {
     const details = await qdExtract(pageContent,
-      `Extract data about this language. Return JSON:
-      {
-        "jumlah_penutur": number or null,
-        "status_vitalitas": "aman"|"rentan"|"terancam"|"sangat terancam"|"kritis"|null,
-        "provinsi": string or null,
-        "sistem_tulisan": string or null,
-        "tipe_morfologi": string or null,
-        "urutan_kata": string or null
-      }
-      If data not found, use null.`
+      `Extract data. Return JSON: { "jumlah_penutur": number|null, "status_vitalitas": string|null, "provinsi": string|null }`
     );
     if (details) return details;
   }
-
-  // Fallback: use SearXNG snippets
-  console.log(`   Trying SearXNG for ${lang.nama}...`);
-  const url = `${SEARXNG_URL}/search?q=${encodeURIComponent(`bahasa ${lang.nama} penutur vitalitas`)}&format=json&language=id&engines=duckduckgo,wikipedia`;
-  try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
-    const data = await res.json();
-    const snippets = data.results?.slice(0, 3).map(r => `${r.title}: ${r.content}`).join("\n\n");
-
-    if (snippets) {
-      const details = await qdExtract(snippets,
-        `Extract data from search results. Return JSON:
-        { "jumlah_penutur": number|null, "status_vitalitas": string|null, "provinsi": string|null }`
-      );
-      if (details) return details;
-    }
-  } catch {}
 
   return null;
 }
