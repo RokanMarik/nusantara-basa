@@ -134,7 +134,7 @@ async function getLanguageList() {
   });
 
   // Filter out garbage patterns
-  const garbage = /^rumpun|^daftar|^bahasa daerah|^suku|^kelompok|^wilayah|^dialek|^surat|filipina|nugini|alkitab|klasik$|belanda|inggris$|^indonesia$|newar|umbria|tsat/i;
+  const garbage = /^rumpun|^daftar|^bahasa daerah|^suku|^kelompok|^wilayah|^dialek|^surat|^di\s|filipina|nugini|alkitab|klasik$|belanda|inggris$|^indonesia$|^indonesia\s|^daerah$|newar|umbria|tsat|^gaul$|^gaul\s|^\s*$/i;
   const clean = unique.filter(l => !garbage.test(l.nama));
 
   console.log(`   ${allLangs.length} raw → ${unique.length} unique → ${clean.length} clean`);
