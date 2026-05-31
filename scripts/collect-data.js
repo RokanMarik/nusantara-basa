@@ -87,24 +87,58 @@ async function jinaFetch(url) {
 }
 
 async function getLanguageList() {
-  console.log("\n1. Getting comprehensive language list...\n");
+  console.log("\n1. Getting language list from multiple sources...\n");
 
-  // Use Jina to fetch Ethnologue Indonesia page
-  const content = await jinaFetch("https://www.ethnologue.com/country/ID/languages");
-  if (content) {
-    const extracted = await qdExtract(content,
-      "Extract ALL Indonesian languages. Return JSON array: [{nama: string, iso: string}]. Include every language mentioned."
-    );
-    if (extracted && Array.isArray(extracted) && extracted.length > 10) {
-      console.log(`   Extracted ${extracted.length} languages from Ethnologue via Jina`);
-      return extracted;
+  const allLangs = [];
+
+  // Source 1: Wikipedia ID - Bahasa di Indonesia menurut rumpun
+  console.log("   Source 1: Wikipedia ID...");
+  const rumpunSearch = await wikipediaSearch("bahasa di Indonesia menurut rumpun", 20);
+  for (const r of rumpunSearch) {
+    if (r.title.startsWith("Bahasa ") && !r.title.includes("Daftar")) {
+      allLangs.push({ nama: r.title.replace(/^Bahasa\s*/, ''), source: "wikipedia-id" });
     }
   }
 
-  // Fallback: Wikipedia search
-  console.log("   Falling back to Wikipedia search...");
-  const results = await wikipediaSearch("daftar bahasa di Indonesia menurut rumpun", 50);
-  return results.map(r => ({ nama: r.title.replace(/^Bahasa\s*/, ''), snippet: r.snippet })).slice(0, 50);
+  // Source 2: Wikipedia ID - Bahasa daerah per provinsi
+  console.log("   Source 2: Bahasa per provinsi...");
+  const provSearch = await wikipediaSearch("bahasa daerah di Indonesia provinsi", 30);
+  for (const r of provSearch) {
+    if (r.title.startsWith("Bahasa ")) {
+      allLangs.push({ nama: r.title.replace(/^Bahasa\s*/, ''), source: "wikipedia-id" });
+    }
+  }
+
+  // Source 3: Wikipedia ID - List bahasa
+  console.log("   Source 3: Daftar bahasa...");
+  const listSearch = await wikipediaSearch("daftar bahasa di Indonesia", 20);
+  for (const r of listSearch) {
+    const page = await wikipediaGetPage(r.title);
+    if (page) {
+      const extracted = await qdExtract(page,
+        "Extract ALL language names mentioned. Return JSON array: [{nama: string}]. Only actual language names, not rumpun or categories."
+      );
+      if (extracted && Array.isArray(extracted)) {
+        extracted.forEach(l => allLangs.push({ nama: l.nama, source: "wikipedia-list" }));
+      }
+    }
+  }
+
+  // Deduplicate
+  const seen = new Set();
+  const unique = allLangs.filter(l => {
+    const key = l.nama.toLowerCase().trim();
+    if (seen.has(key) || key.length < 3) return false;
+    seen.add(key);
+    return true;
+  });
+
+  // Filter out garbage patterns
+  const garbage = /^rumpun|^daftar|^bahasa daerah|^suku|^kelompok|^wilayah|^dialek|^surat|filipina|nugini|alkitab|klasik$|belanda|inggris$|^indonesia$|newar|umbria|tsat/i;
+  const clean = unique.filter(l => !garbage.test(l.nama));
+
+  console.log(`   ${allLangs.length} raw → ${unique.length} unique → ${clean.length} clean`);
+  return clean;
 }
 
 async function getLanguageDetails(lang) {
@@ -220,8 +254,9 @@ async function main() {
   console.log(`\n📝 Processing ${languages.length} languages...\n`);
 
   let success = 0, failed = 0;
+  const maxProcess = Math.min(languages.length, 50); // Limit to 50 per run
 
-  for (let i = 0; i < languages.length; i++) {
+  for (let i = 0; i < maxProcess; i++) {
     const lang = languages[i];
     console.log(`[${i + 1}/${languages.length}] ${lang.nama}`);
 
