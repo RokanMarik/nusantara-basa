@@ -1,9 +1,8 @@
 // Data collection for Indonesian languages
-// Priority: jina/fetch → SearXNG → qd/kmodel
+// Uses: Wikipedia API → qd/kmodel → Supabase
 // Usage: node scripts/collect-data.js
 
 const { createClient } = require('@supabase/supabase-js');
-const { execSync } = require('child_process');
 
 const SUPABASE_URL = "https://hkeheukewxsvaarxaket.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrZWhldWtld3hzdmFhcnhha2V0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDEzOTkzMywiZXhwIjoyMDk1NzE1OTMzfQ.36yS86na5jZYaJEguPDREzrx_qpPOL15zNNxMaeCg20";
@@ -13,33 +12,29 @@ const SEARXNG_URL = "http://localhost:8080";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-async function jinaFetch(url) {
+// Wikipedia API (returns JSON directly, no fetch needed)
+async function wikipediaSearch(query, limit = 20) {
   try {
-    const res = await fetch(`${NINEROUTER_URL}/v1/web/fetch`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Authorization": `Bearer ${NINEROUTER_KEY}` },
-      body: JSON.stringify({ model: "jina/fetch", url }),
-      signal: AbortSignal.timeout(30000),
-    });
-    if (!res.ok) throw new Error(`jina fetch error: ${res.status}`);
+    const url = `https://id.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&srlimit=${limit}&format=json&origin=*`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
     const data = await res.json();
-    return data.content || data.text || "";
+    return data.query?.search || [];
   } catch (err) {
-    console.log(`   jina/fetch failed: ${err.message}`);
-    return null;
+    console.log(`   Wikipedia API failed: ${err.message}`);
+    return [];
   }
 }
 
-async function searxngSearch(query) {
+async function wikipediaGetPage(title) {
   try {
-    const url = `${SEARXNG_URL}/search?q=${encodeURIComponent(query)}&format=json&engines=duckduckgo,google,wikipedia&language=id`;
-    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
-    if (!res.ok) throw new Error(`searxng error: ${res.status}`);
+    const url = `https://id.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=extracts&explaintext=true&format=json&origin=*`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
     const data = await res.json();
-    return data.results || [];
+    const pages = data.query?.pages || {};
+    const page = Object.values(pages)[0];
+    return page?.extract || "";
   } catch (err) {
-    console.log(`   SearXNG failed: ${err.message}`);
-    return [];
+    return "";
   }
 }
 
@@ -51,8 +46,8 @@ async function qdExtract(content, prompt) {
       body: JSON.stringify({
         model: "qd/kmodel",
         messages: [
-          { role: "system", content: "Extract data from the given text. Return ONLY valid JSON, no explanation." },
-          { role: "user", content: `${prompt}\n\nText:\n${content.substring(0, 3000)}` }
+          { role: "system", content: "Return ONLY valid JSON, no explanation." },
+          { role: "user", content: `${prompt}\n\nText:\n${content.substring(0, 4000)}` }
         ],
         temperature: 0.1,
         max_tokens: 500,
@@ -64,7 +59,7 @@ async function qdExtract(content, prompt) {
     const data = await res.json();
     const content_ = data.choices?.[0]?.message?.content || "";
     const jsonMatch = content_.match(/\{[\s\S]*?\}/);
-    if (!jsonMatch) throw new Error("No JSON in response");
+    if (!jsonMatch) throw new Error("No JSON");
     return JSON.parse(jsonMatch[0]);
   } catch (err) {
     console.log(`   qd/kmodel failed: ${err.message}`);
@@ -75,93 +70,88 @@ async function qdExtract(content, prompt) {
 async function getLanguageList() {
   console.log("\n1. Getting language list from Wikipedia...\n");
 
-  // Try jina/fetch first
-  const content = await jinaFetch("https://id.wikipedia.org/wiki/Daftar_bahasa_di_Indonesia");
+  const results = await wikipediaSearch("bahasa daerah Indonesia", 30);
+  if (results.length === 0) return [];
 
-  if (content) {
-    const extracted = await qdExtract(content,
-      "Extract ALL Indonesian languages from this text. Return JSON array: [{nama: string, iso: string, provinsi: string}]. Include as many as possible."
-    );
-    if (extracted && Array.isArray(extracted)) {
-      console.log(`   Extracted ${extracted.length} languages from Wikipedia via jina/fetch`);
-      return extracted;
-    }
-  }
+  console.log(`   Found ${results.length} Wikipedia articles`);
 
-  // Fallback to SearXNG
-  console.log("   Falling back to SearXNG...");
-  const results = await searxngSearch("daftar lengkap bahasa daerah Indonesia");
+  // Extract language names from search results
+  const languages = results
+    .filter(r => r.title.includes("Bahasa") || r.title.includes("Suku"))
+    .map(r => ({ nama: r.title.replace(/^Bahasa\s*/, ''), snippet: r.snippet }));
 
-  for (const r of results.slice(0, 3)) {
-    const content = await jinaFetch(r.url);
-    if (content) {
-      const extracted = await qdExtract(content,
-        "Extract ALL Indonesian languages from this text. Return JSON array: [{nama: string, iso: string, provinsi: string}]."
-      );
-      if (extracted && Array.isArray(extracted) && extracted.length > 0) {
-        console.log(`   Extracted ${extracted.length} languages from ${r.url}`);
-        return extracted;
-      }
-    }
-  }
+  // Deduplicate
+  const seen = new Set();
+  const unique = languages.filter(l => {
+    const key = l.nama.toLowerCase().substring(0, 10);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 
-  console.log("   Could not extract language list. Using fallback list.");
-  return [];
+  console.log(`   ${unique.length} unique languages`);
+  return unique.slice(0, 30); // Limit to 30 for now
 }
 
 async function getLanguageDetails(lang) {
-  console.log(`   Fetching details for ${lang.nama}...`);
+  console.log(`   Getting details for ${lang.nama}...`);
 
-  // Search for this language
-  const searchResults = await searxngSearch(`${lang.nama} bahasa daerah penutur vitalitas ISO`);
+  // Get Wikipedia page content
+  const pageContent = await wikipediaGetPage(lang.nama.startsWith("Bahasa ") ? lang.nama : `Bahasa ${lang.nama}`);
 
-  for (const r of searchResults.slice(0, 2)) {
-    const content = await jinaFetch(r.url);
-    if (content) {
-      const details = await qdExtract(content,
-        `Extract data for language "${lang.nama}". Return JSON:
-        {
-          "jumlah_penutur": number or null,
-          "status_vitalitas": "aman"|"rentan"|"terancam"|"sangat terancam"|"kritis" or null,
-          "provinsi": string,
-          "kabupaten": string or null,
-          "sistem_tulisan": string or null,
-          "tipe_morfologi": string or null,
-          "urutan_kata": string or null,
-          "lat": number or null,
-          "lng": number or null
-        }`
-      );
-      if (details) {
-        console.log(`   Got details from ${r.url}`);
-        return details;
+  if (pageContent) {
+    const details = await qdExtract(pageContent,
+      `Extract data about this language. Return JSON:
+      {
+        "jumlah_penutur": number or null,
+        "status_vitalitas": "aman"|"rentan"|"terancam"|"sangat terancam"|"kritis"|null,
+        "provinsi": string or null,
+        "sistem_tulisan": string or null,
+        "tipe_morfologi": string or null,
+        "urutan_kata": string or null
       }
-    }
+      If data not found, use null.`
+    );
+    if (details) return details;
   }
+
+  // Fallback: use SearXNG snippets
+  console.log(`   Trying SearXNG for ${lang.nama}...`);
+  const url = `${SEARXNG_URL}/search?q=${encodeURIComponent(`bahasa ${lang.nama} penutur vitalitas`)}&format=json&language=id&engines=duckduckgo,wikipedia`;
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+    const data = await res.json();
+    const snippets = data.results?.slice(0, 3).map(r => `${r.title}: ${r.content}`).join("\n\n");
+
+    if (snippets) {
+      const details = await qdExtract(snippets,
+        `Extract data from search results. Return JSON:
+        { "jumlah_penutur": number|null, "status_vitalitas": string|null, "provinsi": string|null }`
+      );
+      if (details) return details;
+    }
+  } catch {}
 
   return null;
 }
 
 async function insertLanguage(lang, details) {
-  // Check if already exists
-  if (lang.iso) {
-    const { data: existing } = await supabase
-      .from("bahasa")
-      .select("id")
-      .eq("kode_iso_639", lang.iso)
-      .single();
-    if (existing) {
-      console.log(`   Already exists: ${lang.nama}`);
-      return;
-    }
+  // Check if exists
+  const { data: existing } = await supabase
+    .from("bahasa")
+    .select("id")
+    .ilike("nama_bahasa", lang.nama)
+    .limit(1);
+
+  if (existing?.length > 0) {
+    console.log(`   Already exists: ${lang.nama}`);
+    return;
   }
 
-  // Get rumpun ID (default to Austronesia)
+  // Get rumpun ID
   const { data: rumpun } = await supabase
     .from("rumpun_bahasa")
-    .select("id")
-    .eq("nama_rumpun", "Austronesia")
-    .single();
+    .select("id").eq("nama_rumpun", "Austronesia").single();
 
   // Insert bahasa
   const { data: bahasa, error: bError } = await supabase
@@ -169,14 +159,11 @@ async function insertLanguage(lang, details) {
     .insert({
       nama_bahasa: lang.nama,
       nama_lokal: lang.nama,
-      kode_iso_639: lang.iso || null,
       rumpun_id: rumpun?.id || null,
       jumlah_penutur: details?.jumlah_penutur || null,
       status_vitalitas: details?.status_vitalitas || null,
-      koordinat_pusat: details?.lat && details?.lng ? { type: "Point", coordinates: [details.lng, details.lat] } : null,
     })
-    .select()
-    .single();
+    .select().single();
 
   if (bError || !bahasa) {
     console.log(`   Insert failed: ${bError?.message}`);
@@ -188,12 +175,11 @@ async function insertLanguage(lang, details) {
     await supabase.from("lokasi").insert({
       bahasa_id: bahasa.id,
       provinsi: details.provinsi,
-      kabupaten: details.kabupaten || null,
     });
   }
 
-  // Insert fitur_linguistik
-  if (details?.sistem_tulisan || details?.tipe_morfologi || details?.urutan_kata) {
+  // Insert fitur
+  if (details?.sistem_tulisan || details?.tipe_morfologi) {
     await supabase.from("fitur_linguistik").insert({
       bahasa_id: bahasa.id,
       sistem_tulisan: details.sistem_tulisan || null,
@@ -202,24 +188,22 @@ async function insertLanguage(lang, details) {
     });
   }
 
-  console.log(`   ✅ Inserted: ${lang.nama}`);
+  console.log(`   ✅ ${lang.nama}`);
 }
 
 async function main() {
   console.log("🔍 Nusantara Basa - Data Collection");
-  console.log("Priority: jina/fetch → SearXNG → qd/kmodel\n");
+  console.log("Wikipedia API → qd/kmodel → Supabase\n");
 
   const languages = await getLanguageList();
-
   if (languages.length === 0) {
-    console.log("\n❌ No languages found. Exiting.");
+    console.log("\n❌ No languages found.");
     process.exit(1);
   }
 
   console.log(`\n📝 Processing ${languages.length} languages...\n`);
 
-  let success = 0;
-  let failed = 0;
+  let success = 0, failed = 0;
 
   for (let i = 0; i < languages.length; i++) {
     const lang = languages[i];
@@ -230,12 +214,11 @@ async function main() {
       await insertLanguage(lang, details);
       success++;
     } catch (err) {
-      console.log(`   ❌ Error: ${err.message}`);
+      console.log(`   ❌ ${err.message}`);
       failed++;
     }
 
-    // Rate limit
-    await new Promise(r => setTimeout(r, 3000));
+    await new Promise(r => setTimeout(r, 2000));
   }
 
   console.log(`\n📊 Done! ${success} inserted, ${failed} failed.`);
