@@ -12,6 +12,7 @@ const NINEROUTER_KEY = "sk-2ce0b3116b58ede3-4v2kkj-033fc842";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const LIMIT = parseInt(process.argv[2]) || 50;
+const OFFSET = parseInt(process.argv[3]) || 0;
 
 async function jinaFetch(url) {
   try {
@@ -437,13 +438,15 @@ async function main() {
   console.log(`Limit: ${LIMIT} languages per run\n`);
 
   const languages = await getIsoLanguages();
-  console.log(`\n📝 Processing ${languages.length} languages...\n`);
+  const totalLangs = languages.length;
+  const maxProcess = Math.min(totalLangs - OFFSET, LIMIT);
+  console.log(`\n📝 Processing ${maxProcess} languages (offset ${OFFSET}, limit ${LIMIT})...\n`);
 
   let success = 0, skipped = 0, failed = 0;
 
-  for (let i = 0; i < Math.min(languages.length, LIMIT); i++) {
+  for (let i = OFFSET; i < OFFSET + maxProcess; i++) {
     const lang = languages[i];
-    console.log(`[${i + 1}/${Math.min(languages.length, LIMIT)}] ${lang.nama} (${lang.iso})`);
+    console.log(`[${i + 1}/${totalLangs}] ${lang.nama} (${lang.iso})`);
 
     try {
       const details = await getDetails(lang.iso);
@@ -460,6 +463,7 @@ async function main() {
   }
 
   console.log(`\n📊 Done! ${success} inserted, ${skipped} skipped, ${failed} failed.`);
+  console.log(`Next run: node scripts/expand-iso.js ${LIMIT} ${OFFSET + maxProcess}`);
 }
 
 main();
