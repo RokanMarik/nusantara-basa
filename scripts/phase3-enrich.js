@@ -70,12 +70,29 @@ function extractData(text) {
 
 async function enrichLanguage(bahasa) {
   const name = bahasa.nama_bahasa.replace(/^Bahasa\s*/i, '');
+  const iso = bahasa.kode_iso_639;
 
-  // Try Wikipedia ID
-  const urls = [
-    `https://id.wikipedia.org/wiki/Bahasa_${encodeURIComponent(name)}`,
-    `https://id.wikipedia.org/wiki/${encodeURIComponent(name)}`,
-  ];
+  // Try multiple sources in order
+  const urls = [];
+
+  // 1. Wikipedia ID
+  urls.push(`https://id.wikipedia.org/wiki/Bahasa_${encodeURIComponent(name)}`);
+  urls.push(`https://id.wikipedia.org/wiki/${encodeURIComponent(name)}`);
+
+  // 2. Glottolog (comprehensive linguistic database)
+  if (iso) {
+    urls.push(`https://glottolog.org/resource/languoid/id/${iso.toLowerCase()}1234`);
+    urls.push(`https://glottolog.org/resource/languoid/iso/${iso.toLowerCase()}`);
+  }
+
+  // 3. Wikipedia EN (more languages have English articles)
+  urls.push(`https://en.wikipedia.org/wiki/${encodeURIComponent(name)}_language`);
+  urls.push(`https://en.wikipedia.org/wiki/Languages_of_Indonesia`);
+
+  // 4. Ethnologue (speaker data)
+  if (iso) {
+    urls.push(`https://www.ethnologue.com/language/${iso.toLowerCase()}`);
+  }
 
   for (const url of urls) {
     const content = await jinaFetch(url);
@@ -84,6 +101,11 @@ async function enrichLanguage(bahasa) {
       if (Object.keys(extracted).length > 0) {
         return { ...extracted, source: url };
       }
+    }
+  }
+
+  return null;
+}
     }
   }
 
