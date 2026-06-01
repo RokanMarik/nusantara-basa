@@ -46,13 +46,13 @@ export default async function HomePage() {
           <Link href="/" className="font-black text-[#1a1209] text-sm tracking-tight hover:text-amber-700 transition-colors duration-200" aria-label="Nusantara Basa Home">
             Nusantara<span className="text-amber-700">Basa</span>
           </Link>
-          <div className="hidden md:flex items-center gap-6">
-            <Link href="/daftar-bahasa" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="View complete language list">Daftar Bahasa</Link>
-            <Link href="/explore/map" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="Explore the language map">Peta</Link>
-            <Link href="/sumber-data" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="View data sources">Sumber</Link>
-            <Link href="/explore/map" className="px-4 py-1.5 bg-[#1a1209] text-earth-100 rounded-full text-sm font-bold hover:bg-[#2d1f0e] transition-all duration-200 cursor-pointer" aria-label="Start exploring the map">
-              Jelajahi
-            </Link>
+          <div className="hidden md:flex items-center gap-4">
+            <Link href="/daftar-bahasa" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Daftar</Link>
+            <Link href="/explore/compare" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Compare</Link>
+            <Link href="/explore/map" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Peta</Link>
+            <Link href="/sumber-data" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Sumber</Link>
+            <a href="/api/export?format=csv" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="Export data as CSV">Export</a>
+            <Link href="/explore/map" className="px-4 py-1.5 bg-[#1a1209] text-earth-100 rounded-full text-sm font-bold hover:bg-[#2d1f0e] transition-all duration-200 cursor-pointer">Jelajahi</Link>
           </div>
         </div>
       </nav>
