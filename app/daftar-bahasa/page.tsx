@@ -94,8 +94,8 @@ export default function DaftarBahasaPage() {
 
       switch (sortKey) {
         case "nama":
-          aVal = a.nama_bahasa.toLowerCase();
-          bVal = b.nama_bahasa.toLowerCase();
+          aVal = (a.nama_bahasa || "").toLowerCase();
+          bVal = (b.nama_bahasa || "").toLowerCase();
           break;
         case "penutur":
           aVal = a.jumlah_penutur || 0;
