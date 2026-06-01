@@ -47,8 +47,9 @@ export default async function HomePage() {
             Nusantara<span className="text-amber-700">Basa</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
+            <Link href="/daftar-bahasa" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="View complete language list">Daftar Bahasa</Link>
             <Link href="/explore/map" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="Explore the language map">Peta</Link>
-            <Link href="#bahasa" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="View language collection">Bahasa</Link>
+            <Link href="/sumber-data" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="View data sources">Sumber</Link>
             <Link href="/explore/map" className="px-4 py-1.5 bg-[#1a1209] text-earth-100 rounded-full text-sm font-bold hover:bg-[#2d1f0e] transition-all duration-200 cursor-pointer" aria-label="Start exploring the map">
               Jelajahi
             </Link>

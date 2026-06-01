@@ -106,11 +106,6 @@ async function enrichLanguage(bahasa) {
 
   return null;
 }
-    }
-  }
-
-  return null;
-}
 
 async function updateLanguage(bahasaId, data) {
   const updates = {};
