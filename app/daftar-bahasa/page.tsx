@@ -69,7 +69,7 @@ export default function DaftarBahasaPage() {
   }, []);
 
   const filtered = useMemo(() => {
-    let result = bahasaList;
+    let result = bahasaList.filter(b => b && b.nama_bahasa);
 
     if (search) {
       const q = search.toLowerCase();
