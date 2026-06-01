@@ -22,7 +22,7 @@ export default function ComparePage() {
   }, []);
 
   useEffect(() => {
-    const data = bahasaList.filter(b => selected.includes(b.id));
+    const data = bahasaList.filter(b => b && b.id && selected.includes(b.id));
     setSelectedData(data);
   }, [selected, bahasaList]);
 
