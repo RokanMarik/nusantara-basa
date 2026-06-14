@@ -1,0 +1,1893 @@
+Processing 71740 bytes
+Extracted 209 languages
+[
+  {
+    "no": 1,
+    "nama": "Aabinomin",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 2,
+    "nama": "Abai",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Utara"
+    ],
+    "provinsi_str": "Kalimantan Utara"
+  },
+  {
+    "no": 3,
+    "nama": "Abrap",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 4,
+    "nama": "Abui (Aboa)",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 5,
+    "nama": "Abun",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 6,
+    "nama": "Abun Gii  (Abun Jii)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 7,
+    "nama": "Abun Ji  (Karon Pantai)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 8,
+    "nama": "Aceh",
+    "wilayah": "Sumatra",
+    "provinsis": [
+      "Aceh"
+    ],
+    "provinsi_str": "Aceh"
+  },
+  {
+    "no": 9,
+    "nama": "Adagum (Citak Wagabus)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 10,
+    "nama": "Adang",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 11,
+    "nama": "Afilaup",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 12,
+    "nama": "Aframa",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 13,
+    "nama": "Air Matoa",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 14,
+    "nama": "Airo",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 15,
+    "nama": "Airoran",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 16,
+    "nama": "Ale",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 17,
+    "nama": "Alor",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 18,
+    "nama": "Alune",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 19,
+    "nama": "Amathamit",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 20,
+    "nama": "Ambai",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 21,
+    "nama": "Ambalau",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 22,
+    "nama": "Ambel",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 23,
+    "nama": "Amber",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 24,
+    "nama": "Amungkal",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 25,
+    "nama": "Anakalang",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 26,
+    "nama": "Anasi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 27,
+    "nama": "Ansus-Papuma",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 28,
+    "nama": "Anus",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 29,
+    "nama": "Aoheng (Penihing)",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Timur"
+    ],
+    "provinsi_str": "Kalimantan Timur"
+  },
+  {
+    "no": 30,
+    "nama": "Arakam",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 31,
+    "nama": "Arandai",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 32,
+    "nama": "Are",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 33,
+    "nama": "Arguni (Taver)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 34,
+    "nama": "Armati Sarma",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 35,
+    "nama": "Arubos",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 36,
+    "nama": "Arui-Mor",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 37,
+    "nama": "As",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 38,
+    "nama": "Asmat Bets Mbup",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 39,
+    "nama": "Asmat Safan",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 40,
+    "nama": "Asmat Sawa",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 550,
+    "nama": "See",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 551,
+    "nama": "Segaai",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Timur"
+    ],
+    "provinsi_str": "Kalimantan Timur"
+  },
+  {
+    "no": 552,
+    "nama": "Segar",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 553,
+    "nama": "Seget",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 554,
+    "nama": "Sekar-Onim",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 555,
+    "nama": "Seko",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Tengah",
+      "Sulawesi Selatan"
+    ],
+    "provinsi_str": "Sulawesi Tengah, Sulawesi Selatan"
+  },
+  {
+    "no": 556,
+    "nama": "Selaru",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 557,
+    "nama": "Selegof",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 558,
+    "nama": "Seluwarsa",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 559,
+    "nama": "Sempan",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 560,
+    "nama": "Senggi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 561,
+    "nama": "Sentani",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 562,
+    "nama": "Seram",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 563,
+    "nama": "Serili",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 564,
+    "nama": "Serua",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 565,
+    "nama": "Serui Laut",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 566,
+    "nama": "Sigulai",
+    "wilayah": "Sumatra",
+    "provinsis": [
+      "Aceh"
+    ],
+    "provinsi_str": "Aceh"
+  },
+  {
+    "no": 567,
+    "nama": "Sikari",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 568,
+    "nama": "Sikka",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 569,
+    "nama": "Silimo",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 570,
+    "nama": "Sipisi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 571,
+    "nama": "Skou",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 572,
+    "nama": "Smarki Kanum",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 573,
+    "nama": "So a",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 574,
+    "nama": "Soba",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 575,
+    "nama": "Sobey",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 576,
+    "nama": "Sobey Wakde",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 577,
+    "nama": "Somu (Toro)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 578,
+    "nama": "Soon",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 579,
+    "nama": "Sorabi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 580,
+    "nama": "Sou",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 581,
+    "nama": "Sough (Manikion)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 582,
+    "nama": "Sough Bohon",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 583,
+    "nama": "Sowiwa (Morowa)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 584,
+    "nama": "Soytai",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 585,
+    "nama": "Srum",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 586,
+    "nama": "Sudate (Sehudate)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 587,
+    "nama": "Sula",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku Utara"
+    ],
+    "provinsi_str": "Maluku Utara"
+  },
+  {
+    "no": 588,
+    "nama": "Sumba Barat",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 589,
+    "nama": "Sumbawa (Samawa)",
+    "wilayah": "Nusa Tenggara Barat",
+    "provinsis": [
+      "Nusa Tenggara Barat"
+    ],
+    "provinsi_str": "Nusa Tenggara Barat"
+  },
+  {
+    "no": 590,
+    "nama": "Sumuri (Sumuri)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 591,
+    "nama": "Sunda",
+    "wilayah": "Sumatra",
+    "provinsis": [
+      "Bengkulu",
+      "Lampung",
+      "DKI Jakarta",
+      "Jawa Barat",
+      "Jawa Tengah",
+      "Banten",
+      "Sulawesi Tenggara"
+    ],
+    "provinsi_str": "Bengkulu, Lampung, DKI Jakarta, Jawa Barat, Jawa Tengah, Banten, Sulawesi Tenggara"
+  },
+  {
+    "no": 592,
+    "nama": "Sunum",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 593,
+    "nama": "Taa",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Tengah"
+    ],
+    "provinsi_str": "Sulawesi Tengah"
+  },
+  {
+    "no": 594,
+    "nama": "Tabahair (Bipim, Bipin)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 595,
+    "nama": "Tabla",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 596,
+    "nama": "Tabundung",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 597,
+    "nama": "Tagalisa",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 598,
+    "nama": "Taliabu",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku Utara"
+    ],
+    "provinsi_str": "Maluku Utara"
+  },
+  {
+    "no": 599,
+    "nama": "Tamakuri",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 600,
+    "nama": "Taman",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Barat"
+    ],
+    "provinsi_str": "Kalimantan Barat"
+  },
+  {
+    "no": 601,
+    "nama": "Tamario",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 602,
+    "nama": "Tamer Tunai",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 603,
+    "nama": "Tamuan",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Tengah"
+    ],
+    "provinsi_str": "Kalimantan Tengah"
+  },
+  {
+    "no": 604,
+    "nama": "Tandia",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 605,
+    "nama": "Tangko",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 606,
+    "nama": "Tapea",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 607,
+    "nama": "Tarangan Barat",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 608,
+    "nama": "Tarangan Timur",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 609,
+    "nama": "Tarfia",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 610,
+    "nama": "Tause",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 611,
+    "nama": "Tawoyan",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Tengah"
+    ],
+    "provinsi_str": "Kalimantan Tengah"
+  },
+  {
+    "no": 612,
+    "nama": "Tawu Ane",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 613,
+    "nama": "Tebako",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 614,
+    "nama": "Tefanma",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 615,
+    "nama": "Tefaro (Demba)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 616,
+    "nama": "Tehit",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 617,
+    "nama": "Tehit Dit (Tehit Tua)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 618,
+    "nama": "Teiwa",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 619,
+    "nama": "Telaah Babar",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 620,
+    "nama": "Telepe",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 621,
+    "nama": "Tenggalan",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Utara"
+    ],
+    "provinsi_str": "Kalimantan Utara"
+  },
+  {
+    "no": 622,
+    "nama": "Teon",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 623,
+    "nama": "Tepin",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 624,
+    "nama": "Ternate",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku Utara"
+    ],
+    "provinsi_str": "Maluku Utara"
+  },
+  {
+    "no": 625,
+    "nama": "Tetun",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 626,
+    "nama": "Tevera Pew",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 627,
+    "nama": "Tewa",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 628,
+    "nama": "Tidung",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Utara"
+    ],
+    "provinsi_str": "Kalimantan Utara"
+  },
+  {
+    "no": 629,
+    "nama": "Tobati",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 630,
+    "nama": "Tobelo",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku Utara"
+    ],
+    "provinsi_str": "Maluku Utara"
+  },
+  {
+    "no": 631,
+    "nama": "Tolaki",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Tenggara"
+    ],
+    "provinsi_str": "Sulawesi Tenggara"
+  },
+  {
+    "no": 632,
+    "nama": "Tombatu",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Tengah"
+    ],
+    "provinsi_str": "Sulawesi Tengah"
+  },
+  {
+    "no": 633,
+    "nama": "Tomor",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 634,
+    "nama": "Topoiyo",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Barat"
+    ],
+    "provinsi_str": "Sulawesi Barat"
+  },
+  {
+    "no": 635,
+    "nama": "Toraja",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Selatan"
+    ],
+    "provinsi_str": "Sulawesi Selatan"
+  },
+  {
+    "no": 636,
+    "nama": "Torweja",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 637,
+    "nama": "Totoberi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 638,
+    "nama": "Totoli",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Tengah"
+    ],
+    "provinsi_str": "Sulawesi Tengah"
+  },
+  {
+    "no": 639,
+    "nama": "Towe",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 640,
+    "nama": "Trimuris-Bagusa",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 641,
+    "nama": "Tsaukwambo",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 642,
+    "nama": "Tunjung",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Timur"
+    ],
+    "provinsi_str": "Kalimantan Timur"
+  },
+  {
+    "no": 643,
+    "nama": "Ulakin (Ulakuno)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 644,
+    "nama": "Uma Lung",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Utara"
+    ],
+    "provinsi_str": "Kalimantan Utara"
+  },
+  {
+    "no": 645,
+    "nama": "Una",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 646,
+    "nama": "Ure (Mere)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 647,
+    "nama": "Uruangnirin",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 648,
+    "nama": "Uud Danum (Ot Danum)",
+    "wilayah": "Kalimantan",
+    "provinsis": [
+      "Kalimantan Barat",
+      "Kalimantan Tengah"
+    ],
+    "provinsi_str": "Kalimantan Barat, Kalimantan Tengah"
+  },
+  {
+    "no": 649,
+    "nama": "Vamin",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 650,
+    "nama": "Vedan Nus (Podena)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 651,
+    "nama": "Wabo",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 652,
+    "nama": "Waicen",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 653,
+    "nama": "Wairate (Debra)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 654,
+    "nama": "Walak",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 655,
+    "nama": "Waliam",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 656,
+    "nama": "Walsa",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 657,
+    "nama": "Wambo Tawe Tirop",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 658,
+    "nama": "Wambon Kenondik (Wombon, Womsi)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 659,
+    "nama": "Wamesa",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 660,
+    "nama": "Wandamen",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 661,
+    "nama": "Wanggom",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 662,
+    "nama": "Wano",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 663,
+    "nama": "Wanukaka (Wanokaka)",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 664,
+    "nama": "Warari Onate",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 665,
+    "nama": "Wardo",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 666,
+    "nama": "Warembori",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 667,
+    "nama": "Wari",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 668,
+    "nama": "Warlon",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 669,
+    "nama": "Warry",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 670,
+    "nama": "Waruri (Ambumi)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 671,
+    "nama": "Wate",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 672,
+    "nama": "Wau Arak",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 673,
+    "nama": "Weinami",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 674,
+    "nama": "Wemale",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 675,
+    "nama": "Wersing (Kolana (Wirasina))",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 676,
+    "nama": "Wewewa (Wejewa)",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsis": [
+      "Nusa Tenggara Timur"
+    ],
+    "provinsi_str": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 677,
+    "nama": "Windesi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 678,
+    "nama": "Wiyagar",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 679,
+    "nama": "Woda-Woda",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 680,
+    "nama": "Wolani",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 681,
+    "nama": "Wolio",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Tenggara"
+    ],
+    "provinsi_str": "Sulawesi Tenggara"
+  },
+  {
+    "no": 682,
+    "nama": "Wombon (Womsi)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 683,
+    "nama": "Wonti (Waropen)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 684,
+    "nama": "Wooi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 685,
+    "nama": "Woria",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 686,
+    "nama": "Wotu",
+    "wilayah": "Sulawesi",
+    "provinsis": [
+      "Sulawesi Selatan"
+    ],
+    "provinsi_str": "Sulawesi Selatan"
+  },
+  {
+    "no": 687,
+    "nama": "Yabanda (Away)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 688,
+    "nama": "Yabega",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 689,
+    "nama": "Yaben",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 690,
+    "nama": "Yafi",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 691,
+    "nama": "Yaghai Mur",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 692,
+    "nama": "Yaghai Wairu",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 693,
+    "nama": "Yahadian-Mugim",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 694,
+    "nama": "Yakapis",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 695,
+    "nama": "Yalahatan",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 696,
+    "nama": "Yali Anggruk",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 697,
+    "nama": "Yali Kosarek",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 698,
+    "nama": "Yali Ninia",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 699,
+    "nama": "Yali Pass Valley",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 700,
+    "nama": "Yamas",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 701,
+    "nama": "Yamdena",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 702,
+    "nama": "Yamueti",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 703,
+    "nama": "Yatoke",
+    "wilayah": "Maluku",
+    "provinsis": [
+      "Maluku"
+    ],
+    "provinsi_str": "Maluku"
+  },
+  {
+    "no": 704,
+    "nama": "Yaur",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 705,
+    "nama": "Yaur Rihegure",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 706,
+    "nama": "Yawa Onate",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 707,
+    "nama": "Yei",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 708,
+    "nama": "Yei Bawah",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 709,
+    "nama": "Yelmek",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 710,
+    "nama": "Yeresiam",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 711,
+    "nama": "Yeresiam Kiruru",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 712,
+    "nama": "Yeresiam Pedalaman (Sirise)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  },
+  {
+    "no": 713,
+    "nama": "Yeretuar (Umare)",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 714,
+    "nama": "Yetfa",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 715,
+    "nama": "Yokari",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 716,
+    "nama": "Yoke",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 717,
+    "nama": "Yonggom",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua"
+    ],
+    "provinsi_str": "Papua"
+  },
+  {
+    "no": 718,
+    "nama": "Yuafeta",
+    "wilayah": "Papua",
+    "provinsis": [
+      "Papua Barat"
+    ],
+    "provinsi_str": "Papua Barat"
+  }
+]

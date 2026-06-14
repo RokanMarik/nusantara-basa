@@ -1,0 +1,556 @@
+[
+  {
+    "category": "Rentan",
+    "indeks": "0.61-0.80",
+    "languages": [
+      {
+        "original": "Bahasa Asmat",
+        "normalized": "Asmat",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Walsa",
+        "normalized": "Walsa",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Biak",
+        "normalized": "Biak",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Bima (Mbojo)",
+        "normalized": "Bima",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Bugis",
+        "normalized": "Bugis",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Dajub (Tokuni)",
+        "normalized": "Dajub",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Korowai Karuwage",
+        "normalized": "Korowai Karuwage",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Melayu",
+        "normalized": "Melayu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Madura",
+        "normalized": "Madura",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Makassar",
+        "normalized": "Makassar",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Minangkabau",
+        "normalized": "Minangkabau",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Muna",
+        "normalized": "Muna",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Sasak",
+        "normalized": "Sasak",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Sentani",
+        "normalized": "Sentani",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Serui Laut",
+        "normalized": "Serui Laut",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Sumbawa",
+        "normalized": "Sumbawa",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Kombai",
+        "normalized": "Kombai",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Tagalisa",
+        "normalized": "Tagalisa",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Aceh",
+        "normalized": "Aceh",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Bali dialek Bali",
+        "normalized": "Bali",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Jawa dialek Jogja-",
+        "normalized": "Jawa",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Sunda",
+        "normalized": "Sunda",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Aframa",
+        "normalized": "Aframa",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Bugis",
+        "normalized": "Bugis",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Gayo",
+        "normalized": "Gayo",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Gresi",
+        "normalized": "Gresi",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Kerinci",
+        "normalized": "Kerinci",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Kuri (Nabi)",
+        "normalized": "Kuri",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Luhu",
+        "normalized": "Luhu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Mandar",
+        "normalized": "Mandar",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Meoswar (Roswar)",
+        "normalized": "Meoswar",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Minahasa",
+        "normalized": "Minahasa",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Melayu dialek",
+        "normalized": "Melayu dialek",
+        "wilayah": "Papua"
+      }
+    ]
+  },
+  {
+    "category": "Mengalami Kemunduran",
+    "indeks": "0.41-0.60",
+    "languages": [
+      {
+        "original": "Bahasa Rongga",
+        "normalized": "Rongga",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Senggi (Find)",
+        "normalized": "Senggi",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Somu (Toro)",
+        "normalized": "Somu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Wolio",
+        "normalized": "Wolio",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Lampung",
+        "normalized": "Lampung",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Modole",
+        "normalized": "Modole",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Marori",
+        "normalized": "Marori",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Seget",
+        "normalized": "Seget",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Buru",
+        "normalized": "Buru",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Gorontalo dialek",
+        "normalized": "Gorontalo dialek",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Hatam",
+        "normalized": "Hatam",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Hitu",
+        "normalized": "Hitu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Lemolang",
+        "normalized": "Lemolang",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Melayu di Indragiri",
+        "normalized": "Melayu di Indragiri",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Ogan dialek Rupit",
+        "normalized": "Ogan",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Rampi",
+        "normalized": "Rampi",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Saleman",
+        "normalized": "Saleman",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Toba\u0000",
+        "normalized": "Toba\u0000",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Yalahatan",
+        "normalized": "Yalahatan",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Dra",
+        "normalized": "Dra",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Karas",
+        "normalized": "Karas",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Massenrengpulu",
+        "normalized": "Massenrengpulu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Mentawai",
+        "normalized": "Mentawai",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Ngguntar",
+        "normalized": "Ngguntar",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Nias",
+        "normalized": "Nias",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Pannei",
+        "normalized": "Pannei",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Pedamaran",
+        "normalized": "Pedamaran",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Punan Merah",
+        "normalized": "Punan Merah",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Sahu",
+        "normalized": "Sahu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Tehit",
+        "normalized": "Tehit",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Tenggalan",
+        "normalized": "Tenggalan",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Totoli",
+        "normalized": "Totoli",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Yamdena dialek",
+        "normalized": "Yamdena dialek",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Beka\u0000k",
+        "normalized": "Beka\u0000k",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Lematang",
+        "normalized": "Lematang",
+        "wilayah": "Nusa Tenggara Timur"
+      }
+    ]
+  },
+  {
+    "category": "Terancam Punah",
+    "indeks": "0.21-0.40",
+    "languages": [
+      {
+        "original": "Bahasa kategori kri\u0000s",
+        "normalized": "kategori kri\u0000s",
+        "wilayah": "Tidak diketahui"
+      }
+    ]
+  },
+  {
+    "category": "Punah",
+    "indeks": "0.00-0.20",
+    "languages": [
+      {
+        "original": "Bahasa Adang",
+        "normalized": "Adang",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Arguni (Taver)",
+        "normalized": "Arguni",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Bajau Tungkal Satu",
+        "normalized": "Bajau Tungkal Satu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Bku",
+        "normalized": "Bku",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Dubu",
+        "normalized": "Dubu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Yamdena dialek",
+        "normalized": "Yamdena dialek",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Irarutu",
+        "normalized": "Irarutu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Kalabra",
+        "normalized": "Kalabra",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Konjo",
+        "normalized": "Konjo",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Makleu",
+        "normalized": "Makleu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Mander",
+        "normalized": "Mander",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Minahasa",
+        "normalized": "Minahasa",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Namla",
+        "normalized": "Namla",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Nedebang",
+        "normalized": "Nedebang",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Podena",
+        "normalized": "Podena",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Ponosakan",
+        "normalized": "Ponosakan",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Samasuru",
+        "normalized": "Samasuru",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Sangihe Talaud",
+        "normalized": "Sangihe Talaud",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Sawai",
+        "normalized": "Sawai",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Tunjung",
+        "normalized": "Tunjung",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Enggano",
+        "normalized": "Enggano",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Teon",
+        "normalized": "Teon",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Benggaulu",
+        "normalized": "Benggaulu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Berangas",
+        "normalized": "Berangas",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Mansim Borai",
+        "normalized": "Mansim Borai",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Ibu (Ibo)",
+        "normalized": "Ibu",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Le\u0000",
+        "normalized": "Le\u0000",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Meher",
+        "normalized": "Meher",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Re\u0000a",
+        "normalized": "Re\u0000a",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Loon",
+        "normalized": "Loon",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Saponi",
+        "normalized": "Saponi",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Hamap",
+        "normalized": "Hamap",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Ho\u0000",
+        "normalized": "Ho\u0000",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Kaiely",
+        "normalized": "Kaiely",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Mawes",
+        "normalized": "Mawes",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Piru",
+        "normalized": "Piru",
+        "wilayah": "Tidak diketahui"
+      },
+      {
+        "original": "Bahasa Tandia",
+        "normalized": "Tandia",
+        "wilayah": "Papua"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1001 @@
+  "rows": [
+    {
+      "id": "64c327a5-5277-442a-ba6e-7a48d7d14560",
+      "nama_bahasa": "Dayak Ngaju"
+    },
+    {
+      "id": "8a0535f4-0e4f-4f66-8a88-f8612b68d145",
+      "nama_bahasa": "Gorontalo"
+    },
+    {
+      "id": "7489e0dd-7df3-4a06-b1fb-79f97186c5ce",
+      "nama_bahasa": "Jawa"
+    },
+    {
+      "id": "55be6698-43a4-4264-bb2c-dff044811d04",
+      "nama_bahasa": "Toraja"
+    },
+    {
+      "id": "54de48b5-d9a0-425c-a8de-27295d056116",
+      "nama_bahasa": "Asmat"
+    },
+    {
+      "id": "039208c1-7c2c-4ad9-9e51-283e96273678",
+      "nama_bahasa": "Batak Karo"
+    },
+    {
+      "id": "862a2f92-dc9d-49aa-a434-5427411bc9fd",
+      "nama_bahasa": "Bugis"
+    },
+    {
+      "id": "4d241198-414f-4118-b2e0-34076ac8dd35",
+      "nama_bahasa": "Madura"
+    },
+    {
+      "id": "47812bf9-e96b-4bc3-aacc-a3827c4c15f6",
+      "nama_bahasa": "Minangkabau"
+    },
+    {
+      "id": "95d6dbca-e66b-478e-af5f-d5e2dcc1e68f",
+      "nama_bahasa": "Bali"
+    },
+    {
+      "id": "69dcf918-a599-4515-a42d-51193e1631fc",
+      "nama_bahasa": "Banjar"
+    },
+    {
+      "id": "5d05df7f-2de8-498e-afe4-091faa02e9f5",
+      "nama_bahasa": "Makassar"
+    },
+    {
+      "id": "6384ca38-251d-437b-b918-1518016c5c12",
+      "nama_bahasa": "Sasak"
+    },
+    {
+      "id": "339f2181-2eb1-45e0-b453-932cdb232927",
+      "nama_bahasa": "Dayak Iban"
+    },
+    {
+      "id": "58b7ad74-44fd-4906-a991-288668911b96",
+      "nama_bahasa": "Bima"
+    },
+    {
+      "id": "c5789179-62f6-41ea-8284-6bc899c13015",
+      "nama_bahasa": "Batak Simalungun"
+    },
+    {
+      "id": "4388148e-0109-425c-bf80-cd977e7b73bc",
+      "nama_bahasa": "Kluet"
+    },
+    {
+      "id": "59fecce3-6b5f-4d3e-b068-cd1b14cd1a17",
+      "nama_bahasa": "Semende"
+    },
+    {
+      "id": "4c90fb69-2b30-4613-80d5-7e196adab8f7",
+      "nama_bahasa": "Melayu Riau"
+    },
+    {
+      "id": "a0035c9f-c789-494c-a1c9-41be921599ea",
+      "nama_bahasa": "Kutai"
+    },
+    {
+      "id": "fcb49847-6d5f-458c-a08c-e981ea4c139d",
+      "nama_bahasa": "Pendau"
+    },
+    {
+      "id": "1d7efca7-2597-41ad-8541-990d6eee2c51",
+      "nama_bahasa": "Berawan"
+    },
+    {
+      "id": "bba7817e-82c6-4e40-9d81-f24f27ae23d8",
+      "nama_bahasa": "Bambam"
+    },
+    {
+      "id": "121fd22a-1bac-42c0-a636-109360bb09d4",
+      "nama_bahasa": "Kreol Portugis Flores"
+    },
+    {
+      "id": "ac54011b-0e60-4ca1-9620-d79e73e5d8bf",
+      "nama_bahasa": "Bikol Tengah"
+    },
+    {
+      "id": "a8f7cf4b-3420-457d-8b72-ae8f4b37ecc7",
+      "nama_bahasa": "Sepa"
+    },
+    {
+      "id": "7c2113ca-9d1a-48ea-9b7e-3361dfee30ec",
+      "nama_bahasa": "Makian"
+    },
+    {
+      "id": "30a1fc93-7036-4ca3-bcbe-27b76292ba18",
+      "nama_bahasa": "Mek"
+    },
+    {
+      "id": "7f368994-235d-473f-92b0-09e6411d012d",
+      "nama_bahasa": "Maybrat"
+    },
+    {
+      "id": "70268619-39fe-4865-bb99-ed28932d2fa1",
+      "nama_bahasa": "Miyoba"
+    },
+    {
+      "id": "bcbf174a-beb1-4029-8ed0-b7d5ecbe0da6",
+      "nama_bahasa": "Batak Mandailing"
+    },
+    {
+      "id": "8334578d-fba0-4c7e-839a-43faf11ebcd8",
+      "nama_bahasa": "Yakan"
+    },
+    {
+      "id": "7ec313be-368e-4413-b01f-8057916268a9",
+      "nama_bahasa": "Tatana"
+    },
+    {
+      "id": "fc7bbc7d-efad-4efe-a448-f7da9b257857",
+      "nama_bahasa": "Kumai"
+    },
+    {
+      "id": "7ac25615-b5c0-48db-985d-36e7beba2bf7",
+      "nama_bahasa": "Amarasi"
+    },
+    {
+      "id": "482d04ab-95c6-401f-a53f-7753ebf3e224",
+      "nama_bahasa": "Ambelau"
+    },
+    {
+      "id": "03cf96b7-e3a3-4b41-bc94-cf941d37adcd",
+      "nama_bahasa": "Patas"
+    },
+    {
+      "id": "1033d7ce-5b00-444f-9cc0-d896739d8050",
+      "nama_bahasa": "Aceh"
+    },
+    {
+      "id": "a5b91e1f-dd14-4d59-9936-965d83cbcc50",
+      "nama_bahasa": "Donggo"
+    },
+    {
+      "id": "75b572c5-03cf-4c75-a6d1-d5e56ee27248",
+      "nama_bahasa": "Arab-Jawa Klego"
+    },
+    {
+      "id": "11fbf135-54a5-4dd4-a9be-891a94c96cea",
+      "nama_bahasa": "Melayu Maumere"
+    },
+    {
+      "id": "62af14de-807f-44ce-af91-241c6f7a3558",
+      "nama_bahasa": "Melayu Ampenan"
+    },
+    {
+      "id": "14dbaa77-2957-4b96-bce6-6f0493d4c0e5",
+      "nama_bahasa": "Duri"
+    },
+    {
+      "id": "63dd42c4-9ae3-4686-b90c-af8212b9f5f3",
+      "nama_bahasa": "Embaloh"
+    },
+    {
+      "id": "660f7233-b9a8-4458-a18c-cb48cc9eae62",
+      "nama_bahasa": "Ambon"
+    },
+    {
+      "id": "06a0d1e3-0e51-42ca-994e-8b783bb21a30",
+      "nama_bahasa": "Ampanang"
+    },
+    {
+      "id": "6273b094-9c6c-4364-a31f-debc9ee5ff28",
+      "nama_bahasa": "Musi"
+    },
+    {
+      "id": "5417059e-3d9c-4701-86c8-26c201a30727",
+      "nama_bahasa": "Tabun"
+    },
+    {
+      "id": "249054a8-81a8-4ef1-bc49-18f3febe235c",
+      "nama_bahasa": "Ende"
+    },
+    {
+      "id": "e9643e7a-25a1-42ab-8f3b-3120dd8a46e9",
+      "nama_bahasa": "Flores"
+    },
+    {
+      "id": "2f1036c5-7ffe-41a3-a1bd-7359c4126629",
+      "nama_bahasa": "Iban"
+    },
+    {
+      "id": "559275c5-5b09-43cf-85d6-2e2db9224626",
+      "nama_bahasa": "Kamberau"
+    },
+    {
+      "id": "b5667aa7-731c-4bc8-9414-884f6d961859",
+      "nama_bahasa": "Bamayo"
+    },
+    {
+      "id": "807889ee-0aaf-4be7-9b07-a2dc304acae5",
+      "nama_bahasa": "Batak Angkola"
+    },
+    {
+      "id": "4d620691-6f1d-496d-a11f-e3d5328511a3",
+      "nama_bahasa": "Batak Dairi"
+    },
+    {
+      "id": "5a604d6c-b961-4fb9-b2ee-404603612631",
+      "nama_bahasa": "Batak Pakpak"
+    },
+    {
+      "id": "a8dbcb9d-2016-4be1-80ef-5795f6327087",
+      "nama_bahasa": "Ciacia"
+    },
+    {
+      "id": "3fca7f80-78f5-40b4-b9bd-6f81e0a131d8",
+      "nama_bahasa": "Dayak Bakati"
+    },
+    {
+      "id": "0c143216-3415-4567-8198-dd00d459ed78",
+      "nama_bahasa": "Dayak Kenyah"
+    },
+    {
+      "id": "8d811ada-6d48-4248-b6b6-8d57d51f5280",
+      "nama_bahasa": "Habu"
+    },
+    {
+      "id": "fd24f5a6-ee16-4caf-85df-5b7dbc9c261e",
+      "nama_bahasa": "Kendayan"
+    },
+    {
+      "id": "43d5fd24-47d7-4067-adcf-b521226828f0",
+      "nama_bahasa": "Demografi Indonesia"
+    },
+    {
+      "id": "2ad2ddb2-c0b6-4a4f-aedc-905068daeea1",
+      "nama_bahasa": "Alas"
+    },
+    {
+      "id": "303720c2-c4e5-490a-81c7-88594be41d4c",
+      "nama_bahasa": "Tamiang"
+    },
+    {
+      "id": "99b39bc0-9a9e-43c9-b2f0-3ddaf74f0d73",
+      "nama_bahasa": "Bentong"
+    },
+    {
+      "id": "28d9794e-63c2-4602-93b7-3f13afd745a7",
+      "nama_bahasa": "Aneuk Jamee"
+    },
+    {
+      "id": "d7adc623-1099-47f1-9c0e-182af4c3a6c8",
+      "nama_bahasa": "Singkil"
+    },
+    {
+      "id": "7e099796-880b-46db-899f-e04f304156f8",
+      "nama_bahasa": "Pakpak"
+    },
+    {
+      "id": "7150e727-dd42-46b9-84b4-568d5cf1313d",
+      "nama_bahasa": "Dairi"
+    },
+    {
+      "id": "ba3c98dc-dc00-4986-aaf6-d6a0388857df",
+      "nama_bahasa": "Sikule"
+    },
+    {
+      "id": "e7cf2e00-ee04-4dbe-9cb8-cd7368ade5a5",
+      "nama_bahasa": "Kubu"
+    },
+    {
+      "id": "38ef5c50-6cdf-4aaf-b161-15ef3ffa594e",
+      "nama_bahasa": "Lubu"
+    },
+    {
+      "id": "1c39da0a-5538-4ab4-8fc5-3c82c88a1506",
+      "nama_bahasa": "Pasemah"
+    },
+    {
+      "id": "f481d750-a1f5-4b03-88ac-2e1f0efcb705",
+      "nama_bahasa": "Serawai"
+    },
+    {
+      "id": "643b1110-846b-4dc2-acc9-a040767dbdd8",
+      "nama_bahasa": "Semendo"
+    },
+    {
+      "id": "020eb25f-7553-4b5a-8ca4-c397a7d3ae99",
+      "nama_bahasa": "Lampung Nyo"
+    },
+    {
+      "id": "4f9d43f6-4226-4419-a9f1-b12793898714",
+      "nama_bahasa": "Lampung Api"
+    },
+    {
+      "id": "8fd5925a-7cac-4943-bd89-cb85cf5c1050",
+      "nama_bahasa": "Pubian"
+    },
+    {
+      "id": "f4ecc572-0a1b-4571-a32c-f36d58f99be4",
+      "nama_bahasa": "Abung"
+    },
+    {
+      "id": "1fe64944-c311-4281-8064-6d9ef83fd6c5",
+      "nama_bahasa": "Sungkai"
+    },
+    {
+      "id": "b04ff4f7-5a0f-49c3-b799-eb3e22c64645",
+      "nama_bahasa": "Krui"
+    },
+    {
+      "id": "752da055-9a42-40fa-97a8-03090ac7747a",
+      "nama_bahasa": "Ranau"
+    },
+    {
+      "id": "8213ad7e-114e-43cc-915d-7005f170f802",
+      "nama_bahasa": "Belalau"
+    },
+    {
+      "id": "e56f2643-578a-4fd0-be8e-4eab143b856d",
+      "nama_bahasa": "Melayu Jambi"
+    },
+    {
+      "id": "e83f1b5f-98d0-47b1-9954-11f3f3f0e68f",
+      "nama_bahasa": "Melayu Bangka"
+    },
+    {
+      "id": "930660ba-a134-4f4f-ae40-85799bb0f266",
+      "nama_bahasa": "Melayu Palembang"
+    },
+    {
+      "id": "b5001e26-c3d0-4f4d-b10b-226957e060c8",
+      "nama_bahasa": "Melayu Bengkulu"
+    },
+    {
+      "id": "8f30fbc6-56d6-4f05-85cc-d82402de1dc0",
+      "nama_bahasa": "Osing"
+    },
+    {
+      "id": "f2f7ef21-cc2e-4a7a-995a-8a5a60dc5185",
+      "nama_bahasa": "Tengger"
+    },
+    {
+      "id": "7700affb-1a14-439c-ae41-c12d1550067b",
+      "nama_bahasa": "Banyumasan"
+    },
+    {
+      "id": "42fb5cd3-3d1e-40ab-9f60-107538eac974",
+      "nama_bahasa": "Banten"
+    },
+    {
+      "id": "e21fbfec-15ba-4470-b9e5-ae760799ed23",
+      "nama_bahasa": "Cirebon"
+    },
+    {
+      "id": "71653e70-b15b-45a8-ae3c-525def09e2ee",
+      "nama_bahasa": "Dayak Benuaq"
+    },
+    {
+      "id": "18256812-c1a5-4c90-9832-dd9d181ea8a1",
+      "nama_bahasa": "Dayak Tunjung"
+    },
+    {
+      "id": "b991ecdb-8770-4203-a454-8f9a65c4b0da",
+      "nama_bahasa": "Dayak Lawangan"
+    },
+    {
+      "id": "a2e99d67-7c0d-4fc9-b6b9-7c9d67fb5a47",
+      "nama_bahasa": "Dayak Maanyan"
+    },
+    {
+      "id": "a3c15ed1-e664-4fc4-a9a4-ecde30f01500",
+      "nama_bahasa": "Dayak Dohoi"
+    },
+    {
+      "id": "65957abe-81e3-44be-8a6c-c21a1d16903f",
+      "nama_bahasa": "Dayak Siang"
+    },
+    {
+      "id": "8f71e4e5-9429-47ca-9589-e806eb1c1784",
+      "nama_bahasa": "Berau"
+    },
+    {
+      "id": "fe8ceda0-c5e5-4ae4-94b1-3b965057abc3",
+      "nama_bahasa": "Murut"
+    },
+    {
+      "id": "41341043-1365-444e-92fc-5c0212d7c64b",
+      "nama_bahasa": "Bisaya"
+    },
+    {
+      "id": "b58bba18-e4d5-40a5-b243-a9ef02568628",
+      "nama_bahasa": "Selako"
+    },
+    {
+      "id": "d6d986d6-1598-4c7f-9a3a-b6042615611b",
+      "nama_bahasa": "Mualang"
+    },
+    {
+      "id": "6029ded0-190d-490c-bd6c-f16d7d583547",
+      "nama_bahasa": "Sanggau"
+    },
+    {
+      "id": "68d56faa-d967-47b9-bc2a-c5fcd65581d5",
+      "nama_bahasa": "Ribun"
+    },
+    {
+      "id": "35b4ce64-8ff5-47f9-931a-9e4cb51eae8f",
+      "nama_bahasa": "Kalis"
+    },
+    {
+      "id": "3e690b25-f503-4107-a461-bdee15b89abd",
+      "nama_bahasa": "Bukit"
+    },
+    {
+      "id": "1720d73d-6898-4103-85aa-b9fdc0dbe2b7",
+      "nama_bahasa": "Merap"
+    },
+    {
+      "id": "78c96a19-af8d-47c1-99a5-cc5fdfacac84",
+      "nama_bahasa": "Segai"
+    },
+    {
+      "id": "5feb0e9c-e716-426f-bf0c-6c4191a48e6d",
+      "nama_bahasa": "Bahau"
+    },
+    {
+      "id": "9a7b264f-bff8-4d64-80b4-b6c364a75598",
+      "nama_bahasa": "Modang"
+    },
+    {
+      "id": "07dbe7e9-2227-4b53-b160-914520e825c5",
+      "nama_bahasa": "Kahayan"
+    },
+    {
+      "id": "63d70fe4-60b3-4650-9349-e93692d83538",
+      "nama_bahasa": "Kapuas"
+    },
+    {
+      "id": "c3519ace-c690-4035-b0b0-656bc7d911ff",
+      "nama_bahasa": "Mendawai"
+    },
+    {
+      "id": "cac96524-4fee-48c5-90ba-05037aa5045a",
+      "nama_bahasa": "Sukamara"
+    },
+    {
+      "id": "72e10d7c-b460-4125-b838-f2551b462987",
+      "nama_bahasa": "Seberuang"
+    },
+    {
+      "id": "42088099-a8c1-48a2-951c-484e992df420",
+      "nama_bahasa": "Jongkong"
+    },
+    {
+      "id": "45d9d856-d1f2-49c8-86f6-edf24166df7e",
+      "nama_bahasa": "Campalagian"
+    },
+    {
+      "id": "b20d6a44-53df-4839-83dd-06c0e3d0b2f6",
+      "nama_bahasa": "Aralle-Tabulahan"
+    },
+    {
+      "id": "27703ffe-506b-4ec8-885e-2f8b340ea747",
+      "nama_bahasa": "Dakka"
+    },
+    {
+      "id": "45c0fd2c-700e-4e0f-8062-bf48f411cda9",
+      "nama_bahasa": "Ulumanda"
+    },
+    {
+      "id": "e74dfc30-2d44-4d4f-adb6-9a7aa21bcdbb",
+      "nama_bahasa": "Kalao"
+    },
+    {
+      "id": "9418c2f9-45f5-40d5-92d7-54fa7ffc2482",
+      "nama_bahasa": "Tukang Besi"
+    },
+    {
+      "id": "36f6c81b-091b-49db-8f66-7c65e7594bfd",
+      "nama_bahasa": "Wakonae"
+    },
+    {
+      "id": "cd776e75-e15e-48d7-a1a1-3815dbd248f5",
+      "nama_bahasa": "Waru"
+    },
+    {
+      "id": "b8af0d7d-8786-4fdb-bf81-bbc4fe36bc7e",
+      "nama_bahasa": "Pancana"
+    },
+    {
+      "id": "8947f199-a56a-47fc-bec9-9509779e12e0",
+      "nama_bahasa": "Taloki"
+    },
+    {
+      "id": "8c4b1c62-61dc-450a-9c9f-f34502e767d4",
+      "nama_bahasa": "Tae"
+    },
+    {
+      "id": "ab7fb32d-07cf-4e73-ae84-200bee8b2b6d",
+      "nama_bahasa": "Enrekang"
+    },
+    {
+      "id": "a2b35b05-eba8-486b-9628-3198a533e5f2",
+      "nama_bahasa": "Maiwa"
+    },
+    {
+      "id": "bf1d8b26-9b88-4ce3-8c70-685c4c678276",
+      "nama_bahasa": "Lembata"
+    },
+    {
+      "id": "a0e93dc1-0078-4666-be7b-48fa25fe90b2",
+      "nama_bahasa": "Lindu"
+    },
+    {
+      "id": "6c1348bc-21f9-46c5-861a-e2b6bcd9fc57",
+      "nama_bahasa": "Tajio"
+    },
+    {
+      "id": "e20d653e-0bb0-4c53-86c8-b4ca4bc7fd48",
+      "nama_bahasa": "Andio"
+    },
+    {
+      "id": "6e8a4965-7dc0-47c6-8772-4d64409e467e",
+      "nama_bahasa": "Unde"
+    },
+    {
+      "id": "26de5ac5-c4c6-458a-972a-e37833b35f2a",
+      "nama_bahasa": "Sedoa"
+    },
+    {
+      "id": "13c608df-d61d-4543-b91f-b4de25d5629b",
+      "nama_bahasa": "Tolala"
+    },
+    {
+      "id": "81022a78-cfa3-4640-9266-3f4a857fdc9a",
+      "nama_bahasa": "Tombelala"
+    },
+    {
+      "id": "c14480e5-75cd-4d2e-b44d-e9f62df5bab0",
+      "nama_bahasa": "Dampelas"
+    },
+    {
+      "id": "6440e8d3-9bb3-4049-8888-4167e26146dd",
+      "nama_bahasa": "Lauje"
+    },
+    {
+      "id": "fce75a04-2869-404f-a7f1-8798ca157a54",
+      "nama_bahasa": "Suwawa"
+    },
+    {
+      "id": "051648c6-c763-4fd3-92a9-9d0f284463cf",
+      "nama_bahasa": "Atinggola"
+    },
+    {
+      "id": "d96d2743-ef2c-400a-b1da-fd57cd2c0662",
+      "nama_bahasa": "Limboto"
+    },
+    {
+      "id": "b3b9ca18-7330-4542-a31c-9e68753094b1",
+      "nama_bahasa": "Bolango"
+    },
+    {
+      "id": "ce498380-7cb1-42d4-b9a1-1c05be80d65d",
+      "nama_bahasa": "Kaidipang"
+    },
+    {
+      "id": "1fc05615-be58-41c3-9038-6da77546d5f4",
+      "nama_bahasa": "Sumbawa"
+    },
+    {
+      "id": "ff29d54d-7073-4526-a767-e45ddd4f57ec",
+      "nama_bahasa": "Dompu"
+    },
+    {
+      "id": "356a9cbe-3ce1-44eb-8ff6-8280ffe3660e",
+      "nama_bahasa": "Ngadha"
+    },
+    {
+      "id": "ad8782cf-d506-44ca-81ca-0a8ef4b4e0ce",
+      "nama_bahasa": "Keo"
+    },
+    {
+      "id": "0e98b28f-62eb-4d2c-9a8d-96d5ee8487ac",
+      "nama_bahasa": "Krowai"
+    },
+    {
+      "id": "6d1dfbaa-00d0-4f00-a602-1a360f50bfa7",
+      "nama_bahasa": "Adonara"
+    },
+    {
+      "id": "72e2391c-79c0-49ca-9295-908687260b36",
+      "nama_bahasa": "Solor"
+    },
+    {
+      "id": "132dd0e7-de7f-4b61-976c-b27b33fda907",
+      "nama_bahasa": "Abui"
+    },
+    {
+      "id": "4440d746-d5f5-423a-8869-05f00c6d06fc",
+      "nama_bahasa": "Wersing"
+    },
+    {
+      "id": "8772d358-6c07-43c4-8bf1-b2177fcf5bbe",
+      "nama_bahasa": "Kula"
+    },
+    {
+      "id": "6c7e813e-10c0-46c3-9ee0-e99bf9202991",
+      "nama_bahasa": "Reta"
+    },
+    {
+      "id": "59ab7fe5-cb83-4503-9e07-3d0467da7e07",
+      "nama_bahasa": "Korowai"
+    },
+    {
+      "id": "fdf1276c-b535-413e-8c9f-62b28f5f7fc1",
+      "nama_bahasa": "Poboya"
+    },
+    {
+      "id": "fabbfc88-0197-4093-b9bb-a8125e46857e",
+      "nama_bahasa": "Leti"
+    },
+    {
+      "id": "f541b55d-8d1c-487d-9a00-102aa5df9a97",
+      "nama_bahasa": "Mombum"
+    },
+    {
+      "id": "0c6b3152-df05-4d41-ad7b-46afae2e55cc",
+      "nama_bahasa": "Luang"
+    },
+    {
+      "id": "c562d996-4b46-44dc-9618-c2c18d68f0e3",
+      "nama_bahasa": "Fordata"
+    },
+    {
+      "id": "655d5aba-e1a2-4d6d-b330-1c0811467c35",
+      "nama_bahasa": "Ngalik"
+    },
+    {
+      "id": "5c88a29a-90d9-409c-b0e0-99ac876c2993",
+      "nama_bahasa": "Seluwasan"
+    },
+    {
+      "id": "5352b6c3-1760-4406-82b0-3b6a76dd7924",
+      "nama_bahasa": "Damer"
+    },
+    {
+      "id": "41c3c815-1929-41f7-b1f7-50e26cffd4c7",
+      "nama_bahasa": "Wetarese"
+    },
+    {
+      "id": "b676f3bb-5d0e-4f19-a78b-f4407abc0b96",
+      "nama_bahasa": "Galoli"
+    },
+    {
+      "id": "d82845df-6413-4e86-81f1-bfdfdbac3964",
+      "nama_bahasa": "Makasae"
+    },
+    {
+      "id": "9904e0f8-86a7-4b4f-8748-45d80a009ed8",
+      "nama_bahasa": "Tetum"
+    },
+    {
+      "id": "2b131af3-9b3b-4e55-8f50-d437b3f89f24",
+      "nama_bahasa": "Mambae"
+    },
+    {
+      "id": "7cb79ca4-29b2-41b1-9cf5-e51e0c55e80c",
+      "nama_bahasa": "Tocodede"
+    },
+    {
+      "id": "8fe24ab6-980a-40aa-97c6-db45dd435c9e",
+      "nama_bahasa": "Awyi"
+    },
+    {
+      "id": "122fbba3-672e-4554-a820-fb218be32fab",
+      "nama_bahasa": "Idalaka"
+    },
+    {
+      "id": "d0d44f89-3696-49a0-bd76-0c80340e43a7",
+      "nama_bahasa": "Kairui"
+    },
+    {
+      "id": "40f79d98-f83b-4e79-b6b1-d5d49db09d66",
+      "nama_bahasa": "Warkai"
+    },
+    {
+      "id": "1fc87b10-ce58-42a7-b05b-b85e29b8fd7d",
+      "nama_bahasa": "Waima'a"
+    },
+    {
+      "id": "04c6ddbd-b406-4072-ae82-9fa835f46d37",
+      "nama_bahasa": "Naueti"
+    },
+    {
+      "id": "e1064fcd-7ffb-4977-979b-2d87c273aaa8",
+      "nama_bahasa": "Ninggerum"
+    },
+    {
+      "id": "688945a6-4b9d-42d7-a4f5-55249baa2276",
+      "nama_bahasa": "Marind"
+    },
+    {
+      "id": "47c4daa7-95c0-449c-805c-0606a03000b6",
+      "nama_bahasa": "Habun"
+    },
+    {
+      "id": "40e42c6f-18fd-4e63-b356-f04aa53ab3af",
+      "nama_bahasa": "Raihat"
+    },
+    {
+      "id": "64d2b287-be7f-405d-9063-f24583447e5e",
+      "nama_bahasa": "Yaqay"
+    },
+    {
+      "id": "22fba3a6-fac6-4515-a6ce-de50bcb0ccc1",
+      "nama_bahasa": "Kanum"
+    },
+    {
+      "id": "35ee50f0-ecc4-4246-9f44-2739ff29437f",
+      "nama_bahasa": "Lova"
+    },
+    {
+      "id": "89bcb64d-d652-4048-9f5d-98c7f9e9c7f5",
+      "nama_bahasa": "Tulehu"
+    },
+    {
+      "id": "69c452be-d6f4-43e6-af77-8ed34e483b38",
+      "nama_bahasa": "Asilulu"
+    },
+    {
+      "id": "bb29f11d-c035-435f-9a79-af03169cc352",
+      "nama_bahasa": "Eipo"
+    },
+    {
+      "id": "f4bdd22f-bdfc-4513-b31d-12b70f82e972",
+      "nama_bahasa": "Manipa"
+    },
+    {
+      "id": "28694cf0-4e84-41a4-b9cc-64c84355a3b3",
+      "nama_bahasa": "Elpaputih"
+    },
+    {
+      "id": "9b766181-a692-4eef-b08c-70111ac2b362",
+      "nama_bahasa": "Kaelolo"
+    },
+    {
+      "id": "5d8db7b6-853f-407a-99b0-a4560b01445f",
+      "nama_bahasa": "Amahai"
+    },
+    {
+      "id": "cb8d2145-b337-4d82-8466-875e1b4aa7c3",
+      "nama_bahasa": "Seit"
+    },
+    {
+      "id": "8835f71a-9511-4db4-9303-339d939a682d",
+      "nama_bahasa": "Nusaelaut"
+    },
+    {
+      "id": "810a9cc8-cba9-44b1-9e0d-a85fbc5bf975",
+      "nama_bahasa": "Teluti"
+    },
+    {
+      "id": "3be7dc40-8824-4e68-9607-8f4865f38263",
+      "nama_bahasa": "Lisabata"
+    },
+    {
+      "id": "0d0b2ff3-9e4c-493c-8c40-5488bb801b3a",
+      "nama_bahasa": "Nuniali"
+    },
+    {
+      "id": "7e2404b1-752f-4b2b-89bf-dfef7e20faa3",
+      "nama_bahasa": "Moksela"
+    },
+    {
+      "id": "fc0b919c-319c-4e58-9730-8bf55288bda1",
+      "nama_bahasa": "Lisela"
+    },
+    {
+      "id": "e0037664-c744-437e-a809-f9651008db6b",
+      "nama_bahasa": "Masiwang"
+    },
+    {
+      "id": "4a88b88d-b16b-4a7a-b396-ff27f0f111b6",
+      "nama_bahasa": "Dawera-Daweloor"
+    },
+    {
+      "id": "843bda13-020e-433c-8d94-29f70a0795c9",
+      "nama_bahasa": "Geser"
+    },
+    {
+      "id": "6ceab96f-b532-4563-9fe2-9ba7ec60b1a2",
+      "nama_bahasa": "Gorom"
+    },
+    {
+      "id": "6f2a6e4e-acbd-4a94-8d87-fd4ca2a4707f",
+      "nama_bahasa": "Wahai"
+    },
+    {
+      "id": "97a39226-c046-4d1b-b4fb-ac58ab17220a",
+      "nama_bahasa": "Bati"
+    },
+    {
+      "id": "d375d28a-fe3a-4aa5-9dd9-e12534b2b1ed",
+      "nama_bahasa": "Mangole"
+    },
+    {
+      "id": "9b86341b-b145-482e-8e43-c44aa53e4535",
+      "nama_bahasa": "Sanana"
+    },
+    {
+      "id": "9988960b-325e-48c2-9526-0107ae06e6f3",
+      "nama_bahasa": "Loloda"
+    },
+    {
+      "id": "4b35407c-b280-4eb7-8e0b-0f537f562ab0",
+      "nama_bahasa": "Tidore"
+    },
+    {
+      "id": "7d4be2db-f248-4d32-babd-f0eb941ae46f",
+      "nama_bahasa": "Kayoa"
+    },
+    {
+      "id": "6ff8dee9-13f8-43b2-90d1-521940e317a7",
+      "nama_bahasa": "Obi"
+    },
+    {
+      "id": "695c9af7-9573-4c83-96b0-96db43759321",
+      "nama_bahasa": "Forest Tobelo"
+    },
+    {
+      "id": "865a4780-c357-47d9-9fdc-325067ff542d",
+      "nama_bahasa": "Pagu"
+    },
+    {
+      "id": "69fbba37-a6d2-4b72-b377-b411a3483dd6",
+      "nama_bahasa": "Gamkonora"
+    },
+    {
+      "id": "2eec4159-9a00-45bc-815c-af7b45f6a1b4",
+      "nama_bahasa": "Waioli"
+    },
+    {
+      "id": "3128b0db-93be-4fa3-b22a-7ef0ce0bc8af",
+      "nama_bahasa": "Maba"
+    },
+    {
+      "id": "b4d1e13d-d264-41d1-8640-fd3c60a38969",
+      "nama_bahasa": "Yali"
+    },
+    {
+      "id": "2314187c-b05c-4917-a339-cee3c09650c7",
+      "nama_bahasa": "Mee"
+    },
+    {
+      "id": "1c61d579-7c86-4742-b4ce-a38411ee5718",
+      "nama_bahasa": "Moni"
+    },
+    {
+      "id": "979f2d74-0feb-451c-9957-32b88da71e50",
+      "nama_bahasa": "Amung"
+    },
+    {
+      "id": "6982fd66-bfb0-4230-90b3-96c3c2526719",
+      "nama_bahasa": "Sko"
+    },
+    {
+      "id": "30cfd201-026f-4017-8dcb-6253650c3a4c",
+      "nama_bahasa": "I'saka"
+    },
+    {
+      "id": "18290c60-d6f0-4c31-8c4b-b758846b9502",
+      "nama_bahasa": "Biangai"
+    },
+    {
+      "id": "c55b2d51-4589-4949-b0f7-b74f0ffe72b8",
+      "nama_bahasa": "Tunggare"
+    },
+    {
+      "id": "c4a70d0e-7189-46e9-a2d1-de97a453937c",
+      "nama_bahasa": "Nisa"
+    },
+    {
+      "id": "ac5e17f5-b548-4ec6-99c2-804d777e56f5",
+      "nama_bahasa": "Hattam"
+    },
+    {
+      "id": "f0bd6e2f-b47b-46df-8813-099411a3fd00",
+      "nama_bahasa": "Arfak"
+    },
+    {
+      "id": "8b3c3528-e641-481b-a989-83bb1898209b",
+      "nama_bahasa": "Sougb"
+    },
+    {
+      "id": "55ae4c79-dc75-4cd7-a08c-50757b545276",
+      "nama_bahasa": "Dombano"
+    },
+    {
+      "id": "36eba52a-2504-4fe1-9477-8ffdd7d7f3aa",
+      "nama_bahasa": "Bulik"
+    },
+    {
+      "id": "d3f92b67-6e90-4a1a-99e7-c3076838e8e4",
+      "nama_bahasa": "Serui"
+    },
+    {
+      "id": "167d4694-31ad-4644-a707-b8333c0aa03b",
+      "nama_bahasa": "Yapen"
+    },
+    {
+      "id": "984ad9d2-9233-4709-9ed0-265d69320a07",
+      "nama_bahasa": "Batak Toba"
+    },
+    {
+      "id": "8820ec8d-50d1-4141-8043-9c0ce562043b",
+      "nama_bahasa": "Ansus"
+    },
+    {
+      "id": "e5080a2c-f9a4-4a0f-8b47-d978335615df",
+      "nama_bahasa": "Moor"
+    },
+    {
+      "id": "ae151754-5d20-4dbc-bf66-eae992f4a4c8",
+      "nama_bahasa": "Wondama"
+    },
+    {
+      "id": "bac45aa9-9b54-4828-a515-0be65c0b3552",
+      "nama_bahasa": "Roon"
+    },
+    {
+      "id": "79cb561f-d589-4d5f-8be4-c18f8f27b7b4",
+      "nama_bahasa": "Yeretuar"
+    },
+    {
+      "id": "398033c5-1347-4476-a8b2-5c1da2dc285c",
+      "nama_bahasa": "Umar"
+    },
+    {
+      "id": "79535eff-ff43-4bf6-8f94-82b83d0e134b",
+      "nama_bahasa": "Dusner"
+    },
+    {
+      "id": "108a8886-2a7f-4b3c-a202-ba7303aad8c9",
+      "nama_bahasa": "Mori Bawah"
+    },
+    {
+      "id": "6c3f7891-18e1-4f8a-bca5-00208a52223b",
+      "nama_bahasa": "Uma"
+    },
+    {
+      "id": "477b0ff6-6385-4829-b508-d177b20fb271",
+      "nama_bahasa": "Behoa"
+    },
+    {
+      "id": "19b9f149-1106-47e6-b1a6-96d7590a7c86",
+      "nama_bahasa": "Napu"
+    },
+    {
+      "id": "71cf6646-c583-4b2c-8a62-bd5b3bb0524c",
+      "nama_bahasa": "Palue"
+    },
+    {
+      "id": "5a78824f-f754-4a04-b9aa-deae91dec620",
+      "nama_bahasa": "Mukang"
+    },
+    {
+      "id": "73196201-b7e0-4dea-9004-fbf8395d29b3",
+      "nama_bahasa": "Wanukaka"
+    },
+    {
+      "id": "adaf7a39-5029-41f9-a7ea-9ba15227510f",
+      "nama_bahasa": "Mamboru"
+    },
+    {
+      "id": "31ae7b07-27bc-49e7-a99b-171ae211c5d2",
+      "nama_bahasa": "Anakalangu"
+    },
+    {
+      "id": "85d7ac66-8f6a-46d1-b1a7-f7c0145d4770",
+      "nama_bahasa": "Weyewa"
+    },
+    {
+      "id": "6707bc30-6b75-4829-aa1d-946d491891ac",
+      "nama_bahasa": "Laura"
+    },

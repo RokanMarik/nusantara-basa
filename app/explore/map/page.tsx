@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/Header";
 import { BottomPanel } from "@/components/layout/BottomPanel";
+import { ProvincePanel } from "@/components/map/ProvincePanel";
 import type { BahasaMarker } from "@/lib/types";
 
 const LanguageMap = dynamic(
@@ -21,6 +22,7 @@ export default function MapPage() {
   const [loading, setLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchResultInfo, setSearchResultInfo] = useState<string | null>(null);
+  const [showProvincePanel, setShowProvincePanel] = useState(false);
 
   useEffect(() => {
     fetch("/api/locations/markers")
@@ -79,6 +81,22 @@ export default function MapPage() {
       <div className="absolute inset-0">
         <LanguageMap markers={bahasaList} />
       </div>
+      
+      {/* Province Stats Toggle Button */}
+      <button
+        onClick={() => setShowProvincePanel(!showProvincePanel)}
+        className="absolute top-20 right-4 z-[1000] bg-white rounded-lg shadow-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+      >
+        {showProvincePanel ? "Tutup" : "Statistik Provinsi"}
+      </button>
+      
+      {/* Province Panel */}
+      {showProvincePanel && (
+        <div className="absolute top-32 right-4 z-[1000]">
+          <ProvincePanel />
+        </div>
+      )}
+      
       <div className="absolute bottom-0 left-0 right-0 z-[1000]">
         <BottomPanel
           search={search}

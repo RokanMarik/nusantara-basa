@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="data pokok kebahasaan dan kesastraan">
+    <meta name="author" content="badan bahasa, badan pengembangan dan pembinaan bahasa">
+    <title>Badan Bahasa</title>
+    <link href="css/reset.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+.logo {padding:10px 0 0 0;}
+.pagenumber1 {display:inline-table; background-color:#CCCCCC; border:solid 1px #999999;}
+.pagenumber2 {display:inline-table; border:solid 1px #999999;}
+.link2{
+color:#999999;
+padding-left:25px;
+font-size:12px;
+padding-top:5px;
+}
+</style>
+<script type="text/javascript">
+if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1 ){ 
+alert("Peramban yang Anda gunakan tidak mendukung aplikasi Dapobas. Gunakan Chrome, Firefox atau Opera untuk menampilkan hasil terbaik.");
+window.location = "indexie";
+}
+</script>
+<body class="landing-page">
+<div class="navbar-wrapper">
+<nav class="navbar navbar-default" style=" background-image:url(images/head.png); background-repeat:repeat-x; z-index:10; margin: 0;">
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<div class="navbar-wrapper" style="width:100%; top:0;">
+<style>
+.dropbtn1 {
+    background-color:#FFFFFF;
+    border:solid #999999 1px;
+    border-radius:5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #74b0fb;
+}
+
+.dropdown1 {
+    float: right;
+    position: relative;
+    display: inline-block;
+     z-index: 100;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #9933cc;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 100;
+    border-radius:5px;
+}
+
+.dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+     z-index: 100;
+}
+
+.dropdown1 a:hover {background-color: #790daf;}
+.show {display: block;}
+</style>
+<table width="100%" border="0" style="z-index: 100;">
+<tr style="background:#9933CC;">
+<td align="left" valign="middle" style=" border-bottom:solid #999999 1px;padding-top:5px; padding-bottom:5px;">
+<a href="index.php"><img src="images/logo1.png" /></a>
+</td>
+<td align="right" valign="middle" style=" border-bottom:solid #999999 1px; padding-top:5px; padding-bottom:5px;">
+<div class="dropdown1">
+<button onClick="myFunction()" class="dropbtn1">&#9776;</button>
+<div id="mydropdown1" class="dropdown1-content" style="text-align:left; padding-left:10px; z-index:1;">
+<a href="index.php"><img src="ikons/home.png" alt="" /></a>
+<a href="referensi"><img src="ikons/referensi.png" alt="" /></a>
+<a href="databahasa.php"><img src="ikons/bahasa.png" alt="" /></a>
+<a href="datasastra.php"><img src="ikons/sastra.png" alt="" /></a>
+<a href="search_filter"><img src="ikons/advanced.png" alt="" /></a>
+<a href="charts"><img src="ikons/charts.png" alt="" /></a>
+<a href="info"><img src="ikons/about.png" alt="" /></a>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown1 content */
+function myFunction() {
+    document.getElementById("mydropdown1").classList.toggle("show");
+}
+
+// Close the dropdown1 if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown1-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var opendropdown = dropdowns[i];
+      if (opendropdown.classList.contains('show')) {
+        opendropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script></div>
+</div>
+    <div class="small hidden-xs">
+   <div class="row" style=" width: 100%;">
+	  <div class="container-fluid" style=" background-color:#8355a5; width: 100%;">
+		<div class="navbar-header">
+     <a href="index.php"><img src="images/logo.png"></a>       
+		</div>   
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style=" background-color:#8355a5; padding-top:15px;">
+			<ul class="nav navbar-nav navbar-right">
+				<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+	padding-left:20px;
+	padding-top:10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px 16px;
+    z-index: 1;
+	right:0;
+	border-radius: 15px 0px 15px 0px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+</style>
+<li><div class="dropdown"><span><a href="index" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/home.png" alt="" />Beranda</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Halaman Beranda</p>
+          </div>
+</li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Objek</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/petabahasa&cat=1">Bahasa Daerah di indonesia</a></p>
+
+<p><a href="homecat.php?show=url/&cat=2">Aksara Daerah</a></p>
+
+<p><a href="homecat.php?show=url/regsastra3&cat=3">Sastra Tulisan Tangan</a></p>
+
+<p><a href="homecat.php?show=url/regsastra1&cat=4">Sastra Cetak</a></p>
+
+<p><a href="homecat.php?show=url/regsastra2&cat=5">Sastra Lisan</a></p>
+</p>
+</div>
+</div></li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Lembaga</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/bipa_list&cat=6">Lembaga BIPA</a></p>
+
+<p><a href="homecat.php?show=url/pegiatukbi&cat=7">Lembaga Pegiat UKBI</a></p>
+
+<p><a href="homecat.php?show=url/komunitas&cat=8">Komunitas Sastra</a></p>
+
+<p><a href="homecat.php?show=url/komlit&cat=39">Komunitas Literasi</a></p>
+</p>
+</div>
+</div></li>    
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />SDM</a></span><div class="dropdown-content" style="width:180px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/widyabasa&cat=9">Widyabasa</a></p>
+
+<p><a href="homecat.php?show=url/pengajarbipa&cat=10">Pengajar BIPA</a></p>
+
+<p><a href="homecat.php?show=url/penyuluh&cat=11">Penyuluh</a></p>
+
+<p><a href="homecat.php?show=url/pekamus&cat=12">Pekamus</a></p>
+
+<p><a href="homecat.php?show=url/penyunting&cat=13">Penyunting</a></p>
+
+<p><a href="homecat.php?show=url/penerjemah_list&cat=14">Penerjemah</a></p>
+
+<p><a href="homecat.php?show=url/jurubahasa&cat=15">Juru Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/dubas1&cat=16">Duta Bahasa</a></p>
+</p>
+</div>
+</div></li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Substansi</a></span><div class="dropdown-content" style="width:420px;border-bottom:#0000FF solid 8px;">
+            
+<p><table border="0" width="100%">
+<tr><td valign=top>
+<p><a href="homecat.php?show=url/ukbi1&cat=17">Data UKBI</a></p>
+
+<p><a href="homecat.php?show=url/&cat=18">Data Pembinaan Pemantauan Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/&cat=19">Data Penghargaan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=20">Data Penugasan Ahli Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/penyuluhan&cat=21">Data Penyuluhan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=22">Data Pemelajar BIPA</a></p>
+
+<p><a href="homecat.php?show=url/pesuluh&cat=23">Data Pesuluh</a></p>
+
+<p><a href="homecat.php?show=url/&cat=24">Data Pemerkayaan Kosakata</a></p>
+
+<p><a href="homecat.php?show=url/&cat=25">Data Pengembangan Kamus</a></p>
+
+<p><a href="homecat.php?show=url/&cat=26">Data Pedoman Kebahasaan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=27">Data Bahan Diplomasi Kebahasaan</a></p>
+
+<p><a href="homecat.php?show=url/bukuterjemahan&cat=28">Data Buku Terjemahan</a></p></td><td width="20px">&nbsp;</td><td valign=top>
+<p><a href="homecat.php?show=url/&cat=29">Data Musikalisasi Puisi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=30">Data Bahan Pengayaan Literasi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=31">Data Transliterasi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=32">Data Peningkayan Kompetensi Bahasa Asing (PKBA)</a></p>
+
+<p><a href="homecat.php?show=url/&cat=33">Data Capaian Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=34">Data Konservasi Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=35">Data Revitalisasi Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=36">Data Pengembangan Sastra</a></p>
+
+<p><a href="homecat.php?show=url/pengarang&cat=37">Data Pengarang</a></p>
+
+<p><a href="homecat.php?show=url/tokohbahasa&cat=38">Data Tokoh Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/rbd&cat=41">Revitalisasi Bahasa Daerah</a></p>
+</td></tr>
+</table></p></div>
+</div></li>  
+<li><div class="dropdown"><span style="margin-top:5px;"><a href="simkeda/" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Simkeda</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Sistem Informasi Monitoring Kedaulatan Bahasa</p>
+          </div>
+        </div></li>
+<li><div class="dropdown"><span><a href="search_filter" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/advanced.png" alt="" />Pencarian</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Pencarian lanjut berdasarkan kategori</p>
+          </div>
+        </div></li>
+                <li><div class="dropdown"><span><a href="charts" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/charts.png" alt="" />Statistik</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p>Statistik</p>
+          </div>
+        </div></li>
+				<li><div class="dropdown"><span><a href="info" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/about.png" alt="" />Info</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p>Info</p>
+          </div>
+        </div></li>			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+</div>
+<div class="small hidden-xs">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td bgcolor="#CCCCCC" style=" padding-left:5px; padding-right:5px;" width="180px"><img src="images/banner1.png" alt="" /></td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);" width="450px">
+<div style=" width:450px;">
+<form  action="search.php" method="get">
+<div class="input-group">
+<input type="text" class="form-control" name="q" onBlur="if(this.value==&apos;&apos;)this.value=this.defaultValue;" onFocus="if(this.value==this.defaultValue)this.value=&apos;&apos;" type="text" placeholder="Cari Data ..."> 
+<span class="input-group-btn"> 
+<button type="submit" class="btn btn-primary" style=" padding:5px; background-color:#FFFFFF; border:1px solid #cccccc;"><img alt="search button" height="21" src="images/searchbox.png" title="Cari" width="21"/></button> </span></div>
+</form>
+</div>
+</td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan=2 bgcolor="#CCCCCC" style=" padding-left:5px; padding-right:5px;" width="180px"><img src="images/banner1.png" alt="" /></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);" width="250px">
+<div style=" width:250px;">
+<form  action="_search.php" method="get">
+<div class="input-group">
+<input type="text" class="form-control" name="q" onBlur="if(this.value==&apos;&apos;)this.value=this.defaultValue;" onFocus="if(this.value==this.defaultValue)this.value=&apos;&apos;" type="text" placeholder="Cari Data ..."> 
+<span class="input-group-btn"> 
+<button type="submit" class="btn btn-primary" style=" padding:5px; background-color:#FFFFFF; border:1px solid #cccccc;"><img alt="search button" height="21" src="images/searchbox.png" title="Cari" width="21"/></button> </span></div>
+</form>
+</div>
+</td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="small hidden-xs">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="195px"><img src="images/jeda_sisi.png" alt="" /></td>
+<td valign="top">
+
+    <style>
+.pagenumber1 {display:inline-table; background-color:#CCCCCC; border:solid 1px #999999;}
+.pagenumber2 {display:inline-table; border:solid 1px #999999;}
+.isi {font-size:12px; color:#000000;}
+.isi td{padding-bottom:5px; padding-top:5px;}
+</style>
+<script type="text/javascript" language="JavaScript1.2" src="js/popup.js"></script>
+
+
+<h3 style="font-weight:bold; font-size:24px; padding-top:10px; padding-bottom:20px;">Bahasa Daerah di Indonesia</h3>
+<p>Data : 718 Bahasa</p><table border="1" cellpadding="5" cellspacing="0" class="isi" style=" font-family:Arial, Helvetica, sans-serif; border:#FFFFFF solid 1px; border-collapse:collapse; font-size:11px; padding-top:5px; padding-bottom:5px;">
+  <tr height="30px" style="font-weight:bold; background-color:#666666; color:#FFFFFF; padding:5px;">
+    <td width="60px" align="center">No.</td>
+    <td width="200px">Bahasa</td>
+    <td width="250px">Wilayah</td>
+    <td width="200px">Provinsi</td>
+  </tr>
+
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=701></a>701.</td>
+			<td valign=top><strong>Yamdena </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=535"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=702></a>702.</td>
+			<td valign=top><strong>Yamueti </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3099"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=703></a>703.</td>
+			<td valign=top><strong>Yatoke </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=537"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=704></a>704.</td>
+			<td valign=top><strong>Yaur </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=813"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=705></a>705.</td>
+			<td valign=top><strong>Yaur Rihegure </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=814"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=706></a>706.</td>
+			<td valign=top><strong>Yawa Onate </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=815"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=707></a>707.</td>
+			<td valign=top><strong>Yei </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=816"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=708></a>708.</td>
+			<td valign=top><strong>Yei Bawah </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=817"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=709></a>709.</td>
+			<td valign=top><strong>Yelmek </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=818"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=710></a>710.</td>
+			<td valign=top><strong>Yeresiam </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=819"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=711></a>711.</td>
+			<td valign=top><strong>Yeresiam Kiruru </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=529"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=712></a>712.</td>
+			<td valign=top><strong>Yeresiam Pedalaman (Sirise)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=531"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=713></a>713.</td>
+			<td valign=top><strong>Yeretuar (Umare)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=820"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=714></a>714.</td>
+			<td valign=top><strong>Yetfa </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=821"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=715></a>715.</td>
+			<td valign=top><strong>Yokari </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=822"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=716></a>716.</td>
+			<td valign=top><strong>Yoke </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=823"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=717></a>717.</td>
+			<td valign=top><strong>Yonggom </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=824"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=718></a>718.</td>
+			<td valign=top><strong>Yuafeta </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=533"><u> Papua Barat</u></a></div></td>
+		</tr>
+		  
+</table>
+
+
+<div class="jeda"></div>
+	<a href='/homecat.php?show=url/petabahasa&cat=&page=7'><div class=pagenumber2>&nbsp;&lt;&lt;&nbsp;</div></a> <a href='/homecat.php?show=url/petabahasa&cat=&page=1'><div class=pagenumber2>&nbsp;1&nbsp;</div></a> ... <a href='/homecat.php?show=url/petabahasa&cat=&page=3'><div class=pagenumber2>&nbsp;3&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=4'><div class=pagenumber2>&nbsp;4&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=5'><div class=pagenumber2>&nbsp;5&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=6'><div class=pagenumber2>&nbsp;6&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=7'><div class=pagenumber2>&nbsp;7&nbsp;</div></a>  <b><div class=pagenumber1>&nbsp;8&nbsp;</div></b>  </td>
+</tr>
+</table>
+</td>
+<td width="195px"><img src="images/jeda_sisi.png" alt="" /></td>
+</tr>
+<tr>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="3" align="center"><div class="footer" style="color:#333333; text-align: center;">
+&copy; 2024 &nbsp;&nbsp;&nbsp;Badan Pengembangan dan Pembinaan Bahasa
+</footer></td>
+</tr>
+</table>
+
+</div>
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="10px">&nbsp;</td>
+<td valign="top">
+
+    <style>
+.pagenumber1 {display:inline-table; background-color:#CCCCCC; border:solid 1px #999999;}
+.pagenumber2 {display:inline-table; border:solid 1px #999999;}
+.isi {font-size:12px; color:#000000;}
+.isi td{padding-bottom:5px; padding-top:5px;}
+</style>
+<script type="text/javascript" language="JavaScript1.2" src="js/popup.js"></script>
+
+
+<h3 style="font-weight:bold; font-size:24px; padding-top:10px; padding-bottom:20px;">Bahasa Daerah di Indonesia</h3>
+<p>Data : 718 Bahasa</p><table border="1" cellpadding="5" cellspacing="0" class="isi" style=" font-family:Arial, Helvetica, sans-serif; border:#FFFFFF solid 1px; border-collapse:collapse; font-size:11px; padding-top:5px; padding-bottom:5px;">
+  <tr height="30px" style="font-weight:bold; background-color:#666666; color:#FFFFFF; padding:5px;">
+    <td width="60px" align="center">No.</td>
+    <td width="200px">Bahasa</td>
+    <td width="250px">Wilayah</td>
+    <td width="200px">Provinsi</td>
+  </tr>
+
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=701></a>701.</td>
+			<td valign=top><strong>Yamdena </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=535"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=702></a>702.</td>
+			<td valign=top><strong>Yamueti </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3099"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=703></a>703.</td>
+			<td valign=top><strong>Yatoke </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=537"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=704></a>704.</td>
+			<td valign=top><strong>Yaur </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=813"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=705></a>705.</td>
+			<td valign=top><strong>Yaur Rihegure </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=814"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=706></a>706.</td>
+			<td valign=top><strong>Yawa Onate </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=815"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=707></a>707.</td>
+			<td valign=top><strong>Yei </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=816"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=708></a>708.</td>
+			<td valign=top><strong>Yei Bawah </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=817"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=709></a>709.</td>
+			<td valign=top><strong>Yelmek </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=818"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=710></a>710.</td>
+			<td valign=top><strong>Yeresiam </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=819"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=711></a>711.</td>
+			<td valign=top><strong>Yeresiam Kiruru </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=529"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=712></a>712.</td>
+			<td valign=top><strong>Yeresiam Pedalaman (Sirise)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=531"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=713></a>713.</td>
+			<td valign=top><strong>Yeretuar (Umare)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=820"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=714></a>714.</td>
+			<td valign=top><strong>Yetfa </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=821"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=715></a>715.</td>
+			<td valign=top><strong>Yokari </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=822"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=716></a>716.</td>
+			<td valign=top><strong>Yoke </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=823"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=717></a>717.</td>
+			<td valign=top><strong>Yonggom </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=824"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=718></a>718.</td>
+			<td valign=top><strong>Yuafeta </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=533"><u> Papua Barat</u></a></div></td>
+		</tr>
+		  
+</table>
+
+
+<div class="jeda"></div>
+	<a href='/homecat.php?show=url/petabahasa&cat=&page=7'><div class=pagenumber2>&nbsp;&lt;&lt;&nbsp;</div></a> <a href='/homecat.php?show=url/petabahasa&cat=&page=1'><div class=pagenumber2>&nbsp;1&nbsp;</div></a> ... <a href='/homecat.php?show=url/petabahasa&cat=&page=3'><div class=pagenumber2>&nbsp;3&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=4'><div class=pagenumber2>&nbsp;4&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=5'><div class=pagenumber2>&nbsp;5&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=6'><div class=pagenumber2>&nbsp;6&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=7'><div class=pagenumber2>&nbsp;7&nbsp;</div></a>  <b><div class=pagenumber1>&nbsp;8&nbsp;</div></b>  </td>
+</tr>
+</table>
+</td>
+<td width="10px">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr>
+<td width="10px">&nbsp;</td>
+<td height="20px" align="center"><div class="footer" style="color:#333333; text-align: center;">
+&copy; 2024 &nbsp;&nbsp;&nbsp;Badan Pengembangan dan Pembinaan Bahasa
+</footer></td>
+<td width="10px">&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

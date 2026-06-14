@@ -1,0 +1,596 @@
+[
+  {
+    "no": 2,
+    "nama": "Abai",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Utara"
+  },
+  {
+    "no": 3,
+    "nama": "Abrap",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 4,
+    "nama": "Abui (Aboa)",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsi": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 5,
+    "nama": "Abun",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 6,
+    "nama": "Abun Gii  (Abun Jii)",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 7,
+    "nama": "Abun Ji  (Karon Pantai)",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 8,
+    "nama": "Aceh",
+    "wilayah": "Sumatra",
+    "provinsi": "Aceh"
+  },
+  {
+    "no": 9,
+    "nama": "Adagum (Citak Wagabus)",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 10,
+    "nama": "Adang",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsi": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 11,
+    "nama": "Afilaup",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 12,
+    "nama": "Aframa",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 13,
+    "nama": "Air Matoa",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 14,
+    "nama": "Airo",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 15,
+    "nama": "Airoran",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 16,
+    "nama": "Ale",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 17,
+    "nama": "Alor",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsi": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 18,
+    "nama": "Alune",
+    "wilayah": "Maluku",
+    "provinsi": "Maluku"
+  },
+  {
+    "no": 19,
+    "nama": "Amathamit",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 20,
+    "nama": "Ambai",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 21,
+    "nama": "Ambalau",
+    "wilayah": "Maluku",
+    "provinsi": "Maluku"
+  },
+  {
+    "no": 22,
+    "nama": "Ambel",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 23,
+    "nama": "Amber",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 24,
+    "nama": "Amungkal",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 25,
+    "nama": "Anakalang",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsi": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 26,
+    "nama": "Anasi",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 27,
+    "nama": "Ansus-Papuma",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 28,
+    "nama": "Anus",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 29,
+    "nama": "Aoheng (Penihing)",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Timur"
+  },
+  {
+    "no": 30,
+    "nama": "Arakam",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 31,
+    "nama": "Arandai",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 32,
+    "nama": "Are",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 33,
+    "nama": "Arguni (Taver)",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 34,
+    "nama": "Armati Sarma",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 35,
+    "nama": "Arubos",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 36,
+    "nama": "Arui-Mor",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 37,
+    "nama": "As",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 38,
+    "nama": "Asmat Bets Mbup",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 39,
+    "nama": "Asmat Safan",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 40,
+    "nama": "Asmat Sawa",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 41,
+    "nama": "Asmat Sirat",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 42,
+    "nama": "Asmat Unir Sirau",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 43,
+    "nama": "Asmat Waijens",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 44,
+    "nama": "Atam (Temma)",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 45,
+    "nama": "Auye",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 46,
+    "nama": "Awban",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 47,
+    "nama": "Awe (Maweyo, Kaburi)",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 48,
+    "nama": "Awera",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 49,
+    "nama": "Awyu Anggai",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 50,
+    "nama": "Awyu Darat Kotiak",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 51,
+    "nama": "Awyu Darat Yagatsu-Kiki",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 52,
+    "nama": "Awyu Laut",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 53,
+    "nama": "Awyu Meto",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 54,
+    "nama": "Awyu Tokompatu",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 55,
+    "nama": "Bacan",
+    "wilayah": "Maluku",
+    "provinsi": "Maluku Utara"
+  },
+  {
+    "no": 56,
+    "nama": "Bada",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Tengah"
+  },
+  {
+    "no": 57,
+    "nama": "Baedate",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 58,
+    "nama": "Baham",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 59,
+    "nama": "Bahau Diaq Lay",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Timur"
+  },
+  {
+    "no": 60,
+    "nama": "Bahau Ujoh Bilang",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Timur"
+  },
+  {
+    "no": 61,
+    "nama": "Bajau Pondong",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Timur"
+  },
+  {
+    "no": 62,
+    "nama": "Bajau Semayap",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Selatan"
+  },
+  {
+    "no": 63,
+    "nama": "Bajau Tungkal Satu",
+    "wilayah": "Sumatra",
+    "provinsi": "Jambi"
+  },
+  {
+    "no": 64,
+    "nama": "Bajo",
+    "wilayah": "Jawa dan Bali, Sulawesi, Nusa Tenggara Barat, Nusa Tenggara Timur, Maluku",
+    "provinsi": "Jawa Timur,  Sulawesi Tengah,  Sulawesi Selatan,  Sulawesi Tenggara,  Gorontalo,  Nusa Tenggara Barat,  Nusa Tenggara Timur,  Maluku Utara"
+  },
+  {
+    "no": 65,
+    "nama": "Bajo Delang",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsi": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 66,
+    "nama": "Bakatik",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Barat"
+  },
+  {
+    "no": 67,
+    "nama": "Bakumpai",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Tengah,  Kalimantan Selatan"
+  },
+  {
+    "no": 68,
+    "nama": "Balaesang",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Tengah"
+  },
+  {
+    "no": 69,
+    "nama": "Balai",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Tengah"
+  },
+  {
+    "no": 70,
+    "nama": "Balantak",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Tengah"
+  },
+  {
+    "no": 71,
+    "nama": "Bali",
+    "wilayah": "Sumatra, Jawa dan Bali, Kalimantan, Sulawesi, Nusa Tenggara Barat",
+    "provinsi": "Lampung,  Bali,  Kalimantan Tengah,  Sulawesi Tenggara,  Nusa Tenggara Barat"
+  },
+  {
+    "no": 72,
+    "nama": "Balkewan",
+    "wilayah": "Maluku",
+    "provinsi": "Maluku"
+  },
+  {
+    "no": 73,
+    "nama": "Banda",
+    "wilayah": "Maluku",
+    "provinsi": "Maluku"
+  },
+  {
+    "no": 74,
+    "nama": "Banggai",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Tengah"
+  },
+  {
+    "no": 75,
+    "nama": "Banjar",
+    "wilayah": "Sumatra, Kalimantan",
+    "provinsi": "Riau,  Jambi,  Kalimantan Tengah,  Kalimantan Selatan"
+  },
+  {
+    "no": 76,
+    "nama": "Bantik",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Utara"
+  },
+  {
+    "no": 77,
+    "nama": "Barakai",
+    "wilayah": "Maluku",
+    "provinsi": "Maluku"
+  },
+  {
+    "no": 78,
+    "nama": "Barapasi",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 79,
+    "nama": "Baras",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Barat"
+  },
+  {
+    "no": 80,
+    "nama": "Basap",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Timur"
+  },
+  {
+    "no": 81,
+    "nama": "Basemah",
+    "wilayah": "Sumatra",
+    "provinsi": "Lampung"
+  },
+  {
+    "no": 82,
+    "nama": "Batak",
+    "wilayah": "Sumatra",
+    "provinsi": "Aceh,  Sumatra Utara,  Sumatra Barat,  Riau"
+  },
+  {
+    "no": 83,
+    "nama": "Batanta",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 84,
+    "nama": "Batero",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 85,
+    "nama": "Batu",
+    "wilayah": "Nusa Tenggara Timur",
+    "provinsi": "Nusa Tenggara Timur"
+  },
+  {
+    "no": 86,
+    "nama": "Batuley",
+    "wilayah": "Maluku",
+    "provinsi": "Maluku"
+  },
+  {
+    "no": 87,
+    "nama": "Bauzi",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 88,
+    "nama": "Bawija",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 89,
+    "nama": "Bayan",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Tengah"
+  },
+  {
+    "no": 90,
+    "nama": "Bedoanas (Baruan-Erokwanas)",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 91,
+    "nama": "Beneraf",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 92,
+    "nama": "Benggaulu",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Barat"
+  },
+  {
+    "no": 93,
+    "nama": "Bengkulu",
+    "wilayah": "Sumatra",
+    "provinsi": "Bengkulu"
+  },
+  {
+    "no": 94,
+    "nama": "Benuaq",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Timur"
+  },
+  {
+    "no": 95,
+    "nama": "Berangas",
+    "wilayah": "Kalimantan",
+    "provinsi": "Kalimantan Selatan"
+  },
+  {
+    "no": 96,
+    "nama": "Berbai",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 97,
+    "nama": "Berik",
+    "wilayah": "Papua",
+    "provinsi": "Papua"
+  },
+  {
+    "no": 98,
+    "nama": "Beser",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 99,
+    "nama": "Beser Swaimbon",
+    "wilayah": "Papua",
+    "provinsi": "Papua Barat"
+  },
+  {
+    "no": 100,
+    "nama": "Besoa",
+    "wilayah": "Sulawesi",
+    "provinsi": "Sulawesi Tengah"
+  }
+]

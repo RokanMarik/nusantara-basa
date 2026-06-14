@@ -1,3 +1,9 @@
+// ============================================
+// NUSANTARA BASA - Prisma Schema v2.0
+// Updated: 2024-01-14
+// 14 tables total (8 existing + 6 new)
+// ============================================
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -6,6 +12,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+// ============================================
+// MODEL UTAMA - BAHASA & RUMPUN
+// ============================================
 
 model RumpunBahasa {
   id              String       @id @default(uuid()) @db.Uuid
@@ -39,17 +49,31 @@ model Bahasa {
   autoSummary        String?           @map("auto_summary") @db.Text
   dibuatPada         DateTime          @default(now()) @map("dibuat_pada")
   diperbaruiPada     DateTime          @default(now()) @updatedAt @map("diperbarui_pada")
+
+  // Relations (existing)
   lokasi             Lokasi[]
   fiturLinguistik    FiturLinguistik?
   kosakata           Kosakata[]
   statusPreservasi   StatusPreservasi?
   manuskrip          Manuskrip[]
 
+  // Relations (new)
+  mediaDokumen       MediaDanDokumen[]
+  sumberReferensi    SumberReferensi[]
+  peristiwaSejarah   PeristiwaSejarah[]
+  pengaruhBahasaLain PengaruhBahasaLain[]
+  penuturHistoris    PenuturHistoris[]
+  riwayatNama        RiwayatNama[]
+
   @@index([kodeIso639])
   @@index([statusVitalitas])
   @@index([rumpunId])
   @@map("bahasa")
 }
+
+// ============================================
+// MODEL MODUL INTI (existing)
+// ============================================
 
 model Lokasi {
   id             String   @id @default(uuid()) @db.Uuid
@@ -135,4 +159,121 @@ model Manuskrip {
 
   @@index([bahasaId])
   @@map("manuskrip")
+}
+
+// ============================================
+// MODEL TAMBAHAN BARU (6 tabel)
+// ============================================
+
+model MediaDanDokumen {
+  id              String   @id @default(uuid()) @db.Uuid
+  bahasaId        String   @map("bahasa_id") @db.Uuid
+  bahasa          Bahasa   @relation(fields: [bahasaId], references: [id], onDelete: Cascade)
+  tipeMedia       String   @map("tipe_media") @db.VarChar(50)
+  urlFile         String   @map("url_file") @db.Text
+  deskripsi       String?  @db.Text
+  tanggalUnggah   DateTime @default(now()) @map("tanggal_unggah")
+  format          String?  @db.VarChar(20)
+  ukuran          String?  @db.VarChar(20)
+  dibuatPada      DateTime @default(now()) @map("dibuat_pada")
+  diperbaruiPada  DateTime @default(now()) @updatedAt @map("diperbarui_pada")
+
+  @@index([bahasaId])
+  @@index([tipeMedia])
+  @@map("media_dokumen")
+}
+
+model SumberReferensi {
+  id              String   @id @default(uuid()) @db.Uuid
+  bahasaId        String   @map("bahasa_id") @db.Uuid
+  bahasa          Bahasa   @relation(fields: [bahasaId], references: [id], onDelete: Cascade)
+  namaLembaga     String   @map("nama_lembaga") @db.VarChar(200)
+  jenisSumber     String   @map("jenis_sumber") @db.VarChar(50)
+  tahunTerbit     Int?     @map("tahun_terbit")
+  urlDoi          String?  @map("url_doi") @db.Text
+  kredibilitas    String?  @db.VarChar(20)
+  catatan         String?  @db.Text
+  dibuatPada      DateTime @default(now()) @map("dibuat_pada")
+  diperbaruiPada  DateTime @default(now()) @updatedAt @map("diperbarui_pada")
+
+  @@index([bahasaId])
+  @@index([jenisSumber])
+  @@map("sumber_referensi")
+}
+
+model PeristiwaSejarah {
+  id                String   @id @default(uuid()) @db.Uuid
+  bahasaId          String   @map("bahasa_id") @db.Uuid
+  bahasa            Bahasa   @relation(fields: [bahasaId], references: [id], onDelete: Cascade)
+  tahunMulai        Int?     @map("tahun_mulai")
+  tahunSelesai      Int?     @map("tahun_selesai")
+  jenisPeristiwa    String   @map("jenis_peristiwa") @db.VarChar(100)
+  eraHistoris       String?  @map("era_historis") @db.VarChar(50)
+  dampakPadaBahasa  String?  @map("dampak_pada_bahasa") @db.Text
+  wilayahTerdampak  String?  @map("wilayah_terdampak") @db.Text
+  sumberSejarah     String?  @map("sumber_sejarah") @db.Text
+  catatan           String?  @db.Text
+  dibuatPada        DateTime @default(now()) @map("dibuat_pada")
+  diperbaruiPada    DateTime @default(now()) @updatedAt @map("diperbarui_pada")
+
+  @@index([bahasaId])
+  @@index([jenisPeristiwa])
+  @@index([eraHistoris])
+  @@map("peristiwa_sejarah")
+}
+
+model PengaruhBahasaLain {
+  id                String   @id @default(uuid()) @db.Uuid
+  bahasaId          String   @map("bahasa_id") @db.Uuid
+  bahasa            Bahasa   @relation(fields: [bahasaId], references: [id], onDelete: Cascade)
+  bahasaAsal        String   @map("bahasa_asal") @db.VarChar(100)
+  periodePengaruh   String?  @map("periode_pengaruh") @db.VarChar(100)
+  jenisPengaruh     String?  @map("jenis_pengaruh") @db.VarChar(50)
+  contohKosakata    Json?    @map("contoh_kosakata")
+  estimasiSerapan   Int?     @map("estimasi_serapan")
+  jalurMasuk        String?  @map("jalur_masuk") @db.VarChar(50)
+  catatan           String?  @db.Text
+  dibuatPada        DateTime @default(now()) @map("dibuat_pada")
+  diperbaruiPada    DateTime @default(now()) @updatedAt @map("diperbarui_pada")
+
+  @@index([bahasaId])
+  @@index([bahasaAsal])
+  @@index([jenisPengaruh])
+  @@map("pengaruh_bahasa_lain")
+}
+
+model PenuturHistoris {
+  id                String   @id @default(uuid()) @db.Uuid
+  bahasaId          String   @map("bahasa_id") @db.Uuid
+  bahasa            Bahasa   @relation(fields: [bahasaId], references: [id], onDelete: Cascade)
+  tahunSensus       Int      @map("tahun_sensus")
+  jumlahPenutur     Int      @map("jumlah_penutur")
+  metodePencacahan  String?  @map("metode_pencacahan") @db.VarChar(100)
+  sumberData        String?  @map("sumber_data") @db.VarChar(200)
+  wilayahCakupan    String?  @map("wilayah_cakupan") @db.Text
+  catatan           String?  @db.Text
+  dibuatPada        DateTime @default(now()) @map("dibuat_pada")
+  diperbaruiPada    DateTime @default(now()) @updatedAt @map("diperbarui_pada")
+
+  @@index([bahasaId])
+  @@index([tahunSensus])
+  @@map("penutur_historis")
+}
+
+model RiwayatNama {
+  id                String   @id @default(uuid()) @db.Uuid
+  bahasaId          String   @map("bahasa_id") @db.Uuid
+  bahasa            Bahasa   @relation(fields: [bahasaId], references: [id], onDelete: Cascade)
+  namaLama          String   @map("nama_lama") @db.VarChar(200)
+  periodeDigunakan  String?  @map("periode_digunakan") @db.VarChar(100)
+  digunakanOleh     String?  @map("digunakan_oleh") @db.VarChar(200)
+  aksaraAsli        String?  @map("aksara_asli") @db.VarChar(100)
+  alasanPerubahan   String?  @map("alasan_perubahan") @db.Text
+  catatan           String?  @db.Text
+  dibuatPada        DateTime @default(now()) @map("dibuat_pada")
+  diperbaruiPada    DateTime @default(now()) @updatedAt @map("diperbarui_pada")
+
+  @@index([bahasaId])
+  @@index([namaLama])
+  @@map("riwayat_nama")
 }

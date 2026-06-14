@@ -1,0 +1,641 @@
+[
+  {
+    "unmatched": {
+      "nama": "Senggi",
+      "original": "Bahasa Senggi (Find)",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Somu",
+      "original": "Bahasa Somu (Toro)",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Modole",
+      "original": "Bahasa Modole",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Marori",
+      "original": "Bahasa Marori",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Seget",
+      "original": "Bahasa Seget",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Hatam",
+      "original": "Bahasa Hatam",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Lemolang",
+      "original": "Bahasa Lemolang",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Saleman",
+      "original": "Bahasa Saleman",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Toba\u0000",
+      "original": "Bahasa Toba\u0000",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Yalahatan",
+      "original": "Bahasa Yalahatan",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Dra",
+      "original": "Bahasa Dra",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Karas",
+      "original": "Bahasa Karas",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Massenrengpulu",
+      "original": "Bahasa Massenrengpulu",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Ngguntar",
+      "original": "Bahasa Ngguntar",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Pedamaran",
+      "original": "Bahasa Pedamaran",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Tehit",
+      "original": "Bahasa Tehit",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Tenggalan",
+      "original": "Bahasa Tenggalan",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Tengger",
+        "id": "f2f7ef21-cc2e-4a7a-995a-8a5a60dc5185",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Beka\u0000k",
+      "original": "Bahasa Beka\u0000k",
+      "status": "Mengalami Kemunduran",
+      "indeks": "0.41-0.60",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Arguni",
+      "original": "Bahasa Arguni (Taver)",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Bajau Tungkal Satu",
+      "original": "Bahasa Bajau Tungkal Satu",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Sama-Bajau",
+        "id": "34afa298-8b91-48cb-9a9f-e5e00793080f",
+        "confidence": 70,
+        "reason": "Partial match: \"bajau\""
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Bku",
+      "original": "Bahasa Bku",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Dubu",
+      "original": "Bahasa Dubu",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Irarutu",
+      "original": "Bahasa Irarutu",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Kalabra",
+      "original": "Bahasa Kalabra",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Kalao",
+        "id": "e74dfc30-2d44-4d4f-adb6-9a7aa21bcdbb",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Makleu",
+      "original": "Bahasa Makleu",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Mander",
+      "original": "Bahasa Mander",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Mandar",
+        "id": "ff4f28b9-982e-4285-8976-f7bac57197d4",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Minahasa",
+      "original": "Bahasa Minahasa",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Minangkabau",
+        "id": "47812bf9-e96b-4bc3-aacc-a3827c4c15f6",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Namla",
+      "original": "Bahasa Namla",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Nedebang",
+      "original": "Bahasa Nedebang",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Podena",
+      "original": "Bahasa Podena",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Ponosakan",
+      "original": "Bahasa Ponosakan",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Samasuru",
+      "original": "Bahasa Samasuru",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Sama-Bajau",
+        "id": "34afa298-8b91-48cb-9a9f-e5e00793080f",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Sangihe Talaud",
+      "original": "Bahasa Sangihe Talaud",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Sanggau",
+        "id": "6029ded0-190d-490c-bd6c-f16d7d583547",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Enggano",
+      "original": "Bahasa Enggano",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Teon",
+      "original": "Bahasa Teon",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Benggaulu",
+      "original": "Bahasa Benggaulu",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Berangas",
+      "original": "Bahasa Berangas",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Berawan",
+        "id": "1d7efca7-2597-41ad-8541-990d6eee2c51",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      },
+      {
+        "name": "Berau",
+        "id": "8f71e4e5-9429-47ca-9589-e806eb1c1784",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "Mansim Borai",
+      "original": "Bahasa Mansim Borai",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Le\u0000",
+      "original": "Bahasa Le\u0000",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Meher",
+      "original": "Bahasa Meher",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Re\u0000a",
+      "original": "Bahasa Re\u0000a",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Loon",
+      "original": "Bahasa Loon",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Saponi",
+      "original": "Bahasa Saponi",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Ho\u0000",
+      "original": "Bahasa Ho\u0000",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Kaiely",
+      "original": "Bahasa Kaiely",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Mawes",
+      "original": "Bahasa Mawes",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Tandia",
+      "original": "Bahasa Tandia",
+      "status": "Punah",
+      "indeks": "0.00-0.20",
+      "wilayah": "Papua"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Walsa",
+      "original": "Bahasa Walsa",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Dajub",
+      "original": "Bahasa Dajub (Tokuni)",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Sentani",
+      "original": "Bahasa Sentani",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Tagalisa",
+      "original": "Bahasa Tagalisa",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Aframa",
+      "original": "Bahasa Aframa",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Gresi",
+      "original": "Bahasa Gresi",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Kuri",
+      "original": "Bahasa Kuri (Nabi)",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Meoswar",
+      "original": "Bahasa Meoswar (Roswar)",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  },
+  {
+    "unmatched": {
+      "nama": "Minahasa",
+      "original": "Bahasa Minahasa",
+      "status": "Rentan",
+      "indeks": "0.61-0.80",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": [
+      {
+        "name": "Minangkabau",
+        "id": "47812bf9-e96b-4bc3-aacc-a3827c4c15f6",
+        "confidence": 60,
+        "reason": "Similar phonetic start"
+      }
+    ]
+  },
+  {
+    "unmatched": {
+      "nama": "kategori kri\u0000s",
+      "original": "Bahasa kategori kri\u0000s",
+      "status": "Terancam Punah",
+      "indeks": "0.21-0.40",
+      "wilayah": "Tidak diketahui"
+    },
+    "candidates": []
+  }
+]

@@ -11,6 +11,10 @@ const ExternalLink = () => (
 
 export function MapPopup({ marker }: { marker: BahasaMarker }) {
   const penutur = marker.jumlahPenutur ? marker.jumlahPenutur.toLocaleString("id-ID") : "Tidak diketahui";
+  const coordinates = marker.lat && marker.lng 
+    ? `${marker.lat.toFixed(2)}°, ${marker.lng.toFixed(2)}°` 
+    : null;
+  
   return (
     <div className="min-w-[220px]" role="dialog" aria-label={`Language details for ${marker.namaBahasa}`}>
       <div className="flex items-center gap-2 mb-2">
@@ -21,7 +25,12 @@ export function MapPopup({ marker }: { marker: BahasaMarker }) {
         />
         <h3 className="font-semibold text-[#1a1209] text-base">{marker.namaBahasa}</h3>
       </div>
-      {marker.namaLokal && <p className="text-sm text-earth-600 italic mb-3">{marker.namaLokal}</p>}
+      
+      {marker.namaLokal && <p className="text-sm text-earth-600 italic mb-1">{marker.namaLokal}</p>}
+      {marker.kodeIso639 && (
+        <p className="text-xs text-earth-500 mb-3 font-mono">ISO 639-3: {marker.kodeIso639}</p>
+      )}
+      
       <div className="space-y-1.5 text-sm">
         <div className="flex justify-between items-center">
           <span className="text-earth-600">Penutur</span>
@@ -37,13 +46,20 @@ export function MapPopup({ marker }: { marker: BahasaMarker }) {
           <span className="text-earth-600">Status</span>
           <VitalityBadge status={marker.statusVitalitas} />
         </div>
+        {coordinates && (
+          <div className="flex justify-between items-center">
+            <span className="text-earth-600">Koordinat</span>
+            <span className="text-xs font-mono text-[#1a1209]">{coordinates}</span>
+          </div>
+        )}
       </div>
+      
       <Link
         href={`/explore/bahasa/${marker.id}`}
         className="mt-3 block text-center text-sm text-amber-700 hover:text-amber-800 hover:underline font-medium transition-colors duration-200 cursor-pointer"
         aria-label={`View full details for ${marker.namaBahasa}`}
       >
-        Lihat detail <ExternalLink />
+        Lihat detail lengkap <ExternalLink />
       </Link>
     </div>
   );

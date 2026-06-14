@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="data pokok kebahasaan dan kesastraan">
+    <meta name="author" content="badan bahasa, badan pengembangan dan pembinaan bahasa">
+    <title>Badan Bahasa</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+.logo {padding:10px 0 0 0;}
+.pagenumber1 {display:inline-table; background-color:#CCCCCC; border:solid 1px #999999;}
+.pagenumber2 {display:inline-table; border:solid 1px #999999;}
+.link2{
+color:#999999;
+padding-left:25px;
+font-size:12px;
+padding-top:5px;
+}
+</style>
+<script type="text/javascript">
+if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1 ){ 
+alert("Peramban yang Anda gunakan tidak mendukung aplikasi Dapobas. Gunakan Chrome, Firefox atau Opera untuk menampilkan hasil terbaik.");
+window.location = "indexie";
+}
+</script>
+<body class="landing-page">
+<div class="navbar-wrapper">
+<nav class="navbar navbar-default" style=" background-image:url(images/head.png); background-repeat:repeat-x; z-index:10; margin: 0;">
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<div class="navbar-wrapper" style="width:100%; top:0;">
+<style>
+.dropbtn1 {
+    background-color:#FFFFFF;
+    border:solid #999999 1px;
+    border-radius:5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #74b0fb;
+}
+
+.dropdown1 {
+    float: right;
+    position: relative;
+    display: inline-block;
+     z-index: 100;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #9933cc;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 100;
+    border-radius:5px;
+}
+
+.dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+     z-index: 100;
+}
+
+.dropdown1 a:hover {background-color: #790daf;}
+.show {display: block;}
+</style>
+<table width="100%" border="0" style="z-index: 100;">
+<tr style="background:#9933CC;">
+<td align="left" valign="middle" style=" border-bottom:solid #999999 1px;padding-top:5px; padding-bottom:5px;">
+<a href="index.php"><img src="images/logo1.png" /></a>
+</td>
+<td align="right" valign="middle" style=" border-bottom:solid #999999 1px; padding-top:5px; padding-bottom:5px;">
+<div class="dropdown1">
+<button onClick="myFunction()" class="dropbtn1">&#9776;</button>
+<div id="mydropdown1" class="dropdown1-content" style="text-align:left; padding-left:10px; z-index:1;">
+<a href="index.php"><img src="ikons/home.png" alt="" /></a>
+<a href="referensi"><img src="ikons/referensi.png" alt="" /></a>
+<a href="databahasa.php"><img src="ikons/bahasa.png" alt="" /></a>
+<a href="datasastra.php"><img src="ikons/sastra.png" alt="" /></a>
+<a href="search_filter"><img src="ikons/advanced.png" alt="" /></a>
+<a href="charts"><img src="ikons/charts.png" alt="" /></a>
+<a href="info"><img src="ikons/about.png" alt="" /></a>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown1 content */
+function myFunction() {
+    document.getElementById("mydropdown1").classList.toggle("show");
+}
+
+// Close the dropdown1 if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown1-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var opendropdown = dropdowns[i];
+      if (opendropdown.classList.contains('show')) {
+        opendropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script></div>
+</div>
+    <div class="small hidden-xs">
+    <div class="container-fluid" style=" background-color:#8355a5;">
+        <div class="navbar-header">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><img src="images/logo.png"></a>       
+        </div>   
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style=" background-color:#8355a5; padding-top:15px;">
+            <ul class="nav navbar-nav navbar-right">
+                <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+	padding-left:20px;
+	padding-top:10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px 16px;
+    z-index: 1;
+	right:0;
+	border-radius: 15px 0px 15px 0px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+</style>
+<li><div class="dropdown"><span><a href="index" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/home.png" alt="" />Beranda</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Halaman Beranda</p>
+          </div>
+</li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Objek</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/petabahasa&cat=1">Bahasa Daerah di indonesia</a></p>
+
+<p><a href="homecat.php?show=url/&cat=2">Aksara Daerah</a></p>
+
+<p><a href="homecat.php?show=url/regsastra3&cat=3">Sastra Tulisan Tangan</a></p>
+
+<p><a href="homecat.php?show=url/regsastra1&cat=4">Sastra Cetak</a></p>
+
+<p><a href="homecat.php?show=url/regsastra2&cat=5">Sastra Lisan</a></p>
+</p>
+</div>
+</div></li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Lembaga</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/bipa_list&cat=6">Lembaga BIPA</a></p>
+
+<p><a href="homecat.php?show=url/pegiatukbi&cat=7">Lembaga Pegiat UKBI</a></p>
+
+<p><a href="homecat.php?show=url/komunitas&cat=8">Komunitas Sastra</a></p>
+
+<p><a href="homecat.php?show=url/komlit&cat=39">Komunitas Literasi</a></p>
+</p>
+</div>
+</div></li>    
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />SDM</a></span><div class="dropdown-content" style="width:180px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/widyabasa&cat=9">Widyabasa</a></p>
+
+<p><a href="homecat.php?show=url/pengajarbipa&cat=10">Pengajar BIPA</a></p>
+
+<p><a href="homecat.php?show=url/penyuluh&cat=11">Penyuluh</a></p>
+
+<p><a href="homecat.php?show=url/pekamus&cat=12">Pekamus</a></p>
+
+<p><a href="homecat.php?show=url/penyunting&cat=13">Penyunting</a></p>
+
+<p><a href="homecat.php?show=url/penerjemah_list&cat=14">Penerjemah</a></p>
+
+<p><a href="homecat.php?show=url/jurubahasa&cat=15">Juru Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/dubas1&cat=16">Duta Bahasa</a></p>
+</p>
+</div>
+</div></li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Substansi</a></span><div class="dropdown-content" style="width:420px;border-bottom:#0000FF solid 8px;">
+            
+<p><table border="0" width="100%">
+<tr><td valign=top>
+<p><a href="homecat.php?show=url/ukbi1&cat=17">Data UKBI</a></p>
+
+<p><a href="homecat.php?show=url/&cat=18">Data Pembinaan Pemantauan Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/&cat=19">Data Penghargaan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=20">Data Penugasan Ahli Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/penyuluhan&cat=21">Data Penyuluhan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=22">Data Pemelajar BIPA</a></p>
+
+<p><a href="homecat.php?show=url/pesuluh&cat=23">Data Pesuluh</a></p>
+
+<p><a href="homecat.php?show=url/&cat=24">Data Pemerkayaan Kosakata</a></p>
+
+<p><a href="homecat.php?show=url/&cat=25">Data Pengembangan Kamus</a></p>
+
+<p><a href="homecat.php?show=url/&cat=26">Data Pedoman Kebahasaan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=27">Data Bahan Diplomasi Kebahasaan</a></p>
+
+<p><a href="homecat.php?show=url/bukuterjemahan&cat=28">Data Buku Terjemahan</a></p></td><td width="20px">&nbsp;</td><td valign=top>
+<p><a href="homecat.php?show=url/&cat=29">Data Musikalisasi Puisi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=30">Data Bahan Pengayaan Literasi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=31">Data Transliterasi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=32">Data Peningkayan Kompetensi Bahasa Asing (PKBA)</a></p>
+
+<p><a href="homecat.php?show=url/&cat=33">Data Capaian Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=34">Data Konservasi Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=35">Data Revitalisasi Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=36">Data Pengembangan Sastra</a></p>
+
+<p><a href="homecat.php?show=url/pengarang&cat=37">Data Pengarang</a></p>
+
+<p><a href="homecat.php?show=url/tokohbahasa&cat=38">Data Tokoh Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/rbd&cat=41">Revitalisasi Bahasa Daerah</a></p>
+</td></tr>
+</table></p></div>
+</div></li>  
+<li><div class="dropdown"><span style="margin-top:5px;"><a href="simkeda/" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Simkeda</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Sistem Informasi Monitoring Kedaulatan Bahasa</p>
+          </div>
+        </div></li>
+<li><div class="dropdown"><span><a href="search_filter" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/advanced.png" alt="" />Pencarian</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Pencarian lanjut berdasarkan kategori</p>
+          </div>
+        </div></li>
+                <li><div class="dropdown"><span><a href="charts" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/charts.png" alt="" />Statistik</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p>Statistik</p>
+          </div>
+        </div></li>
+				<li><div class="dropdown"><span><a href="info" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/about.png" alt="" />Info</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p>Info</p>
+          </div>
+        </div></li>            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+</div>
+<div class="small hidden-xs">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td bgcolor="#CCCCCC" style=" padding-left:5px; padding-right:5px;" width="180px"><img src="images/banner1.png" alt="" /></td>
+<td bgcolor="#CCCCCC" style=" background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);" width="450px">
+<img src="images/charts.png" alt="" /></td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan=2 bgcolor="#CCCCCC" style=" padding-left:5px; padding-right:5px;" width="180px"><img src="images/banner1.png" alt="" /></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);" width="250px">
+<Font style="font-weight:bold; font-size:24px;">Data Bahasa</Font>
+</td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="small hidden-xs">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="left">
+<tr>
+<td width="200px">&nbsp;</td>
+<td align="left" height="400px" valign="top">
+<div class="row" style="padding-top:10px;">
+<style>
+.headtitle {
+font-family: Geneva, Arial, "Helvetica", sans-serif;
+font-size:12px;
+font-weight:bold;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="tab-view.css" />
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<div class="table-scrollable table-scrollable-borderless">
+<div class="TabView" id="TabView" style="padding-left:10px;">
+<!-- ***** Tabs ************************************************************ -->
+
+<div class="Tabs" style="width: 798px;">
+  <a >BAHASA</a>
+</div>
+
+
+<!-- ***** Pages *********************************************************** -->
+
+<div class="Pages" style="width: 798px; height: 350px;">
+<div class="Page" style="display: "><div class="Pad"><table id="datatable_admin" class="table datatable table-striped table-hover" style="border-collapse:collapse;">
+<tr style="font-weight:bold; background-color:#666666; color:#FFFFFF; padding:10px;">
+<td width="50px" align="center">No.</td>
+<td width="250px">Kategori</td>
+<td width="100px" align="right">Total Data</td>
+
+</tr>
+
+<tr>
+<td align=center valign=top>1</td>
+<td valign=top><a href="category?cat=Tautan Bahasa">Tautan Bahasa</a></td>
+<td align=right valign=top>4</td></tr>
+<tr>
+<td align=center valign=top>2</td>
+<td valign=top><a href="category?cat=Persebaran Bahasa Daerah Berdasarkan Provinsi">Persebaran Bahasa Daerah Berdasarkan Provinsi</a></td>
+<td align=right valign=top>801</td></tr>
+<tr>
+<td align=center valign=top>3</td>
+<td valign=top><a href="category?cat=Registrasi Bahasa">Registrasi Bahasa</a></td>
+<td align=right valign=top>320</td></tr>
+<tr>
+<td align=center valign=top>4</td>
+<td valign=top><a href="category?cat=Penelitian Bahasa">Penelitian Bahasa</a></td>
+<td align=right valign=top>427</td></tr>
+<tr>
+<td align=center valign=top>6</td>
+<td valign=top><a href="category?cat=UKBI">UKBI</a></td>
+<td align=right valign=top>7</td></tr>
+<tr>
+<td align=center valign=top>7</td>
+<td valign=top><a href="category?cat=Bahasa Indonesia bagi Penutur Asing (BIPA)">Bahasa Indonesia bagi Penutur Asing (BIPA)</a></td>
+<td align=right valign=top>3</td></tr>
+<tr>
+<td align=center valign=top>8</td>
+<td valign=top><a href="category?cat=Jaringan Lembaga Penyelenggara Program BIPA">Jaringan Lembaga Penyelenggara Program BIPA</a></td>
+<td align=right valign=top>399</td></tr>
+<tr>
+<td align=center valign=top>9</td>
+<td valign=top><a href="category?cat=Pengendalian Penggunaan Bahasa">Pengendalian Penggunaan Bahasa</a></td>
+<td align=right valign=top>2</td></tr>
+<tr>
+<td align=center valign=top>10</td>
+<td valign=top><a href="category?cat=Ahli Bahasa">Ahli Bahasa</a></td>
+<td align=right valign=top>107</td></tr>
+<tr>
+<td align=center valign=top>11</td>
+<td valign=top><a href="category?cat=Duta Bahasa">Duta Bahasa</a></td>
+<td align=right valign=top>1</td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div style="padding-top:7px; font-size:12px; font-weight:bold; width:798px;"><center>&copy; 2017 &nbsp;&nbsp;&nbsp;Badan Pengembangan dan Pembinaan Bahasa</center></div>
+</td>
+  </tr>
+</table>
+</div>
+</td><td width="200px">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="10px">&nbsp;</td>
+<td align="left"valign="top">
+<table id="datatable_admin" class="table datatable table-striped table-hover" style="border-collapse:collapse;" width="100%">
+<tr style="font-weight:bold; background-color:#666666; color:#FFFFFF; padding:10px;">
+<td width="10px" align="center">No.</td>
+<td width="65%">Kategori</td>
+<td width="30%" align="right">Total Data</td>
+
+</tr>
+
+<tr>
+<td align=center valign=top>1</td>
+<td valign=top><a href="category?cat=Tautan Bahasa">Tautan Bahasa</a></td>
+<td align=right valign=top>4</td></tr>
+<tr>
+<td align=center valign=top>2</td>
+<td valign=top><a href="category?cat=Persebaran Bahasa Daerah Berdasarkan Provinsi">Persebaran Bahasa Daerah Berdasarkan Provinsi</a></td>
+<td align=right valign=top>801</td></tr>
+<tr>
+<td align=center valign=top>3</td>
+<td valign=top><a href="category?cat=Registrasi Bahasa">Registrasi Bahasa</a></td>
+<td align=right valign=top>320</td></tr>
+<tr>
+<td align=center valign=top>4</td>
+<td valign=top><a href="category?cat=Penelitian Bahasa">Penelitian Bahasa</a></td>
+<td align=right valign=top>427</td></tr>
+<tr>
+<td align=center valign=top>5</td>
+<td valign=top><a href="category?cat=UKBI">UKBI</a></td>
+<td align=right valign=top>7</td></tr>
+<tr>
+<td align=center valign=top>6</td>
+<td valign=top><a href="category?cat=Bahasa Indonesia bagi Penutur Asing (BIPA)">Bahasa Indonesia bagi Penutur Asing (BIPA)</a></td>
+<td align=right valign=top>3</td></tr>
+<tr>
+<td align=center valign=top>7</td>
+<td valign=top><a href="category?cat=Jaringan Lembaga Penyelenggara Program BIPA">Jaringan Lembaga Penyelenggara Program BIPA</a></td>
+<td align=right valign=top>399</td></tr>
+<tr>
+<td align=center valign=top>8</td>
+<td valign=top><a href="category?cat=Pengendalian Penggunaan Bahasa">Pengendalian Penggunaan Bahasa</a></td>
+<td align=right valign=top>2</td></tr>
+<tr>
+<td align=center valign=top>9</td>
+<td valign=top><a href="category?cat=Ahli Bahasa">Ahli Bahasa</a></td>
+<td align=right valign=top>107</td></tr>
+<tr>
+<td align=center valign=top>10</td>
+<td valign=top><a href="category?cat=Duta Bahasa">Duta Bahasa</a></td>
+<td align=right valign=top>1</td></tr>
+<tr>
+<td align=center valign=top>11</td>
+<td valign=top><a href="homecat.php?show=url/rbd">Revitalisasi Bahasa Daerah</a></td><td align=right valign=top>1</td></tr></table><div style="padding-top:7px; font-size:12px; font-weight:bold;"><center>&copy; 2019 &nbsp;&nbsp;&nbsp;Badan Pengembangan dan Pembinaan Bahasa</center></div>
+</td>
+<td width="10px">&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- Mainly scripts -->
+<script type="text/javascript" src="tab-view.js"></script>
+<script type="text/javascript">
+tabview_initialize('TabView');
+</script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

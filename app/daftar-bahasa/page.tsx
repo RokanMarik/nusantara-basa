@@ -192,7 +192,7 @@ export default function DaftarBahasaPage() {
               aria-label="Filter by language family"
             >
               <option value="">Semua Rumpun</option>
-              {rumpunList.map(r => <option key={r} value={r}>{r}</option>)}
+              {rumpunList.map((r, i) => <option key={`${r}-key-${i}`} value={r ?? ""}>{r ?? "—"}</option>)}
             </select>
             <select
               className="input-field w-full sm:w-auto text-sm"
@@ -201,7 +201,7 @@ export default function DaftarBahasaPage() {
               aria-label="Filter by vitality status"
             >
               <option value="">Semua Status</option>
-              {vitalitasList.map(v => <option key={v} value={v}>{v.charAt(0).toUpperCase() + v.slice(1)}</option>)}
+              {vitalitasList.filter((v): v is string => v !== null).map(v => <option key={v} value={v}>{v.charAt(0).toUpperCase() + v.slice(1)}</option>)}
             </select>
           </div>
         </div>

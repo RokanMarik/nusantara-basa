@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="data pokok kebahasaan dan kesastraan">
+    <meta name="author" content="badan bahasa, badan pengembangan dan pembinaan bahasa">
+    <title>Badan Bahasa</title>
+    <link href="css/reset.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+.logo {padding:10px 0 0 0;}
+.pagenumber1 {display:inline-table; background-color:#CCCCCC; border:solid 1px #999999;}
+.pagenumber2 {display:inline-table; border:solid 1px #999999;}
+.link2{
+color:#999999;
+padding-left:25px;
+font-size:12px;
+padding-top:5px;
+}
+</style>
+<script type="text/javascript">
+if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1 ){ 
+alert("Peramban yang Anda gunakan tidak mendukung aplikasi Dapobas. Gunakan Chrome, Firefox atau Opera untuk menampilkan hasil terbaik.");
+window.location = "indexie";
+}
+</script>
+<body class="landing-page">
+<div class="navbar-wrapper">
+<nav class="navbar navbar-default" style=" background-image:url(images/head.png); background-repeat:repeat-x; z-index:10; margin: 0;">
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<div class="navbar-wrapper" style="width:100%; top:0;">
+<style>
+.dropbtn1 {
+    background-color:#FFFFFF;
+    border:solid #999999 1px;
+    border-radius:5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #74b0fb;
+}
+
+.dropdown1 {
+    float: right;
+    position: relative;
+    display: inline-block;
+     z-index: 100;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #9933cc;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 100;
+    border-radius:5px;
+}
+
+.dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+     z-index: 100;
+}
+
+.dropdown1 a:hover {background-color: #790daf;}
+.show {display: block;}
+</style>
+<table width="100%" border="0" style="z-index: 100;">
+<tr style="background:#9933CC;">
+<td align="left" valign="middle" style=" border-bottom:solid #999999 1px;padding-top:5px; padding-bottom:5px;">
+<a href="index.php"><img src="images/logo1.png" /></a>
+</td>
+<td align="right" valign="middle" style=" border-bottom:solid #999999 1px; padding-top:5px; padding-bottom:5px;">
+<div class="dropdown1">
+<button onClick="myFunction()" class="dropbtn1">&#9776;</button>
+<div id="mydropdown1" class="dropdown1-content" style="text-align:left; padding-left:10px; z-index:1;">
+<a href="index.php"><img src="ikons/home.png" alt="" /></a>
+<a href="referensi"><img src="ikons/referensi.png" alt="" /></a>
+<a href="databahasa.php"><img src="ikons/bahasa.png" alt="" /></a>
+<a href="datasastra.php"><img src="ikons/sastra.png" alt="" /></a>
+<a href="search_filter"><img src="ikons/advanced.png" alt="" /></a>
+<a href="charts"><img src="ikons/charts.png" alt="" /></a>
+<a href="info"><img src="ikons/about.png" alt="" /></a>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown1 content */
+function myFunction() {
+    document.getElementById("mydropdown1").classList.toggle("show");
+}
+
+// Close the dropdown1 if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown1-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var opendropdown = dropdowns[i];
+      if (opendropdown.classList.contains('show')) {
+        opendropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script></div>
+</div>
+    <div class="small hidden-xs">
+   <div class="row" style=" width: 100%;">
+	  <div class="container-fluid" style=" background-color:#8355a5; width: 100%;">
+		<div class="navbar-header">
+     <a href="index.php"><img src="images/logo.png"></a>       
+		</div>   
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style=" background-color:#8355a5; padding-top:15px;">
+			<ul class="nav navbar-nav navbar-right">
+				<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+	padding-left:20px;
+	padding-top:10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px 16px;
+    z-index: 1;
+	right:0;
+	border-radius: 15px 0px 15px 0px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+</style>
+<li><div class="dropdown"><span><a href="index" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/home.png" alt="" />Beranda</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Halaman Beranda</p>
+          </div>
+</li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Objek</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/petabahasa&cat=1">Bahasa Daerah di indonesia</a></p>
+
+<p><a href="homecat.php?show=url/&cat=2">Aksara Daerah</a></p>
+
+<p><a href="homecat.php?show=url/regsastra3&cat=3">Sastra Tulisan Tangan</a></p>
+
+<p><a href="homecat.php?show=url/regsastra1&cat=4">Sastra Cetak</a></p>
+
+<p><a href="homecat.php?show=url/regsastra2&cat=5">Sastra Lisan</a></p>
+</p>
+</div>
+</div></li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Lembaga</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/bipa_list&cat=6">Lembaga BIPA</a></p>
+
+<p><a href="homecat.php?show=url/pegiatukbi&cat=7">Lembaga Pegiat UKBI</a></p>
+
+<p><a href="homecat.php?show=url/komunitas&cat=8">Komunitas Sastra</a></p>
+
+<p><a href="homecat.php?show=url/komlit&cat=39">Komunitas Literasi</a></p>
+</p>
+</div>
+</div></li>    
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />SDM</a></span><div class="dropdown-content" style="width:180px;border-bottom:#0000FF solid 8px;">
+            
+<p><a href="homecat.php?show=url/widyabasa&cat=9">Widyabasa</a></p>
+
+<p><a href="homecat.php?show=url/pengajarbipa&cat=10">Pengajar BIPA</a></p>
+
+<p><a href="homecat.php?show=url/penyuluh&cat=11">Penyuluh</a></p>
+
+<p><a href="homecat.php?show=url/pekamus&cat=12">Pekamus</a></p>
+
+<p><a href="homecat.php?show=url/penyunting&cat=13">Penyunting</a></p>
+
+<p><a href="homecat.php?show=url/penerjemah_list&cat=14">Penerjemah</a></p>
+
+<p><a href="homecat.php?show=url/jurubahasa&cat=15">Juru Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/dubas1&cat=16">Duta Bahasa</a></p>
+</p>
+</div>
+</div></li>
+<li><div class="dropdown"><span><a href="" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Substansi</a></span><div class="dropdown-content" style="width:420px;border-bottom:#0000FF solid 8px;">
+            
+<p><table border="0" width="100%">
+<tr><td valign=top>
+<p><a href="homecat.php?show=url/ukbi1&cat=17">Data UKBI</a></p>
+
+<p><a href="homecat.php?show=url/&cat=18">Data Pembinaan Pemantauan Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/&cat=19">Data Penghargaan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=20">Data Penugasan Ahli Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/penyuluhan&cat=21">Data Penyuluhan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=22">Data Pemelajar BIPA</a></p>
+
+<p><a href="homecat.php?show=url/pesuluh&cat=23">Data Pesuluh</a></p>
+
+<p><a href="homecat.php?show=url/&cat=24">Data Pemerkayaan Kosakata</a></p>
+
+<p><a href="homecat.php?show=url/&cat=25">Data Pengembangan Kamus</a></p>
+
+<p><a href="homecat.php?show=url/&cat=26">Data Pedoman Kebahasaan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=27">Data Bahan Diplomasi Kebahasaan</a></p>
+
+<p><a href="homecat.php?show=url/bukuterjemahan&cat=28">Data Buku Terjemahan</a></p></td><td width="20px">&nbsp;</td><td valign=top>
+<p><a href="homecat.php?show=url/&cat=29">Data Musikalisasi Puisi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=30">Data Bahan Pengayaan Literasi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=31">Data Transliterasi</a></p>
+
+<p><a href="homecat.php?show=url/&cat=32">Data Peningkayan Kompetensi Bahasa Asing (PKBA)</a></p>
+
+<p><a href="homecat.php?show=url/&cat=33">Data Capaian Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=34">Data Konservasi Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=35">Data Revitalisasi Kebahasaan dan Kesastraan</a></p>
+
+<p><a href="homecat.php?show=url/&cat=36">Data Pengembangan Sastra</a></p>
+
+<p><a href="homecat.php?show=url/pengarang&cat=37">Data Pengarang</a></p>
+
+<p><a href="homecat.php?show=url/tokohbahasa&cat=38">Data Tokoh Bahasa</a></p>
+
+<p><a href="homecat.php?show=url/rbd&cat=41">Revitalisasi Bahasa Daerah</a></p>
+</td></tr>
+</table></p></div>
+</div></li>  
+<li><div class="dropdown"><span style="margin-top:5px;"><a href="simkeda/" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/dbicon.png" alt="" />Simkeda</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Sistem Informasi Monitoring Kedaulatan Bahasa</p>
+          </div>
+        </div></li>
+<li><div class="dropdown"><span><a href="search_filter" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/advanced.png" alt="" />Pencarian</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p style=" text-align:justify;">Pencarian lanjut berdasarkan kategori</p>
+          </div>
+        </div></li>
+                <li><div class="dropdown"><span><a href="charts" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/charts.png" alt="" />Statistik</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p>Statistik</p>
+          </div>
+        </div></li>
+				<li><div class="dropdown"><span><a href="info" style="color:#fff; font-weight: bold; font-size:14px;"><img src="ikons/about.png" alt="" />Info</a></span><div class="dropdown-content" style="width:220px;border-bottom:#0000FF solid 8px;">
+            <p>Info</p>
+          </div>
+        </div></li>			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+</div>
+<div class="small hidden-xs">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td bgcolor="#CCCCCC" style=" padding-left:5px; padding-right:5px;" width="180px"><img src="images/banner1.png" alt="" /></td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);" width="450px">
+<div style=" width:450px;">
+<form  action="search.php" method="get">
+<div class="input-group">
+<input type="text" class="form-control" name="q" onBlur="if(this.value==&apos;&apos;)this.value=this.defaultValue;" onFocus="if(this.value==this.defaultValue)this.value=&apos;&apos;" type="text" placeholder="Cari Data ..."> 
+<span class="input-group-btn"> 
+<button type="submit" class="btn btn-primary" style=" padding:5px; background-color:#FFFFFF; border:1px solid #cccccc;"><img alt="search button" height="21" src="images/searchbox.png" title="Cari" width="21"/></button> </span></div>
+</form>
+</div>
+</td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan=2 bgcolor="#CCCCCC" style=" padding-left:5px; padding-right:5px;" width="180px"><img src="images/banner1.png" alt="" /></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);" width="250px">
+<div style=" width:250px;">
+<form  action="_search.php" method="get">
+<div class="input-group">
+<input type="text" class="form-control" name="q" onBlur="if(this.value==&apos;&apos;)this.value=this.defaultValue;" onFocus="if(this.value==this.defaultValue)this.value=&apos;&apos;" type="text" placeholder="Cari Data ..."> 
+<span class="input-group-btn"> 
+<button type="submit" class="btn btn-primary" style=" padding:5px; background-color:#FFFFFF; border:1px solid #cccccc;"><img alt="search button" height="21" src="images/searchbox.png" title="Cari" width="21"/></button> </span></div>
+</form>
+</div>
+</td>
+<td bgcolor="#CCCCCC" style=" padding-left:10px; padding-right:10px; background-color: #eaf8fc; background-image: linear-gradient(#fff, #d4e8ec);">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="small hidden-xs">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="195px"><img src="images/jeda_sisi.png" alt="" /></td>
+<td valign="top">
+
+    <style>
+.pagenumber1 {display:inline-table; background-color:#CCCCCC; border:solid 1px #999999;}
+.pagenumber2 {display:inline-table; border:solid 1px #999999;}
+.isi {font-size:12px; color:#000000;}
+.isi td{padding-bottom:5px; padding-top:5px;}
+</style>
+<script type="text/javascript" language="JavaScript1.2" src="js/popup.js"></script>
+
+
+<h3 style="font-weight:bold; font-size:24px; padding-top:10px; padding-bottom:20px;">Bahasa Daerah di Indonesia</h3>
+<p>Data : 718 Bahasa</p><table border="1" cellpadding="5" cellspacing="0" class="isi" style=" font-family:Arial, Helvetica, sans-serif; border:#FFFFFF solid 1px; border-collapse:collapse; font-size:11px; padding-top:5px; padding-bottom:5px;">
+  <tr height="30px" style="font-weight:bold; background-color:#666666; color:#FFFFFF; padding:5px;">
+    <td width="60px" align="center">No.</td>
+    <td width="200px">Bahasa</td>
+    <td width="250px">Wilayah</td>
+    <td width="200px">Provinsi</td>
+  </tr>
+
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=401></a>401.</td>
+			<td valign=top><strong>Maya  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=726"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=402></a>402.</td>
+			<td valign=top><strong>Maya Legenyan-Kawei </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=727"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=403></a>403.</td>
+			<td valign=top><strong>Mee Ugia </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=593"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=404></a>404.</td>
+			<td valign=top><strong>Mee Wosokuno  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=728"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=405></a>405.</td>
+			<td valign=top><strong>Mek Kosarek </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=595"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=406></a>406.</td>
+			<td valign=top><strong>Mek Naica </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=597"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=407></a>407.</td>
+			<td valign=top><strong>Mek Nipsan </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=598"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=408></a>408.</td>
+			<td valign=top><strong>Melayu </strong></td>
+			<td valign=top> <b>Sumatra</b>, <b>Jawa dan Bali</b>, <b>Kalimantan</b>, <b>Sulawesi</b>, <b>Nusa Tenggara Barat</b>, <b>Nusa Tenggara Timur</b>, <b>Maluku</b>, <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=101"><u> Sumatra Utara</u></a>, <a href="home?show=isidata&id=110"><u> Riau</u></a>, <a href="home?show=isidata&id=117"><u> Jambi</u></a>, <a href="home?show=isidata&id=123"><u> Sumatra Selatan</u></a>, <a href="home?show=isidata&id=139"><u> Kepulauan Bangka Belitung</u></a>, <a href="home?show=isidata&id=143"><u> DKI Jakarta</u></a>, <a href="home?show=isidata&id=159"><u> Bali</u></a>, <a href="home?show=isidata&id=165"><u> Kalimantan Barat</u></a>, <a href="home?show=isidata&id=186"><u> Kalimantan Tengah</u></a>, <a href="home?show=isidata&id=213"><u> Kalimantan Timur</u></a>, <a href="home?show=isidata&id=232"><u> Sulawesi Utara</u></a>, <a href="home?show=isidata&id=304"><u> Nusa Tenggara Barat</u></a>, <a href="home?show=isidata&id=365"><u> Nusa Tenggara Timur</u></a>, <a href="home?show=isidata&id=479"><u> Maluku</u></a>, <a href="home?show=isidata&id=556"><u> Maluku Utara</u></a>, <a href="home?show=isidata&id=600"><u> Papua</u></a>, <a href="home?show=isidata&id=3049"><u> Kepulauan Riau</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=409></a>409.</td>
+			<td valign=top><strong>Mentawai </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=105"><u> Sumatra Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=410></a>410.</td>
+			<td valign=top><strong>Mentaya </strong></td>
+			<td valign=top> <b>Kalimantan</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=187"><u> Kalimantan Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=411></a>411.</td>
+			<td valign=top><strong>Meyah </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=729"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=412></a>412.</td>
+			<td valign=top><strong>Miere </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=730"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=413></a>413.</td>
+			<td valign=top><strong>Minahasa </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=233"><u> Sulawesi Utara</u></a>, <a href="home?show=isidata&id=290"><u> Gorontalo</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=414></a>414.</td>
+			<td valign=top><strong>Minahasa Tonsawang </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=234"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=415></a>415.</td>
+			<td valign=top><strong>Minahasa Tonsea </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=235"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=416></a>416.</td>
+			<td valign=top><strong>Minangkabau </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=97"><u> Aceh</u></a>, <a href="home?show=isidata&id=102"><u> Sumatra Utara</u></a>, <a href="home?show=isidata&id=106"><u> Sumatra Barat</u></a>, <a href="home?show=isidata&id=111"><u> Riau</u></a>, <a href="home?show=isidata&id=118"><u> Jambi</u></a>, <a href="home?show=isidata&id=129"><u> Bengkulu</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=417></a>417.</td>
+			<td valign=top><strong>Mnanggi </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=602"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=418></a>418.</td>
+			<td valign=top><strong>Moa </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3064"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=419></a>419.</td>
+			<td valign=top><strong>Modole </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=558"><u> Maluku Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=420></a>420.</td>
+			<td valign=top><strong>Moi Maniwo </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=604"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=421></a>421.</td>
+			<td valign=top><strong>Moi Sigin  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=731"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=422></a>422.</td>
+			<td valign=top><strong>Molof </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=605"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=423></a>423.</td>
+			<td valign=top><strong>Momuna </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=607"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=424></a>424.</td>
+			<td valign=top><strong>Moni Bibida </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=609"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=425></a>425.</td>
+			<td valign=top><strong>Moni-Kegouda </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=611"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=426></a>426.</td>
+			<td valign=top><strong>Monuna Samboga </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=608"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=427></a>427.</td>
+			<td valign=top><strong>Mooi </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=613"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=428></a>428.</td>
+			<td valign=top><strong>Mor </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=732"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=429></a>429.</td>
+			<td valign=top><strong>Moraid </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=734"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=430></a>430.</td>
+			<td valign=top><strong>Morunene (Moronene)</strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=281"><u> Sulawesi Tenggara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=431></a>431.</td>
+			<td valign=top><strong>Moskona  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=735"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=432></a>432.</td>
+			<td valign=top><strong>Motu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3079"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=433></a>433.</td>
+			<td valign=top><strong>Mpur </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=737"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=434></a>434.</td>
+			<td valign=top><strong>Mpur Pantai </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3096"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=435></a>435.</td>
+			<td valign=top><strong>Muna </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=282"><u> Sulawesi Tenggara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=436></a>436.</td>
+			<td valign=top><strong>Munggui </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=614"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=437></a>437.</td>
+			<td valign=top><strong>Muri (Mer)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=739"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=438></a>438.</td>
+			<td valign=top><strong>Murkim </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=618"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=439></a>439.</td>
+			<td valign=top><strong>Muyu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=619"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=440></a>440.</td>
+			<td valign=top><strong>Muyu Selatan </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=625"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=441></a>441.</td>
+			<td valign=top><strong>Nafri </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=626"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=442></a>442.</td>
+			<td valign=top><strong>Nage </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=367"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=443></a>443.</td>
+			<td valign=top><strong>Nagi </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=627"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=444></a>444.</td>
+			<td valign=top><strong>Nai </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=628"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=445></a>445.</td>
+			<td valign=top><strong>Nalik Selatan </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=633"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=446></a>446.</td>
+			<td valign=top><strong>Namak </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=629"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=447></a>447.</td>
+			<td valign=top><strong>Namalu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=630"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=448></a>448.</td>
+			<td valign=top><strong>Namas </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=631"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=449></a>449.</td>
+			<td valign=top><strong>Namblong </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=632"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=450></a>450.</td>
+			<td valign=top><strong>Namla </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=634"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=451></a>451.</td>
+			<td valign=top><strong>Namut </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=369"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=452></a>452.</td>
+			<td valign=top><strong>Napiti </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=741"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=453></a>453.</td>
+			<td valign=top><strong>Napiti Pantai-Busama (Napiti Pantai)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=742"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=454></a>454.</td>
+			<td valign=top><strong>Narau </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=635"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=455></a>455.</td>
+			<td valign=top><strong>Nare </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3080"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=456></a>456.</td>
+			<td valign=top><strong>Naulu </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=483"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=457></a>457.</td>
+			<td valign=top><strong>Ndao </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=371"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=458></a>458.</td>
+			<td valign=top><strong>Ndarame </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=636"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=459></a>459.</td>
+			<td valign=top><strong>Ndauwa </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=637"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=460></a>460.</td>
+			<td valign=top><strong>Ndom </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=638"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=461></a>461.</td>
+			<td valign=top><strong>Ndora </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=372"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=462></a>462.</td>
+			<td valign=top><strong>Nedebang </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=374"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=463></a>463.</td>
+			<td valign=top><strong>Ngada </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=376"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=464></a>464.</td>
+			<td valign=top><strong>Ngalum </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=639"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=465></a>465.</td>
+			<td valign=top><strong>Nggem </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=640"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=466></a>466.</td>
+			<td valign=top><strong>Ngguntar </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=641"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=467></a>467.</td>
+			<td valign=top><strong>Ngkalembu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=642"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=468></a>468.</td>
+			<td valign=top><strong>Nias </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=103"><u> Sumatra Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=469></a>469.</td>
+			<td valign=top><strong>Nila </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=484"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=470></a>470.</td>
+			<td valign=top><strong>Ningrum </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=643"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=471></a>471.</td>
+			<td valign=top><strong>Nobuk (Kwerba)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=644"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=472></a>472.</td>
+			<td valign=top><strong>Nosaudare </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=645"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=473></a>473.</td>
+			<td valign=top><strong>Nubuai-Waren </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=671"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=474></a>474.</td>
+			<td valign=top><strong>Numfor (Mansinam)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=745"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=475></a>475.</td>
+			<td valign=top><strong>Nyaw </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=673"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=476></a>476.</td>
+			<td valign=top><strong>Obokuitai </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=675"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=477></a>477.</td>
+			<td valign=top><strong>Oedate (Kerema)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3081"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=478></a>478.</td>
+			<td valign=top><strong>Ogan </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=124"><u> Sumatra Selatan</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=479></a>479.</td>
+			<td valign=top><strong>Oirata </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=486"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=480></a>480.</td>
+			<td valign=top><strong>Okpari </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3082"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=481></a>481.</td>
+			<td valign=top><strong>Omesuri </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=377"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=482></a>482.</td>
+			<td valign=top><strong>Ormu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=676"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=483></a>483.</td>
+			<td valign=top><strong>Oroyliye </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=489"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=484></a>484.</td>
+			<td valign=top><strong>Orya </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=678"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=485></a>485.</td>
+			<td valign=top><strong>Palamul </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=747"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=486></a>486.</td>
+			<td valign=top><strong>Palu e </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=379"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=487></a>487.</td>
+			<td valign=top><strong>Pamona </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=252"><u> Sulawesi Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=488></a>488.</td>
+			<td valign=top><strong>Pannei </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3052"><u> Sulawesi Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=489></a>489.</td>
+			<td valign=top><strong>Pasan </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=236"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=490></a>490.</td>
+			<td valign=top><strong>Pasir (Paser)</strong></td>
+			<td valign=top> <b>Kalimantan</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=214"><u> Kalimantan Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=491></a>491.</td>
+			<td valign=top><strong>Patani </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=560"><u> Maluku Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=492></a>492.</td>
+			<td valign=top><strong>Pedamaran </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=125"><u> Sumatra Selatan</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=493></a>493.</td>
+			<td valign=top><strong>Pembuang </strong></td>
+			<td valign=top> <b>Kalimantan</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=188"><u> Kalimantan Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=494></a>494.</td>
+			<td valign=top><strong>Pigapu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3083"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=495></a>495.</td>
+			<td valign=top><strong>Pijin </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=680"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=496></a>496.</td>
+			<td valign=top><strong>Piliana </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3065"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=497></a>497.</td>
+			<td valign=top><strong>Pipikoro </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=253"><u> Sulawesi Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=498></a>498.</td>
+			<td valign=top><strong>Piru </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=492"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=499></a>499.</td>
+			<td valign=top><strong>Pokoro </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=749"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=500></a>500.</td>
+			<td valign=top><strong>Ponosakan </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=237"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		  
+</table>
+
+
+<div class="jeda"></div>
+	<a href='/homecat.php?show=url/petabahasa&cat=&page=4'><div class=pagenumber2>&nbsp;&lt;&lt;&nbsp;</div></a> <a href='/homecat.php?show=url/petabahasa&cat=&page=1'><div class=pagenumber2>&nbsp;1&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=2'><div class=pagenumber2>&nbsp;2&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=3'><div class=pagenumber2>&nbsp;3&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=4'><div class=pagenumber2>&nbsp;4&nbsp;</div></a>  <b><div class=pagenumber1>&nbsp;5&nbsp;</div></b>  <a href='/homecat.php?show=url/petabahasa&cat=&page=6'><div class=pagenumber2>&nbsp;6&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=7'><div class=pagenumber2>&nbsp;7&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=8'><div class=pagenumber2>&nbsp;8&nbsp;</div></a> <a href='/homecat.php?show=url/petabahasa&cat=&page=6'><div class=pagenumber2>&nbsp;&gt;&gt;&nbsp;</div></a> </td>
+</tr>
+</table>
+</td>
+<td width="195px"><img src="images/jeda_sisi.png" alt="" /></td>
+</tr>
+<tr>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="3" align="center"><div class="footer" style="color:#333333; text-align: center;">
+&copy; 2024 &nbsp;&nbsp;&nbsp;Badan Pengembangan dan Pembinaan Bahasa
+</footer></td>
+</tr>
+</table>
+
+</div>
+<div class="navbar-toggle collapsed" style="margin:0; padding:0px; width:100%; ">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="10px">&nbsp;</td>
+<td valign="top">
+
+    <style>
+.pagenumber1 {display:inline-table; background-color:#CCCCCC; border:solid 1px #999999;}
+.pagenumber2 {display:inline-table; border:solid 1px #999999;}
+.isi {font-size:12px; color:#000000;}
+.isi td{padding-bottom:5px; padding-top:5px;}
+</style>
+<script type="text/javascript" language="JavaScript1.2" src="js/popup.js"></script>
+
+
+<h3 style="font-weight:bold; font-size:24px; padding-top:10px; padding-bottom:20px;">Bahasa Daerah di Indonesia</h3>
+<p>Data : 718 Bahasa</p><table border="1" cellpadding="5" cellspacing="0" class="isi" style=" font-family:Arial, Helvetica, sans-serif; border:#FFFFFF solid 1px; border-collapse:collapse; font-size:11px; padding-top:5px; padding-bottom:5px;">
+  <tr height="30px" style="font-weight:bold; background-color:#666666; color:#FFFFFF; padding:5px;">
+    <td width="60px" align="center">No.</td>
+    <td width="200px">Bahasa</td>
+    <td width="250px">Wilayah</td>
+    <td width="200px">Provinsi</td>
+  </tr>
+
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=401></a>401.</td>
+			<td valign=top><strong>Maya  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=726"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=402></a>402.</td>
+			<td valign=top><strong>Maya Legenyan-Kawei </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=727"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=403></a>403.</td>
+			<td valign=top><strong>Mee Ugia </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=593"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=404></a>404.</td>
+			<td valign=top><strong>Mee Wosokuno  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=728"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=405></a>405.</td>
+			<td valign=top><strong>Mek Kosarek </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=595"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=406></a>406.</td>
+			<td valign=top><strong>Mek Naica </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=597"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=407></a>407.</td>
+			<td valign=top><strong>Mek Nipsan </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=598"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=408></a>408.</td>
+			<td valign=top><strong>Melayu </strong></td>
+			<td valign=top> <b>Sumatra</b>, <b>Jawa dan Bali</b>, <b>Kalimantan</b>, <b>Sulawesi</b>, <b>Nusa Tenggara Barat</b>, <b>Nusa Tenggara Timur</b>, <b>Maluku</b>, <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=101"><u> Sumatra Utara</u></a>, <a href="home?show=isidata&id=110"><u> Riau</u></a>, <a href="home?show=isidata&id=117"><u> Jambi</u></a>, <a href="home?show=isidata&id=123"><u> Sumatra Selatan</u></a>, <a href="home?show=isidata&id=139"><u> Kepulauan Bangka Belitung</u></a>, <a href="home?show=isidata&id=143"><u> DKI Jakarta</u></a>, <a href="home?show=isidata&id=159"><u> Bali</u></a>, <a href="home?show=isidata&id=165"><u> Kalimantan Barat</u></a>, <a href="home?show=isidata&id=186"><u> Kalimantan Tengah</u></a>, <a href="home?show=isidata&id=213"><u> Kalimantan Timur</u></a>, <a href="home?show=isidata&id=232"><u> Sulawesi Utara</u></a>, <a href="home?show=isidata&id=304"><u> Nusa Tenggara Barat</u></a>, <a href="home?show=isidata&id=365"><u> Nusa Tenggara Timur</u></a>, <a href="home?show=isidata&id=479"><u> Maluku</u></a>, <a href="home?show=isidata&id=556"><u> Maluku Utara</u></a>, <a href="home?show=isidata&id=600"><u> Papua</u></a>, <a href="home?show=isidata&id=3049"><u> Kepulauan Riau</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=409></a>409.</td>
+			<td valign=top><strong>Mentawai </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=105"><u> Sumatra Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=410></a>410.</td>
+			<td valign=top><strong>Mentaya </strong></td>
+			<td valign=top> <b>Kalimantan</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=187"><u> Kalimantan Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=411></a>411.</td>
+			<td valign=top><strong>Meyah </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=729"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=412></a>412.</td>
+			<td valign=top><strong>Miere </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=730"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=413></a>413.</td>
+			<td valign=top><strong>Minahasa </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=233"><u> Sulawesi Utara</u></a>, <a href="home?show=isidata&id=290"><u> Gorontalo</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=414></a>414.</td>
+			<td valign=top><strong>Minahasa Tonsawang </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=234"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=415></a>415.</td>
+			<td valign=top><strong>Minahasa Tonsea </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=235"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=416></a>416.</td>
+			<td valign=top><strong>Minangkabau </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=97"><u> Aceh</u></a>, <a href="home?show=isidata&id=102"><u> Sumatra Utara</u></a>, <a href="home?show=isidata&id=106"><u> Sumatra Barat</u></a>, <a href="home?show=isidata&id=111"><u> Riau</u></a>, <a href="home?show=isidata&id=118"><u> Jambi</u></a>, <a href="home?show=isidata&id=129"><u> Bengkulu</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=417></a>417.</td>
+			<td valign=top><strong>Mnanggi </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=602"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=418></a>418.</td>
+			<td valign=top><strong>Moa </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3064"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=419></a>419.</td>
+			<td valign=top><strong>Modole </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=558"><u> Maluku Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=420></a>420.</td>
+			<td valign=top><strong>Moi Maniwo </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=604"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=421></a>421.</td>
+			<td valign=top><strong>Moi Sigin  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=731"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=422></a>422.</td>
+			<td valign=top><strong>Molof </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=605"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=423></a>423.</td>
+			<td valign=top><strong>Momuna </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=607"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=424></a>424.</td>
+			<td valign=top><strong>Moni Bibida </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=609"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=425></a>425.</td>
+			<td valign=top><strong>Moni-Kegouda </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=611"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=426></a>426.</td>
+			<td valign=top><strong>Monuna Samboga </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=608"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=427></a>427.</td>
+			<td valign=top><strong>Mooi </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=613"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=428></a>428.</td>
+			<td valign=top><strong>Mor </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=732"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=429></a>429.</td>
+			<td valign=top><strong>Moraid </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=734"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=430></a>430.</td>
+			<td valign=top><strong>Morunene (Moronene)</strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=281"><u> Sulawesi Tenggara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=431></a>431.</td>
+			<td valign=top><strong>Moskona  </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=735"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=432></a>432.</td>
+			<td valign=top><strong>Motu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3079"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=433></a>433.</td>
+			<td valign=top><strong>Mpur </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=737"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=434></a>434.</td>
+			<td valign=top><strong>Mpur Pantai </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3096"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=435></a>435.</td>
+			<td valign=top><strong>Muna </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=282"><u> Sulawesi Tenggara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=436></a>436.</td>
+			<td valign=top><strong>Munggui </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=614"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=437></a>437.</td>
+			<td valign=top><strong>Muri (Mer)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=739"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=438></a>438.</td>
+			<td valign=top><strong>Murkim </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=618"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=439></a>439.</td>
+			<td valign=top><strong>Muyu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=619"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=440></a>440.</td>
+			<td valign=top><strong>Muyu Selatan </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=625"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=441></a>441.</td>
+			<td valign=top><strong>Nafri </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=626"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=442></a>442.</td>
+			<td valign=top><strong>Nage </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=367"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=443></a>443.</td>
+			<td valign=top><strong>Nagi </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=627"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=444></a>444.</td>
+			<td valign=top><strong>Nai </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=628"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=445></a>445.</td>
+			<td valign=top><strong>Nalik Selatan </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=633"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=446></a>446.</td>
+			<td valign=top><strong>Namak </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=629"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=447></a>447.</td>
+			<td valign=top><strong>Namalu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=630"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=448></a>448.</td>
+			<td valign=top><strong>Namas </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=631"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=449></a>449.</td>
+			<td valign=top><strong>Namblong </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=632"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=450></a>450.</td>
+			<td valign=top><strong>Namla </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=634"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=451></a>451.</td>
+			<td valign=top><strong>Namut </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=369"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=452></a>452.</td>
+			<td valign=top><strong>Napiti </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=741"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=453></a>453.</td>
+			<td valign=top><strong>Napiti Pantai-Busama (Napiti Pantai)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=742"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=454></a>454.</td>
+			<td valign=top><strong>Narau </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=635"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=455></a>455.</td>
+			<td valign=top><strong>Nare </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3080"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=456></a>456.</td>
+			<td valign=top><strong>Naulu </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=483"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=457></a>457.</td>
+			<td valign=top><strong>Ndao </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=371"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=458></a>458.</td>
+			<td valign=top><strong>Ndarame </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=636"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=459></a>459.</td>
+			<td valign=top><strong>Ndauwa </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=637"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=460></a>460.</td>
+			<td valign=top><strong>Ndom </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=638"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=461></a>461.</td>
+			<td valign=top><strong>Ndora </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=372"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=462></a>462.</td>
+			<td valign=top><strong>Nedebang </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=374"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=463></a>463.</td>
+			<td valign=top><strong>Ngada </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=376"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=464></a>464.</td>
+			<td valign=top><strong>Ngalum </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=639"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=465></a>465.</td>
+			<td valign=top><strong>Nggem </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=640"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=466></a>466.</td>
+			<td valign=top><strong>Ngguntar </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=641"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=467></a>467.</td>
+			<td valign=top><strong>Ngkalembu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=642"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=468></a>468.</td>
+			<td valign=top><strong>Nias </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=103"><u> Sumatra Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=469></a>469.</td>
+			<td valign=top><strong>Nila </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=484"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=470></a>470.</td>
+			<td valign=top><strong>Ningrum </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=643"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=471></a>471.</td>
+			<td valign=top><strong>Nobuk (Kwerba)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=644"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=472></a>472.</td>
+			<td valign=top><strong>Nosaudare </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=645"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=473></a>473.</td>
+			<td valign=top><strong>Nubuai-Waren </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=671"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=474></a>474.</td>
+			<td valign=top><strong>Numfor (Mansinam)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=745"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=475></a>475.</td>
+			<td valign=top><strong>Nyaw </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=673"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=476></a>476.</td>
+			<td valign=top><strong>Obokuitai </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=675"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=477></a>477.</td>
+			<td valign=top><strong>Oedate (Kerema)</strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3081"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=478></a>478.</td>
+			<td valign=top><strong>Ogan </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=124"><u> Sumatra Selatan</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=479></a>479.</td>
+			<td valign=top><strong>Oirata </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=486"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=480></a>480.</td>
+			<td valign=top><strong>Okpari </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3082"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=481></a>481.</td>
+			<td valign=top><strong>Omesuri </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=377"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=482></a>482.</td>
+			<td valign=top><strong>Ormu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=676"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=483></a>483.</td>
+			<td valign=top><strong>Oroyliye </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=489"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=484></a>484.</td>
+			<td valign=top><strong>Orya </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=678"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=485></a>485.</td>
+			<td valign=top><strong>Palamul </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=747"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=486></a>486.</td>
+			<td valign=top><strong>Palu e </strong></td>
+			<td valign=top> <b>Nusa Tenggara Timur</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=379"><u> Nusa Tenggara Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=487></a>487.</td>
+			<td valign=top><strong>Pamona </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=252"><u> Sulawesi Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=488></a>488.</td>
+			<td valign=top><strong>Pannei </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3052"><u> Sulawesi Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=489></a>489.</td>
+			<td valign=top><strong>Pasan </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=236"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=490></a>490.</td>
+			<td valign=top><strong>Pasir (Paser)</strong></td>
+			<td valign=top> <b>Kalimantan</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=214"><u> Kalimantan Timur</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=491></a>491.</td>
+			<td valign=top><strong>Patani </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=560"><u> Maluku Utara</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=492></a>492.</td>
+			<td valign=top><strong>Pedamaran </strong></td>
+			<td valign=top> <b>Sumatra</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=125"><u> Sumatra Selatan</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=493></a>493.</td>
+			<td valign=top><strong>Pembuang </strong></td>
+			<td valign=top> <b>Kalimantan</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=188"><u> Kalimantan Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=494></a>494.</td>
+			<td valign=top><strong>Pigapu </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3083"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=495></a>495.</td>
+			<td valign=top><strong>Pijin </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=680"><u> Papua</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=496></a>496.</td>
+			<td valign=top><strong>Piliana </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=3065"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=497></a>497.</td>
+			<td valign=top><strong>Pipikoro </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=253"><u> Sulawesi Tengah</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=498></a>498.</td>
+			<td valign=top><strong>Piru </strong></td>
+			<td valign=top> <b>Maluku</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=492"><u> Maluku</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#dfe2e3 valign=top>
+			<td align=center><a name=499></a>499.</td>
+			<td valign=top><strong>Pokoro </strong></td>
+			<td valign=top> <b>Papua</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=749"><u> Papua Barat</u></a></div></td>
+		</tr>
+		
+		<tr bgcolor=#cccdce valign=top>
+			<td align=center><a name=500></a>500.</td>
+			<td valign=top><strong>Ponosakan </strong></td>
+			<td valign=top> <b>Sulawesi</b></td>
+			<td valign=top><div class="stat1"><a href="home?show=isidata&id=237"><u> Sulawesi Utara</u></a></div></td>
+		</tr>
+		  
+</table>
+
+
+<div class="jeda"></div>
+	<a href='/homecat.php?show=url/petabahasa&cat=&page=4'><div class=pagenumber2>&nbsp;&lt;&lt;&nbsp;</div></a> <a href='/homecat.php?show=url/petabahasa&cat=&page=1'><div class=pagenumber2>&nbsp;1&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=2'><div class=pagenumber2>&nbsp;2&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=3'><div class=pagenumber2>&nbsp;3&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=4'><div class=pagenumber2>&nbsp;4&nbsp;</div></a>  <b><div class=pagenumber1>&nbsp;5&nbsp;</div></b>  <a href='/homecat.php?show=url/petabahasa&cat=&page=6'><div class=pagenumber2>&nbsp;6&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=7'><div class=pagenumber2>&nbsp;7&nbsp;</div></a>  <a href='/homecat.php?show=url/petabahasa&cat=&page=8'><div class=pagenumber2>&nbsp;8&nbsp;</div></a> <a href='/homecat.php?show=url/petabahasa&cat=&page=6'><div class=pagenumber2>&nbsp;&gt;&gt;&nbsp;</div></a> </td>
+</tr>
+</table>
+</td>
+<td width="10px">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr>
+<td width="10px">&nbsp;</td>
+<td height="20px" align="center"><div class="footer" style="color:#333333; text-align: center;">
+&copy; 2024 &nbsp;&nbsp;&nbsp;Badan Pengembangan dan Pembinaan Bahasa
+</footer></td>
+<td width="10px">&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

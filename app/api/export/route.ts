@@ -8,9 +8,30 @@ const supabase = createClient(
 
 export async function GET(request: NextRequest) {
   const format = request.nextUrl.searchParams.get("format") || "json";
-  const { data } = await supabase
+  const vitalitas = request.nextUrl.searchParams.get("vitalitas");
+  const provinsi = request.nextUrl.searchParams.get("provinsi");
+  const wilayah = request.nextUrl.searchParams.get("wilayah");
+  const minPenutur = request.nextUrl.searchParams.get("min_penutur");
+
+  let query = supabase
     .from("bahasa")
-    .select("nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, status_vitalitas, rumpun_bahasa(nama_rumpun), lokasi(provinsi)");
+    .select("nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, status_vitalitas, wilayah, provinsi, kabupaten, egids_level, jumlah_penutur_tahun, sumber_referensi, rumpun_bahasa(nama_rumpun)");
+
+  // Apply filters
+  if (vitalitas) {
+    query = query.eq("status_vitalitas", vitalitas);
+  }
+  if (provinsi) {
+    query = query.eq("provinsi", provinsi);
+  }
+  if (wilayah) {
+    query = query.eq("wilayah", wilayah);
+  }
+  if (minPenutur) {
+    query = query.gte("jumlah_penutur", parseInt(minPenutur));
+  }
+
+  const { data } = await query;
 
   const rows = (data || []).map((b: any) => ({
     nama: b.nama_bahasa,
@@ -18,14 +39,19 @@ export async function GET(request: NextRequest) {
     iso: b.kode_iso_639,
     penutur: b.jumlah_penutur,
     vitalitas: b.status_vitalitas,
+    wilayah: b.wilayah,
+    provinsi: b.provinsi,
+    kabupaten: b.kabupaten,
+    egids: b.egids_level,
+    tahun_penutur: b.jumlah_penutur_tahun,
+    sumber: b.sumber_referensi,
     rumpun: b.rumpun_bahasa?.nama_rumpun,
-    provinsi: b.lokasi?.[0]?.provinsi,
   }));
 
   if (format === "csv") {
-    const header = "Nama,Nama Lokal,ISO 639-3,Penutur,Vitalitas,Rumpun,Provinsi\n";
+    const header = "Nama,Nama Lokal,ISO 639-3,Penutur,Vitalitas,Wilayah,Provinsi,Kabupaten,EGIDS,Tahun Penutur,Sumber,Rumpun\n";
     const csv = header + rows.map(r =>
-      `"${r.nama}","${r.nama_lokal || ''}","${r.iso || ''}",${r.penutur || ''},"${r.vitalitas || ''}","${r.rumpun || ''}","${r.provinsi || ''}"`
+      `"${r.nama}","${r.nama_lokal || ''}","${r.iso || ''}",${r.penutur || ''},"${r.vitalitas || ''}","${r.wilayah || ''}","${r.provinsi || ''}","${r.kabupaten || ''}","${r.egids || ''}",${r.tahun_penutur || ''},"${r.sumber || ''}","${r.rumpun || ''}"`
     ).join("\n");
 
     return new NextResponse(csv, {
