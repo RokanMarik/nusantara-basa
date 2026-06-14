@@ -1,0 +1,16 @@
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Teon') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Benggaulu') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Berangas') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Mansim Borai') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Ibu') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Le') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Meher') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Rea') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Loon') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Saponi') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Hamap') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Ho') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Kaiely') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Mawes') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Piru') AND (status_vitalitas IS NULL OR status_vitalitas = '');
+UPDATE bahasa SET status_vitalitas = 'Punah' WHERE LOWER(nama_bahasa) = LOWER('Tandia') AND (status_vitalitas IS NULL OR status_vitalitas = '');

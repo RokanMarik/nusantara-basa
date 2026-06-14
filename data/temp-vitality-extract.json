@@ -1,0 +1,638 @@
+[
+  {
+    "nama": "Asmat",
+    "original": "Bahasa Asmat",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Walsa",
+    "original": "Bahasa Walsa",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Biak",
+    "original": "Bahasa Biak",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Bima",
+    "original": "Bahasa Bima (Mbojo)",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Bugis",
+    "original": "Bahasa Bugis",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Dajub",
+    "original": "Bahasa Dajub (Tokuni)",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Korowai Karuwage",
+    "original": "Bahasa Korowai Karuwage",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Melayu",
+    "original": "Bahasa Melayu",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Madura",
+    "original": "Bahasa Madura",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Makassar",
+    "original": "Bahasa Makassar",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Minangkabau",
+    "original": "Bahasa Minangkabau",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Muna",
+    "original": "Bahasa Muna",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Sasak",
+    "original": "Bahasa Sasak",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Sentani",
+    "original": "Bahasa Sentani",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Serui Laut",
+    "original": "Bahasa Serui Laut",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Sumbawa",
+    "original": "Bahasa Sumbawa",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Kombai",
+    "original": "Bahasa Kombai",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Tagalisa",
+    "original": "Bahasa Tagalisa",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Aceh",
+    "original": "Bahasa Aceh",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Bali",
+    "original": "Bahasa Bali dialek Bali",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Jawa",
+    "original": "Bahasa Jawa dialek Jogja-",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Sunda",
+    "original": "Bahasa Sunda",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Aframa",
+    "original": "Bahasa Aframa",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Bugis",
+    "original": "Bahasa Bugis",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Gayo",
+    "original": "Bahasa Gayo",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Gresi",
+    "original": "Bahasa Gresi",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Kerinci",
+    "original": "Bahasa Kerinci",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Kuri",
+    "original": "Bahasa Kuri (Nabi)",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Luhu",
+    "original": "Bahasa Luhu",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Mandar",
+    "original": "Bahasa Mandar",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Meoswar",
+    "original": "Bahasa Meoswar (Roswar)",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Minahasa",
+    "original": "Bahasa Minahasa",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Melayu dialek",
+    "original": "Bahasa Melayu dialek",
+    "status_vitalitas": "Rentan",
+    "wilayah": "Papua"
+  },
+  {
+    "nama": "Rongga",
+    "original": "Bahasa Rongga",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Senggi",
+    "original": "Bahasa Senggi (Find)",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Somu",
+    "original": "Bahasa Somu (Toro)",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Wolio",
+    "original": "Bahasa Wolio",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Lampung",
+    "original": "Bahasa Lampung",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Modole",
+    "original": "Bahasa Modole",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Marori",
+    "original": "Bahasa Marori",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Seget",
+    "original": "Bahasa Seget",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Buru",
+    "original": "Bahasa Buru",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Gorontalo dialek",
+    "original": "Bahasa Gorontalo dialek",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Hatam",
+    "original": "Bahasa Hatam",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Hitu",
+    "original": "Bahasa Hitu",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Lemolang",
+    "original": "Bahasa Lemolang",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Melayu di Indragiri",
+    "original": "Bahasa Melayu di Indragiri",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Ogan",
+    "original": "Bahasa Ogan dialek Rupit",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Rampi",
+    "original": "Bahasa Rampi",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Saleman",
+    "original": "Bahasa Saleman",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Toba\u0000",
+    "original": "Bahasa Toba\u0000",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Yalahatan",
+    "original": "Bahasa Yalahatan",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Dra",
+    "original": "Bahasa Dra",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Karas",
+    "original": "Bahasa Karas",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Massenrengpulu",
+    "original": "Bahasa Massenrengpulu",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Mentawai",
+    "original": "Bahasa Mentawai",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Ngguntar",
+    "original": "Bahasa Ngguntar",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Nias",
+    "original": "Bahasa Nias",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Pannei",
+    "original": "Bahasa Pannei",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Pedamaran",
+    "original": "Bahasa Pedamaran",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Punan Merah",
+    "original": "Bahasa Punan Merah",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Sahu",
+    "original": "Bahasa Sahu",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Tehit",
+    "original": "Bahasa Tehit",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Tenggalan",
+    "original": "Bahasa Tenggalan",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Totoli",
+    "original": "Bahasa Totoli",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Yamdena dialek",
+    "original": "Bahasa Yamdena dialek",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Beka\u0000k",
+    "original": "Bahasa Beka\u0000k",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Lematang",
+    "original": "Bahasa Lematang",
+    "status_vitalitas": "Mengalami Kemunduran",
+    "wilayah": "Nusa Tenggara Timur"
+  },
+  {
+    "nama": "kategori kri\u0000s",
+    "original": "Bahasa kategori kri\u0000s",
+    "status_vitalitas": "Terancam Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Adang",
+    "original": "Bahasa Adang",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Arguni",
+    "original": "Bahasa Arguni (Taver)",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Bajau Tungkal Satu",
+    "original": "Bahasa Bajau Tungkal Satu",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Bku",
+    "original": "Bahasa Bku",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Dubu",
+    "original": "Bahasa Dubu",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Yamdena dialek",
+    "original": "Bahasa Yamdena dialek",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Irarutu",
+    "original": "Bahasa Irarutu",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Kalabra",
+    "original": "Bahasa Kalabra",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Konjo",
+    "original": "Bahasa Konjo",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Makleu",
+    "original": "Bahasa Makleu",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Mander",
+    "original": "Bahasa Mander",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Minahasa",
+    "original": "Bahasa Minahasa",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Namla",
+    "original": "Bahasa Namla",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Nedebang",
+    "original": "Bahasa Nedebang",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Podena",
+    "original": "Bahasa Podena",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Ponosakan",
+    "original": "Bahasa Ponosakan",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Samasuru",
+    "original": "Bahasa Samasuru",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Sangihe Talaud",
+    "original": "Bahasa Sangihe Talaud",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Sawai",
+    "original": "Bahasa Sawai",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Tunjung",
+    "original": "Bahasa Tunjung",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Enggano",
+    "original": "Bahasa Enggano",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Teon",
+    "original": "Bahasa Teon",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Benggaulu",
+    "original": "Bahasa Benggaulu",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Berangas",
+    "original": "Bahasa Berangas",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Mansim Borai",
+    "original": "Bahasa Mansim Borai",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Ibu",
+    "original": "Bahasa Ibu (Ibo)",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Le\u0000",
+    "original": "Bahasa Le\u0000",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Meher",
+    "original": "Bahasa Meher",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Re\u0000a",
+    "original": "Bahasa Re\u0000a",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Loon",
+    "original": "Bahasa Loon",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Saponi",
+    "original": "Bahasa Saponi",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Hamap",
+    "original": "Bahasa Hamap",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Ho\u0000",
+    "original": "Bahasa Ho\u0000",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Kaiely",
+    "original": "Bahasa Kaiely",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Mawes",
+    "original": "Bahasa Mawes",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Piru",
+    "original": "Bahasa Piru",
+    "status_vitalitas": "Punah",
+    "wilayah": "Tidak diketahui"
+  },
+  {
+    "nama": "Tandia",
+    "original": "Bahasa Tandia",
+    "status_vitalitas": "Punah",
+    "wilayah": "Papua"
+  }
+]
