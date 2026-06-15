@@ -129,7 +129,7 @@ export default function HistoryPage({ params }: { params: { slug: string } }) {
         ) : (
           <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 max-w-3xl">
             <p className="text-yellow-800">
-              Bahwa tidak ditemukan dengan slug "{params.slug}". Silakan periksa ulang atau kembali ke halaman sebelumnya.
+              {"Bahwa tidak ditemukan dengan slug \"" + params.slug + "\". Silakan periksa ulang atau kembali ke halaman sebelumnya."}
             </p>
           </div>
         )}
