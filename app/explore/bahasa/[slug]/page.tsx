@@ -65,7 +65,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-earth-900 mb-4">Bahasa Tidak Ditemukan</h1>
-          <p className="text-earth-700 mb-8">Bahasa dengan slug "{params.slug}" tidak ditemukan dalam database.</p>
+          <p className="text-earth-700 mb-8">Bahasa dengan slug &ldquo;{params.slug}&rdquo; tidak ditemukan dalam database.</p>
           <Link
             href="/explore"
             className="inline-flex items-center gap-2 px-6 py-3 bg-amber-700 text-white rounded-lg hover:bg-amber-800 transition-colors"
