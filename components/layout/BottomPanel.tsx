@@ -46,7 +46,7 @@ export function BottomPanel({
             <SearchInput
               value={search}
               onChange={onSearchChange}
-              onSmartSearch={onSmartSearch}
+              onSearch={onSmartSearch}
               loading={searchLoading}
             />
             <div className="flex gap-2">
