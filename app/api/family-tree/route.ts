@@ -33,12 +33,12 @@ export async function GET(request: NextRequest) {
       .from('rumpun_bahasa')
       .select(`
         id,
-        nama,
-        induk_id,
-        level
+        nama_rumpun,
+        parent_id,
+        level_taksonomi
       `)
-      .order('level', { ascending: true })
-      .order('nama', { ascending: true })
+      .order('level_taksonomi', { ascending: true })
+      .order('nama_rumpun', { ascending: true })
 
     if (familiesError) throw familiesError
 
@@ -64,9 +64,9 @@ export async function GET(request: NextRequest) {
     families.forEach(family => {
       familyMap.set(family.id, {
         id: family.id,
-        name: family.nama,
-        parent_id: family.induk_id,
-        level: family.level,
+        name: family.nama_rumpun,
+        parent_id: family.parent_id,
+        level: family.level_taksonomi,
         children: [],
         languages: [],
         languageCount: 0
@@ -75,8 +75,8 @@ export async function GET(request: NextRequest) {
 
     families.forEach(family => {
       const node = familyMap.get(family.id)
-      if (node && family.induk_id) {
-        const parent = familyMap.get(family.induk_id)
+      if (node && family.parent_id) {
+        const parent = familyMap.get(family.parent_id)
         if (parent && parent.children) {
           parent.children.push(node)
         }
