@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { LatLngBounds } from "leaflet";
 import { LanguageMarkers } from "./LanguageMarkers";
@@ -17,6 +18,20 @@ interface LanguageMapProps {
 }
 
 export function LanguageMap({ markers }: LanguageMapProps) {
+  // Load Leaflet CSS dynamically to avoid render-blocking
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    document.head.appendChild(link);
+    
+    return () => {
+      if (link.parentNode) {
+        link.parentNode.removeChild(link);
+      }
+    };
+  }, []);
+
   return (
     <MapContainer
       center={[5, 115]}
