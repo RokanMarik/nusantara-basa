@@ -23,22 +23,19 @@ export async function GET(req: Request) {
     const provinsi = searchParams.get("provinsi");
     const vitalitas = searchParams.get("vitalitas");
     const minSpeakers = searchParams.get("min_speakers");
-
     let query = supabase
       .from("bahasa")
       .select(`
         id,
         nama_bahasa,
-        latitude,
-        longitude,
+        koordinat_pusat,
         provinsi,
         kabupaten,
         status_vitalitas,
         jumlah_penutur,
         rumpun_bahasa (nama_rumpun)
       `)
-      .not("latitude", "is", null)
-      .not("longitude", "is", null);
+      .not("koordinat_pusat", "is", null);
 
     // Apply filters
     if (provinsi) {
@@ -58,21 +55,25 @@ export async function GET(req: Request) {
 
     const { data, error } = await query;
 
-    if (error) throw error;
-
-    // Transform data to match interface
-    const languages: LanguageGeoData[] = (data || []).map((b: any) => ({
-      id: b.id,
-      nama_bahasa: b.nama_bahasa,
-      latitude: b.latitude,
-      longitude: b.longitude,
-      provinsi: b.provinsi,
-      kabupaten: b.kabupaten,
-      status_vitalitas: b.status_vitalitas,
-      jumlah_penutur: b.jumlah_penutur,
-      rumpun_bahasa: b.rumpun_bahasa?.nama_rumpun || null,
-    }));
-
+    // Transform data to match interface - extract lat/lng from JSONB
+    const languages: LanguageGeoData[] = (data || []).map((b: any) => {
+      // koordinat_pusat is JSONB: {"type":"Point","coordinates":[lng,lat]}
+      const coords = b.koordinat_pusat;
+      const lat = coords?.coordinates?.[1] ?? null;
+      const lng = coords?.coordinates?.[0] ?? null;
+      
+      return {
+        id: b.id,
+        nama_bahasa: b.nama_bahasa,
+        latitude: lat,
+        longitude: lng,
+        provinsi: b.provinsi,
+        kabupaten: b.kabupaten,
+        status_vitalitas: b.status_vitalitas,
+        jumlah_penutur: b.jumlah_penutur,
+        rumpun_bahasa: b.rumpun_bahasa?.nama_rumpun || null,
+      };
+    });
     return new Response(JSON.stringify(languages), {
       headers: { "Content-Type": "application/json" },
     });
