@@ -44,7 +44,7 @@ export default function SumberDataPage() {
       title: "DapoBas Kemendikbud",
       desc: "Database Bahasa Indonesia - Kementerian Pendidikan dan Kebudayaan",
       detail: "Sumber data primer utama proyek ini. Berisi data 603 bahasa baru dan 107 update bahasa dari seluruh Indonesia, mencakup nama, lokasi, jumlah penutur, dan status vitalitas.",
-      url: "https://dapo.kemdikbud.go.id/",
+      url: "https://dapobas.kemendikdasmen.go.id/homecat.php?show=url/petabahasa&cat=&page=6",
       coverage: "603 bahasa baru + 107 update",
     },
     {
@@ -52,7 +52,7 @@ export default function SumberDataPage() {
       title: "Statistik Kebahasaan 2023",
       desc: "Publikasi Badan Pengembangan dan Pembinaan Bahasa",
       detail: "Laporan statistik resmi dari Badan Bahasa Kemendikbud. Digunakan untuk menambah dan memverifikasi data 49 bahasa daerah yang belum tercatat di DapoBas.",
-      url: "https://badanbahasa.kemdikbud.go.id/",
+      url: "https://dapobas.kemendikdasmen.go.id/charts",
       coverage: "49 bahasa tambahan",
     },
     {
