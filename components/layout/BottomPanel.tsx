@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SearchInput } from "@/components/ui/SearchInput";
 import Link from "next/link";
 
@@ -26,10 +27,15 @@ export function BottomPanel({
   rumpunFilter, onRumpunChange, vitalitasFilter, onVitalitasChange,
   rumpunList, bahasaList, loading,
 }: BottomPanelProps) {
+  const [displayCount, setDisplayCount] = useState(30);
+  
   const vitalitasColors: Record<string, string> = {
     aman: '#22c55e', rentan: '#eab308', terancam: '#f97316',
     'sangat terancam': '#f97316', kritis: '#ef4444',
   };
+  
+  // Limit DOM nodes: only render first 30 cards
+  const displayList = bahasaList.slice(0, displayCount);
 
   return (
     <div className="mx-2 md:mx-3 mb-2 md:mb-3" role="region" aria-label="Language list and filters">
@@ -37,25 +43,30 @@ export function BottomPanel({
         {/* Search + Filters */}
         <div className="px-3 md:px-4 py-3 border-b border-earth-300/30">
           <div className="flex flex-col sm:flex-row gap-2">
-            <div className="flex-1">
-              <SearchInput value={search} onChange={onSearchChange} onSearch={onSmartSearch} loading={searchLoading} placeholder="Cari bahasa, daerah, rumpun..." />
-            </div>
+            <SearchInput
+              value={search}
+              onChange={onSearchChange}
+              onSmartSearch={onSmartSearch}
+              loading={searchLoading}
+            />
             <div className="flex gap-2">
               <select
-                className="input-field w-auto text-sm rounded-xl bg-earth-100/50 border-earth-300/30 cursor-pointer"
                 value={rumpunFilter}
                 onChange={(e) => onRumpunChange(e.target.value)}
+                className="input-field text-sm rounded-xl bg-earth-100/50 border-earth-300/30 cursor-pointer"
                 aria-label="Filter by language family"
               >
                 <option value="">Rumpun</option>
                 {rumpunList.map((r) => (
-                  <option key={r.id} value={r.namaRumpun}>{r.namaRumpun}</option>
+                  <option key={r.id} value={r.namaRumpun}>
+                    {r.namaRumpun} ({r.bahasaCount})
+                  </option>
                 ))}
               </select>
               <select
-                className="input-field w-auto text-sm rounded-xl bg-earth-100/50 border-earth-300/30 cursor-pointer"
                 value={vitalitasFilter}
                 onChange={(e) => onVitalitasChange(e.target.value)}
+                className="input-field text-sm rounded-xl bg-earth-100/50 border-earth-300/30 cursor-pointer"
                 aria-label="Filter by vitality status"
               >
                 <option value="">Status</option>
@@ -81,13 +92,15 @@ export function BottomPanel({
                 <span className="text-sm font-mono">loading...</span>
               </div>
             </div>
-          ) : bahasaList.length === 0 ? (
+          ) : displayList.length === 0 ? (
             <p className="text-center text-xs text-earth-600 py-4 font-mono" role="status">tidak ada hasil</p>
           ) : (
             <>
-              <p className="text-[10px] font-mono text-earth-600 mb-2 px-1" aria-live="polite">{bahasaList.length} bahasa</p>
+              <p className="text-[10px] font-mono text-earth-600 mb-2 px-1" aria-live="polite">
+                {displayList.length} dari {bahasaList.length} bahasa
+              </p>
               <div className="flex gap-2 md:gap-2.5 overflow-x-auto pb-1 snap-x snap-mandatory" style={{ scrollbarWidth: 'thin' }} role="list" aria-label="Language list">
-                {bahasaList.map((b) => {
+                {displayList.map((b) => {
                   const color = b.rumpunNama === "Papua" ? "#8b3a3a" : b.rumpunNama === "Trans-New Guinea" ? "#5a7247" : "#c4703f";
                   const vitalitasColor = vitalitasColors[b.statusVitalitas || ''] || '#9ca3af';
                   const penutur = b.jumlahPenutur ? (b.jumlahPenutur >= 1000000 ? `${(b.jumlahPenutur / 1000000).toFixed(1)}M` : `${(b.jumlahPenutur / 1000).toFixed(0)}K`) : '—';
@@ -117,6 +130,15 @@ export function BottomPanel({
                     </div>
                   );
                 })}
+                {displayCount < bahasaList.length && (
+                  <button
+                    onClick={() => setDisplayCount(displayCount + 30)}
+                    className="snap-start flex-shrink-0 w-32 p-3 rounded-xl border-2 border-dashed border-earth-300 hover:border-earth-400 hover:bg-earth-50/50 transition-all duration-200 cursor-pointer flex items-center justify-center"
+                    aria-label={`Load more languages (${bahasaList.length - displayCount} remaining)`}
+                  >
+                    <span className="text-xs font-mono text-earth-600">+{Math.min(30, bahasaList.length - displayCount)} lagi</span>
+                  </button>
+                )}
               </div>
             </>
           )}
