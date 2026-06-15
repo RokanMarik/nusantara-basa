@@ -43,6 +43,7 @@ interface RelatedBahasa {
 export default function BahasaDetailPage({ params }: { params: { slug: string } }) {
   const [bahasa, setBahasa] = useState<Bahasa | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [relatedLanguages, setRelatedLanguages] = useState<RelatedBahasa[]>([])
 
 
@@ -50,31 +51,35 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
     async function fetchBahasa() {
       try {
         const response = await fetch(`/api/bahasa/${params.slug}`)
-        if (response.ok) {
-          const data = await response.json()
-          setBahasa(data)
+        const data = await response.json()
+        
+        if (!response.ok) {
+          setError(data.error || 'Gagal memuat data bahasa')
+          return
+        }
+        
+        setBahasa(data)
 
-          // Fetch related languages by searching rumpun name
-          const rumpunName = data.rumpun?.nama_rumpun
-          if (rumpunName) {
-            try {
-              const relatedResponse = await fetch(
-                `/api/bahasa?rumpun=${encodeURIComponent(rumpunName)}&limit=4`
-              )
-              if (relatedResponse.ok) {
-                const relatedData = await relatedResponse.json()
-                const related = (relatedData.data || [])
-                  .filter((b: RelatedBahasa) => b.id !== data.id)
-                  .slice(0, 3)
-                setRelatedLanguages(related)
-              }
-            } catch (err) {
-              console.error('Failed to fetch related languages:', err)
+        const rumpunName = data.rumpun?.nama_rumpun
+        if (rumpunName) {
+          try {
+            const relatedResponse = await fetch(
+              `/api/bahasa?rumpun=${encodeURIComponent(rumpunName)}&limit=4`
+            )
+            if (relatedResponse.ok) {
+              const relatedData = await relatedResponse.json()
+              const related = (relatedData.data || [])
+                .filter((b: RelatedBahasa) => b.id !== data.id)
+                .slice(0, 3)
+              setRelatedLanguages(related)
             }
+          } catch (err) {
+            console.error('Failed to fetch related languages:', err)
           }
         }
       } catch (error) {
         console.error('Failed to fetch bahasa:', error)
+        setError('Terjadi kesalahan saat memuat data')
       } finally {
         setLoading(false)
       }
@@ -90,6 +95,26 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-amber-700 mb-4"></div>
           <p className="text-earth-700">Memuat data bahasa...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-earth-900 mb-4">Terjadi Kesalahan</h1>
+          <p className="text-earth-700 mb-8">{error}</p>
+          <Link
+            href="/explore"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-amber-700 text-white rounded-lg hover:bg-amber-800 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Kembali ke Explore
+          </Link>
         </div>
       </div>
     )
@@ -239,12 +264,14 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
             <dl className="space-y-3">
               {bahasa.lokasi && bahasa.lokasi.length > 0 && (
                 <>
-                  <div>
-                    <dt className="text-sm text-earth-600">Provinsi</dt>
-                    <dd className="text-lg text-earth-900">
-                      {bahasa.lokasi.map(l => l.provinsi).filter(Boolean).join(', ') || '-'}
-                    </dd>
-                  </div>
+                  {bahasa.lokasi.some(l => l.provinsi) && (
+                    <div>
+                      <dt className="text-sm text-earth-600">Provinsi</dt>
+                      <dd className="text-lg text-earth-900">
+                        {bahasa.lokasi.map(l => l.provinsi).filter(Boolean).join(', ')}
+                      </dd>
+                    </div>
+                  )}
                   {bahasa.lokasi.some(l => l.kabupaten) && (
                     <div>
                       <dt className="text-sm text-earth-600">Kabupaten</dt>
@@ -261,11 +288,11 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
                   <dd className="text-lg text-earth-900">-</dd>
                 </div>
               )}
-              {bahasa.koordinatPusat && (
+              {bahasa.koordinatPusat && bahasa.koordinatPusat.coordinates && (
                 <div>
                   <dt className="text-sm text-earth-600">Koordinat</dt>
                   <dd className="text-lg text-earth-900 font-mono">
-                    {bahasa.koordinatPusat.coordinates[1].toFixed(4)}, {bahasa.koordinatPusat.coordinates[0].toFixed(4)}
+                    {bahasa.koordinatPusat.coordinates[1]?.toFixed(4) || '0'}, {bahasa.koordinatPusat.coordinates[0]?.toFixed(4) || '0'}
                   </dd>
                 </div>
               )}
