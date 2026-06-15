@@ -7,10 +7,10 @@ import { LanguageMarkers } from "./LanguageMarkers";
 import type { BahasaMarker } from "@/lib/types";
 import styles from "./LanguageMap.module.css";
 
-// Restrict map to Southeast Asia + Papua New Guinea for performance
-const SE_ASIA_BOUNDS = new LatLngBounds(
-  [-11, 92],   // Southwest: southern Indonesia/western PNG
-  [28, 155]    // Northeast: northern SEA to eastern PNG
+// Restrict map to Indonesia territory only for better focus
+const INDONESIA_BOUNDS = new LatLngBounds(
+  [-11, 95],   // Southwest: Aceh/southern Indonesia
+  [6, 141]     // Northeast: Papua/northern Indonesia
 );
 
 interface LanguageMapProps {
@@ -34,11 +34,11 @@ export function LanguageMap({ markers }: LanguageMapProps) {
 
   return (
     <MapContainer
-      center={[5, 115]}
-      zoom={4}
+      center={[-2.5, 118]}
+      zoom={5}
       minZoom={4}
       maxZoom={12}
-      maxBounds={SE_ASIA_BOUNDS}
+      maxBounds={INDONESIA_BOUNDS}
       maxBoundsViscosity={1.0}
       className={`w-full h-full ${styles.leafletContainer}`}
       zoomControl={false}
