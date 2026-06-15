@@ -22,10 +22,13 @@ interface Language {
   kabupaten: string | null
   catatan: string | null
   sumberReferensi: string | null
-  koordinatPusat: any
+  koordinatPusat: {
+    type: string
+    coordinates: [number, number]
+  } | null
   rumpunBahasa: {
     nama_rumpun: string
-    induk_rumpun: string
+    parent_id: string | null
   } | null
 }
 
@@ -34,21 +37,9 @@ interface ComparisonResult {
   metrics: {
     speakers: Array<{ id: string; nama: string; count: number }>
     vitality: Array<{ id: string; nama: string; status: string; egids: string }>
-    geography: Array<{
-      id: string
-      nama: string
-      wilayah: string
-      provinsi: string
-      kabupaten: string | null
-      coordinates: any
-    }>
+    geography: Array<{ id: string; nama: string; wilayah: string; provinsi: string; kabupaten: string; coordinates: any }>
     proximity: Record<string, Record<string, number>>
-    languageFamily: Array<{
-      id: string
-      nama: string
-      family: string
-      parentFamily: string
-    }>
+    languageFamily: Array<{ id: string; nama: string; family: string; parentFamily: string }>
   }
   insights: string[]
   metadata: {
@@ -85,8 +76,8 @@ export default function ComparePage() {
   }
 
   const addLanguage = (language: Language) => {
-    if (languageIds.length >= 4) {
-      alert('Maximum 4 languages allowed')
+    if (languageIds.length >= 5) {
+      alert('Maximum 5 languages allowed')
       return
     }
     if (languageIds.includes(language.id)) {
@@ -168,7 +159,7 @@ export default function ComparePage() {
       <div>
         <h1 className="text-3xl font-bold">Language Comparison Tool</h1>
         <p className="text-muted-foreground mt-2">
-          Compare 2-4 languages side-by-side with detailed metrics and insights
+          Compare 2-5 languages side-by-side with detailed metrics and insights
         </p>
       </div>
 
@@ -225,7 +216,7 @@ export default function ComparePage() {
           {languageIds.length > 0 && (
             <div className="border rounded-lg p-4">
               <h3 className="font-semibold mb-2">
-                Selected Languages ({languageIds.length}/4)
+                Selected Languages ({languageIds.length}/5)
               </h3>
               <div className="flex flex-wrap gap-2">
                 {languageIds.map((id) => {

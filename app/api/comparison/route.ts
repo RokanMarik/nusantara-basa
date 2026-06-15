@@ -44,31 +44,33 @@ function generateInsights(
     }
   }
 
-  const vitalityStatuses = languages.map((lang: any) => lang.status_vitalitas)
+  const vitalityStatuses = languages.map((lang: any) => lang.status_vitalitas).filter(Boolean)
   const uniqueStatuses = [...new Set(vitalityStatuses)]
   if (uniqueStatuses.length === 1) {
     insights.push(`All languages have the same vitality status: ${uniqueStatuses[0]}`)
   }
 
-  const languageIds = Object.keys(proximityMatrix)
-  if (languageIds.length >= 2) {
+  const langIds = Object.keys(proximityMatrix)
+  if (langIds.length >= 2) {
     let closestPair: [string, string, number] = ['', '', Infinity]
-    
-    for (let i = 0; i < languageIds.length; i++) {
-      for (let j = i + 1; j < languageIds.length; j++) {
-        const distance = proximityMatrix[languageIds[i]][languageIds[j]]
-        if (distance < closestPair[2]) {
-          closestPair = [languageIds[i], languageIds[j], distance]
+
+    for (let i = 0; i < langIds.length; i++) {
+      for (let j = i + 1; j < langIds.length; j++) {
+        const distance = proximityMatrix[langIds[i]]?.[langIds[j]]
+        if (distance !== undefined && distance < closestPair[2]) {
+          closestPair = [langIds[i], langIds[j], distance]
         }
       }
     }
-    
+
     if (closestPair[2] < Infinity) {
       const lang1 = languages.find(l => l.id === closestPair[0])
       const lang2 = languages.find(l => l.id === closestPair[1])
-      insights.push(
-        `Closest pair: ${lang1?.nama_bahasa} and ${lang2?.nama_bahasa} (${closestPair[2]} km apart)`
-      )
+      if (lang1 && lang2) {
+        insights.push(
+          `Closest pair: ${lang1.nama_bahasa} and ${lang2.nama_bahasa} (${closestPair[2]} km apart)`
+        )
+      }
     }
   }
 
@@ -104,25 +106,28 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (languageIds.length > 4) {
+    if (languageIds.length > 5) {
       return NextResponse.json(
-        { error: 'Maximum 4 languages allowed for comparison' },
+        { error: 'Maximum 5 languages allowed for comparison' },
         { status: 400 }
       )
     }
 
-    // Build query without .in() to avoid TypeScript error
-    const queryBuilder = supabase
-      .from('bahasa')
-      .select('id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, egids_level, status_vitalitas, wilayah, provinsi, kabupaten, catatan, sumber_referensi, koordinat_pusat, rumpun_bahasa(nama_rumpun, parent_id)')
+    // Fetch each language individually using .eq() for efficiency
+    const SELECT_FIELDS = 'id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, egids_level, status_vitalitas, wilayah, provinsi, kabupaten, catatan, sumber_referensi, koordinat_pusat, rumpun_bahasa(nama_rumpun, parent_id)'
 
-    const queryPromise = queryBuilder.then((result: any) => result)
-    const allLanguages = await queryPromise
-
-    // Filter in JavaScript
-    const languages = (allLanguages.data || []).filter(
-      (lang: any) => languageIds.includes(lang.id)
+    const languagePromises = languageIds.map((id: string) =>
+      supabase
+        .from('bahasa')
+        .select(SELECT_FIELDS)
+        .eq('id', id)
+        .single()
     )
+
+    const results = await Promise.all(languagePromises)
+    const languages = results
+      .filter((r: any) => r.data && !r.error)
+      .map((r: any) => r.data)
 
     if (languages.length !== languageIds.length) {
       return NextResponse.json(
@@ -168,20 +173,20 @@ export async function POST(request: NextRequest) {
       speakers: languages.map((lang: any) => ({
         id: lang.id,
         nama: lang.nama_bahasa,
-        count: lang.jumlah_penutur,
+        count: lang.jumlah_penutur || 0,
       })),
       vitality: languages.map((lang: any) => ({
         id: lang.id,
         nama: lang.nama_bahasa,
-        status: lang.status_vitalitas,
-        egids: lang.egids_level,
+        status: lang.status_vitalitas || 'N/A',
+        egids: lang.egids_level || 'N/A',
       })),
       geography: languages.map((lang: any) => ({
         id: lang.id,
         nama: lang.nama_bahasa,
-        wilayah: lang.wilayah,
-        provinsi: lang.provinsi,
-        kabupaten: lang.kabupaten,
+        wilayah: lang.wilayah || 'N/A',
+        provinsi: lang.provinsi || 'N/A',
+        kabupaten: lang.kabupaten || 'N/A',
         coordinates: lang.koordinat_pusat,
       })),
       proximity: proximityMatrix,
@@ -195,20 +200,25 @@ export async function POST(request: NextRequest) {
 
     const insights = generateInsights(languages, proximityMatrix)
 
+    const totalSpeakers = languages.reduce(
+      (sum: number, lang: any) => sum + (lang.jumlah_penutur || 0),
+      0
+    )
+
     return NextResponse.json({
       languages: languages.map((lang: any) => ({
         id: lang.id,
         namaBahasa: lang.nama_bahasa,
         namaLokal: lang.nama_lokal,
         kodeIso639: lang.kode_iso_639,
-        jumlahPenutur: lang.jumlah_penutur,
-        egidsLevel: lang.egids_level,
-        statusVitalitas: lang.status_vitalitas,
-        wilayah: lang.wilayah,
-        provinsi: lang.provinsi,
-        kabupaten: lang.kabupaten,
-        catatan: lang.catatan,
-        sumberReferensi: lang.sumber_referensi,
+        jumlahPenutur: lang.jumlah_penutur || 0,
+        egidsLevel: lang.egids_level || 'N/A',
+        statusVitalitas: lang.status_vitalitas || 'N/A',
+        wilayah: lang.wilayah || '',
+        provinsi: lang.provinsi || '',
+        kabupaten: lang.kabupaten || null,
+        catatan: lang.catatan || null,
+        sumberReferensi: lang.sumber_referensi || null,
         koordinatPusat: lang.koordinat_pusat,
         rumpunBahasa: lang.rumpun_bahasa,
       })),
@@ -216,16 +226,11 @@ export async function POST(request: NextRequest) {
       insights,
       metadata: {
         totalLanguages: languages.length,
-        languagesWithSpeers: languages.filter(
-          (lang: any) => lang.jumlah_penutur > 0
+        languagesWithSpeakers: languages.filter(
+          (lang: any) => (lang.jumlah_penutur || 0) > 0
         ).length,
         languagesWithCoordinates: languagesWithCoords.length,
-        averageSpeakers: Math.round(
-          languages.reduce(
-            (sum: number, lang: any) => sum + (lang.jumlah_penutur || 0),
-            0
-          ) / languages.length
-        ),
+        averageSpeakers: Math.round(totalSpeakers / languages.length),
       },
     })
   } catch (error) {
