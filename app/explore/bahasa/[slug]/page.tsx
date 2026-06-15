@@ -16,9 +16,26 @@ interface Bahasa {
   jumlah_penutur?: number | null;
   status_vitalitas?: string | null;
   kode_iso_639?: string | null;
+  egids_level?: string | null;
   rumpun_bahasa?: { nama_rumpun: string } | null;
   auto_summary?: string | null;
 }
+
+const EGIDS_DESCRIPTIONS: Record<string, string> = {
+  "0": "International - Used between nations",
+  "1": "National - Used in education, work, media, government",
+  "2": "Regional - Used in larger region work and mass media",
+  "3": "Trade - Used in wider work beyond local community",
+  "4": "Educational - Vigorous, literacy in school system",
+  "5": "Developing - Vigorous, standard form used by some",
+  "6a": "Vigorous - Used by all generations, unbroken transmission",
+  "6b": "Threatened - Used by all generations, losing ground",
+  "7": "Shifting - Child-bearing generation not transmitting to children",
+  "8a": "Moribund - Only spoken by grandparents and older",
+  "8b": "Nearly Extinct - Only spoken by a few oldest members",
+  "9": "Dormant - No fluent speakers, symbolic use remains",
+  "10": "Extinct - No speakers, no ethnic identity",
+};
 
 export default function BahasaDetailPage({ params }: { params: { slug: string } }) {
   const [bahasa, setBahasa] = useState<Bahasa | null>(null);
@@ -118,6 +135,14 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
                     {bahasa.kode_iso_639 && (
                       <span className="inline-block px-3 py-1 rounded-full text-xs font-mono bg-gray-100 text-gray-700 border border-gray-200">
                         ISO: {bahasa.kode_iso_639}
+                      </span>
+                    )}
+                    {bahasa.egids_level && (
+                      <span 
+                        className="inline-block px-3 py-1 rounded-full text-xs bg-blue-50 text-blue-800 border border-blue-200"
+                        title={EGIDS_DESCRIPTIONS[bahasa.egids_level.split(" - ")[0]] || "EGIDS Level"}
+                      >
+                        EGIDS: {bahasa.egids_level}
                       </span>
                     )}
                     {bahasa.rumpun_bahasa && (

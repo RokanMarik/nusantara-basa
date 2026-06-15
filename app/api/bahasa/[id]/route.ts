@@ -42,7 +42,6 @@ export async function GET(
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   if (!bahasa) return NextResponse.json({ error: "Bahasa not found" }, { status: 404 });
-
   const formatted = {
     id: bahasa.id,
     namaBahasa: bahasa.nama_bahasa,
@@ -52,6 +51,7 @@ export async function GET(
     autoSummary: bahasa.auto_summary,
     jumlahPenutur: bahasa.jumlah_penutur,
     statusVitalitas: bahasa.status_vitalitas,
+    egidsLevel: bahasa.egids_level,
     koordinatPusat: bahasa.koordinat_pusat,
     geojsonWilayah: bahasa.geojson_wilayah,
     catatan: bahasa.catatan,

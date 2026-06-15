@@ -38,18 +38,35 @@ const VITALITAS_COLORS: Record<string, string> = {
   kritis: "#ef4444",
 };
 
+const EGIDS_DESCRIPTIONS: Record<string, string> = {
+  "0": "International - Used between nations",
+  "1": "National - Used in education, work, media, government",
+  "2": "Regional - Used in larger region work and mass media",
+  "3": "Trade - Used in wider work beyond local community",
+  "4": "Educational - Vigorous, literacy in school system",
+  "5": "Developing - Vigorous, standard form used by some",
+  "6a": "Vigorous - Used by all generations, unbroken transmission",
+  "6b": "Threatened - Used by all generations, losing ground",
+  "7": "Shifting - Child-bearing generation not transmitting to children",
+  "8a": "Moribund - Only spoken by grandparents and older",
+  "8b": "Nearly Extinct - Only spoken by a few oldest members",
+  "9": "Dormant - No fluent speakers, symbolic use remains",
+  "10": "Extinct - No speakers, no ethnic identity",
+};
+
 interface Bahasa {
   id: string;
-  nama_bahasa: string;
-  nama_lokal: string | null;
-  kode_iso_639: string | null;
-  jumlah_penutur: number | null;
-  status_vitalitas: string | null;
-  rumpun_bahasa: { nama_rumpun: string | null } | null;
-  auto_summary: string | null;
+  namaBahasa: string;
+  namaLokal: string | null;
+  kodeIso639: string | null;
+  jumlahPenutur: number | null;
+  statusVitalitas: string | null;
+  egidsLevel: string | null;
+  rumpunNama: string | null;
+  autoSummary: string | null;
 }
 
-type SortKey = "nama" | "penutur" | "vitalitas" | "rumpun";
+type SortKey = "nama" | "penutur" | "vitalitas" | "rumpun" | "egids";
 type SortDir = "asc" | "desc";
 
 export default function DaftarBahasaPage() {
@@ -58,6 +75,7 @@ export default function DaftarBahasaPage() {
   const [search, setSearch] = useState("");
   const [rumpunFilter, setRumpunFilter] = useState("");
   const [vitalitasFilter, setVitalitasFilter] = useState("");
+  const [egidsFilter, setEgidsFilter] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("nama");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
 
@@ -69,23 +87,27 @@ export default function DaftarBahasaPage() {
   }, []);
 
   const filtered = useMemo(() => {
-    let result = bahasaList.filter(b => b && b.nama_bahasa);
+    let result = bahasaList.filter(b => b && b.namaBahasa);
 
     if (search) {
       const q = search.toLowerCase();
       result = result.filter(b =>
-        b.nama_bahasa.toLowerCase().includes(q) ||
-        b.nama_lokal?.toLowerCase().includes(q) ||
-        b.kode_iso_639?.toLowerCase().includes(q)
+        b.namaBahasa.toLowerCase().includes(q) ||
+        b.namaLokal?.toLowerCase().includes(q) ||
+        b.kodeIso639?.toLowerCase().includes(q)
       );
     }
 
     if (rumpunFilter) {
-      result = result.filter(b => b.rumpun_bahasa?.nama_rumpun === rumpunFilter);
+      result = result.filter(b => b.rumpunNama === rumpunFilter);
     }
 
     if (vitalitasFilter) {
-      result = result.filter(b => b.status_vitalitas === vitalitasFilter);
+      result = result.filter(b => b.statusVitalitas === vitalitasFilter);
+    }
+
+    if (egidsFilter) {
+      result = result.filter(b => b.egidsLevel === egidsFilter);
     }
 
     result.sort((a, b) => {
@@ -94,20 +116,24 @@ export default function DaftarBahasaPage() {
 
       switch (sortKey) {
         case "nama":
-          aVal = (a.nama_bahasa || "").toLowerCase();
-          bVal = (b.nama_bahasa || "").toLowerCase();
+          aVal = (a.namaBahasa || "").toLowerCase();
+          bVal = (b.namaBahasa || "").toLowerCase();
           break;
         case "penutur":
-          aVal = a.jumlah_penutur || 0;
-          bVal = b.jumlah_penutur || 0;
+          aVal = a.jumlahPenutur || 0;
+          bVal = b.jumlahPenutur || 0;
           break;
         case "vitalitas":
-          aVal = a.status_vitalitas || "";
-          bVal = b.status_vitalitas || "";
+          aVal = a.statusVitalitas || "";
+          bVal = b.statusVitalitas || "";
           break;
         case "rumpun":
-          aVal = a.rumpun_bahasa?.nama_rumpun || "";
-          bVal = b.rumpun_bahasa?.nama_rumpun || "";
+          aVal = a.rumpunNama || "";
+          bVal = b.rumpunNama || "";
+          break;
+        case "egids":
+          aVal = a.egidsLevel || "";
+          bVal = b.egidsLevel || "";
           break;
       }
 
@@ -117,10 +143,11 @@ export default function DaftarBahasaPage() {
     });
 
     return result;
-  }, [bahasaList, search, rumpunFilter, vitalitasFilter, sortKey, sortDir]);
+  }, [bahasaList, search, rumpunFilter, vitalitasFilter, egidsFilter, sortKey, sortDir]);
 
-  const rumpunList = [...new Set(bahasaList.map(b => b.rumpun_bahasa?.nama_rumpun).filter(Boolean))].sort();
-  const vitalitasList = [...new Set(bahasaList.map(b => b.status_vitalitas).filter(Boolean))].sort();
+  const rumpunList = [...new Set(bahasaList.map(b => b.rumpunNama).filter(Boolean))].sort();
+  const vitalitasList = [...new Set(bahasaList.map(b => b.statusVitalitas).filter(Boolean))].sort();
+  const egidsList = [...new Set(bahasaList.map(b => b.egidsLevel).filter(Boolean))].sort();
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -203,6 +230,15 @@ export default function DaftarBahasaPage() {
               <option value="">Semua Status</option>
               {vitalitasList.filter((v): v is string => v !== null).map(v => <option key={v} value={v}>{v.charAt(0).toUpperCase() + v.slice(1)}</option>)}
             </select>
+            <select
+              className="input-field w-full sm:w-auto text-sm"
+              value={egidsFilter}
+              onChange={e => setEgidsFilter(e.target.value)}
+              aria-label="Filter by EGIDS level"
+            >
+              <option value="">Semua EGIDS</option>
+              {egidsList.filter((v): v is string => v !== null).map(v => <option key={v} value={v}>{v}</option>)}
+            </select>
           </div>
         </div>
 
@@ -216,45 +252,56 @@ export default function DaftarBahasaPage() {
                   <th className="text-left py-3 px-4 hidden md:table-cell"><SortHeader label="ISO" sort="rumpun" /></th>
                   <th className="text-right py-3 px-4"><SortHeader label="Penutur" sort="penutur" /></th>
                   <th className="text-left py-3 px-4 hidden sm:table-cell"><SortHeader label="Rumpun" sort="rumpun" /></th>
-                  <th className="text-left py-3 px-4 hidden lg:table-cell"><SortHeader label="Status" sort="vitalitas" /></th>
+                  <th className="text-left py-3 px-4 hidden lg:table-cell"><SortHeader label="EGIDS" sort="egids" /></th>
+                  <th className="text-left py-3 px-4 hidden xl:table-cell"><SortHeader label="Status" sort="vitalitas" /></th>
                 </tr>
               </thead>
               <tbody>
                 {loading ? (
-                  <tr><td colSpan={5} className="py-8 text-center text-earth-600">Loading...</td></tr>
+                  <tr><td colSpan={6} className="py-8 text-center text-earth-600">Loading...</td></tr>
                 ) : filtered.length === 0 ? (
-                  <tr><td colSpan={5} className="py-8 text-center text-earth-600">Tidak ada bahasa yang sesuai filter.</td></tr>
+                  <tr><td colSpan={6} className="py-8 text-center text-earth-600">Tidak ada bahasa yang sesuai filter.</td></tr>
                 ) : (
                   filtered.map((b) => {
-                    const rumpunColor = RUMPUN_COLORS[b.rumpun_bahasa?.nama_rumpun || ''] || '#6b5b8a';
-                    const vitalitasColor = VITALITAS_COLORS[b.status_vitalitas || ''] || '#9ca3af';
+                    const rumpunColor = RUMPUN_COLORS[b.rumpunNama || ''] || '#6b5b8a';
+                    const vitalitasColor = VITALITAS_COLORS[b.statusVitalitas || ''] || '#9ca3af';
                     return (
                       <tr key={b.id} className="border-b border-earth-200 hover:bg-earth-50/50 transition-colors duration-200">
                         <td className="py-3 px-4">
-                          <Link href={`/explore/bahasa/${b.id}`} className="group flex items-center gap-2 cursor-pointer" aria-label={`View details for ${b.nama_bahasa}`}>
+                          <Link href={`/explore/bahasa/${b.id}`} className="group flex items-center gap-2 cursor-pointer" aria-label={`View details for ${b.namaBahasa}`}>
                             <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0" style={{ backgroundColor: rumpunColor }}>
-                              {b.nama_bahasa.charAt(0)}
+                              {b.namaBahasa.charAt(0)}
                             </div>
                             <div className="min-w-0">
-                              <div className="font-semibold text-[#1a1209] text-sm group-hover:text-amber-700 transition-colors truncate">{b.nama_bahasa}</div>
-                              {b.nama_lokal && <div className="text-[10px] text-earth-600 truncate italic">{b.nama_lokal}</div>}
+                              <div className="font-semibold text-[#1a1209] text-sm group-hover:text-amber-700 transition-colors truncate">{b.namaBahasa}</div>
+                              {b.namaLokal && <div className="text-[10px] text-earth-600 truncate italic">{b.namaLokal}</div>}
                             </div>
                           </Link>
                         </td>
                         <td className="py-3 px-4 hidden md:table-cell">
-                          <span className="font-mono text-xs text-earth-600">{b.kode_iso_639 || "—"}</span>
+                          <span className="font-mono text-xs text-earth-600">{b.kodeIso639 || "—"}</span>
                         </td>
                         <td className="py-3 px-4 text-right">
-                          <span className="font-semibold text-[#1a1209] text-sm">{formatPenutur(b.jumlah_penutur)}</span>
+                          <span className="font-semibold text-[#1a1209] text-sm">{formatPenutur(b.jumlahPenutur)}</span>
                         </td>
                         <td className="py-3 px-4 hidden sm:table-cell">
-                          <span className="text-xs font-medium" style={{ color: rumpunColor }}>{b.rumpun_bahasa?.nama_rumpun || "—"}</span>
+                          <span className="text-xs font-medium" style={{ color: rumpunColor }}>{b.rumpunNama || "—"}</span>
                         </td>
                         <td className="py-3 px-4 hidden lg:table-cell">
-                          {b.status_vitalitas && (
+                          {b.egidsLevel && (
+                            <span 
+                              className="text-xs font-mono text-earth-700"
+                              title={EGIDS_DESCRIPTIONS[b.egidsLevel.split(" - ")[0]] || ""}
+                            >
+                              {b.egidsLevel}
+                            </span>
+                          )}
+                        </td>
+                        <td className="py-3 px-4 hidden xl:table-cell">
+                          {b.statusVitalitas && (
                             <span className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium" style={{ backgroundColor: vitalitasColor + "15", color: vitalitasColor }}>
                               <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: vitalitasColor }} />
-                              {b.status_vitalitas.charAt(0).toUpperCase() + b.status_vitalitas.slice(1)}
+                              {b.statusVitalitas.charAt(0).toUpperCase() + b.statusVitalitas.slice(1)}
                             </span>
                           )}
                         </td>
