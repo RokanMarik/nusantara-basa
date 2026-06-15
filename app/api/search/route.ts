@@ -79,12 +79,13 @@ async function keywordFallback(query: string) {
 
   if (allIds.size === 0) return [];
 
-  const { data: allBahasa } = await supabase
+  const result = await supabase
     .from("bahasa")
     .select("id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, status_vitalitas, koordinat_pusat, rumpun_bahasa(nama_rumpun)")
     .in("id", [...allIds])
     .order("nama_bahasa", { ascending: true })
     .limit(50);
+  const allBahasa = result.data as any[] | null;
 
   return (allBahasa || []).map((b: any) => ({
     id: b.id,
@@ -137,20 +138,22 @@ export async function POST(request: NextRequest) {
   }
   if (filters.provinsi?.length) {
     // Need to join with lokasi
-    const { data: lokasiIds } = await supabase
+    const result = await supabase
       .from("lokasi")
       .select("bahasa_id")
       .in("provinsi", filters.provinsi);
+    const lokasiIds = result.data as any[] | null;
 
     if (lokasiIds?.length) {
       supabaseQuery = supabaseQuery.in("id", lokasiIds.map((l: any) => l.bahasa_id));
     }
   }
   if (filters.tipe_wilayah) {
-    const { data: lokasiIds } = await supabase
+    const result = await supabase
       .from("lokasi")
       .select("bahasa_id")
       .eq("tipe_wilayah", filters.tipe_wilayah);
+    const lokasiIds = result.data as any[] | null;
 
     if (lokasiIds?.length) {
       supabaseQuery = supabaseQuery.in("id", lokasiIds.map((l: any) => l.bahasa_id));
