@@ -135,7 +135,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Fetch all languages
-    const { data: languages, error } = await supabase
+    const { data: languages, error }: any = await supabase
       .from('bahasa')
       .select(`
         id,
