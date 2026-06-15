@@ -42,6 +42,7 @@ model Bahasa {
   rumpun             RumpunBahasa?     @relation(fields: [rumpunId], references: [id])
   jumlahPenutur      Int?              @map("jumlah_penutur")
   statusVitalitas    String?           @map("status_vitalitas") @db.VarChar(30)
+  egidsLevel         String?           @map("egids_level") @db.VarChar(10)
   tanggalDokumentasi DateTime?         @map("tanggal_dokumentasi") @db.Date
   koordinatPusat     Json?             @map("koordinat_pusat")
   geojsonWilayah     Json?             @map("geojson_wilayah")

@@ -1,3 +1,16 @@
+/**
+ * In-memory cache implementation
+ * 
+ * LIMITATIONS:
+ * - Serverless: Cache is lost on cold starts (each function instance has isolated memory)
+ * - Multi-instance: No cache sharing between serverless function instances
+ * 
+ * For production serverless deployment, consider:
+ * - Vercel KV (Redis-compatible)
+ * - Upstash Redis
+ * - Cloudflare KV
+ */
+
 interface CacheEntry<T> {
   data: T;
   expiry: number;

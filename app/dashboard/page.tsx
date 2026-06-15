@@ -15,7 +15,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import dynamic from 'next/dynamic'
-import type { LanguageGeoData } from '@/app/api/geo/route'
+import type { LanguageGeoData } from '@/lib/types'
 
 const MapComponent = dynamic(() => import('@/components/map/MapComponent'), {
   ssr: false,

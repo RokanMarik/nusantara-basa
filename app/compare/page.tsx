@@ -56,6 +56,7 @@ const POPULAR_LANGUAGES = [
   { id: 'bugis', name: 'Bugis' },
 ]
 
+
 export default function ComparePage() {
   const [languageIds, setLanguageIds] = useState<string[]>([])
   const [searchQuery, setSearchQuery] = useState('')

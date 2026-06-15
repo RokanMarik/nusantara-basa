@@ -1,11 +1,6 @@
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from "@/lib/supabase";
 import { getCache, setCache, TTL } from "@/lib/cache";
 import { apiLimiter, rateLimitHeaders } from "@/lib/rate-limit";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://hkeheukewxsvaarxaket.supabase.co",
-  process.env.SUPABASE_SERVICE_ROLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrZWhldWtld3hzdmFhcnhha2V0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDEzOTkzMywiZXhwIjoyMDk1NzE1OTMzfQ.36yS86na5jZYaJEguPDREzrx_qpPOL15zNNxMaeCg20"
-);
 
 export interface LanguageGeoData {
   id: string;
@@ -58,18 +53,18 @@ export async function GET(req: Request) {
         id,
         nama_bahasa,
         koordinat_pusat,
-        provinsi,
-        kabupaten,
         status_vitalitas,
         jumlah_penutur,
-        rumpun_bahasa (nama_rumpun)
+        rumpun_bahasa (nama_rumpun),
+        lokasi (provinsi, kabupaten)
       `)
       .not("koordinat_pusat", "is", null);
 
     // Apply filters
     if (provinsi) {
-      query = query.eq("provinsi", provinsi);
+      query = query.eq("lokasi.provinsi", provinsi);
     }
+
 
     if (vitalitas) {
       query = query.eq("status_vitalitas", vitalitas);
@@ -100,8 +95,8 @@ export async function GET(req: Request) {
         nama_bahasa: b.nama_bahasa,
         latitude: lat,
         longitude: lng,
-        provinsi: b.provinsi,
-        kabupaten: b.kabupaten,
+        provinsi: b.lokasi?.[0]?.provinsi || null,
+        kabupaten: b.lokasi?.[0]?.kabupaten || null,
         status_vitalitas: b.status_vitalitas,
         jumlah_penutur: b.jumlah_penutur,
         rumpun_bahasa: b.rumpun_bahasa?.nama_rumpun || null,
