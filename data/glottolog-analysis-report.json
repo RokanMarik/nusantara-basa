@@ -1,0 +1,304 @@
+{
+  "timestamp": "2026-06-15T01:40:27.071Z",
+  "source": "Analysis based on ISO 639-3 Registry + Glottolog 5.0 documentation",
+  "totalValidatedISO": 461,
+  "languageTypeAnalysis": {
+    "total": 461,
+    "living": 440,
+    "extinct": 14,
+    "historical": 4,
+    "constructed": 2
+  },
+  "expectedGlottologCoverage": 418,
+  "expectedCoveragePercent": "90.7%",
+  "indonesianFamilies": {
+    "Austronesian": {
+      "subgroups": [
+        "Malayo-Polynesian",
+        "Malayo-Sumbawan",
+        "Celebic",
+        "Philippine"
+      ],
+      "estimatedLanguages": 450
+    },
+    "Trans-New Guinea": {
+      "subgroups": [
+        "Greater Awyu",
+        "Dani",
+        "Asmat-Kamoro",
+        "Mek",
+        "Ok"
+      ],
+      "estimatedLanguages": 250
+    },
+    "West Papuan": {
+      "subgroups": [
+        "North Halmahera",
+        "Bird's Head"
+      ],
+      "estimatedLanguages": 30
+    },
+    "Timor-Alor-Pantar": {
+      "subgroups": [
+        "Alor-Pantar",
+        "Timor"
+      ],
+      "estimatedLanguages": 40
+    },
+    "South Halmahera-West New Guinea": {
+      "subgroups": [
+        "South Halmahera",
+        "Bomberai"
+      ],
+      "estimatedLanguages": 25
+    }
+  },
+  "enrichmentTemplate": [
+    {
+      "iso": "aax",
+      "name": "Mandobo Atas",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "aaz",
+      "name": "Amarasi",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "abf",
+      "name": "Abai Sungai",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "abl",
+      "name": "Lampung Nyo",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "abs",
+      "name": "Ambonese Malay",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "abu",
+      "name": "Abure",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "abz",
+      "name": "Abui",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "ace",
+      "name": "Achinese",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "adn",
+      "name": "Adang",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "adr",
+      "name": "Adonara",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "afz",
+      "name": "Obokuitai",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "air",
+      "name": "Airoran",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "akb",
+      "name": "Batak Angkola",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "akc",
+      "name": "Mpur",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "akq",
+      "name": "Ak",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "aln",
+      "name": "Gheg Albanian",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "amk",
+      "name": "Ambai",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "aml",
+      "name": "War-Jaintia",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "amm",
+      "name": "Ama (Papua New Guinea)",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    },
+    {
+      "iso": "amq",
+      "name": "Amahai",
+      "type": "L",
+      "scope": "I",
+      "glottocode": null,
+      "family": null,
+      "classification": null,
+      "endangerment": null,
+      "country": "Indonesia",
+      "macroarea": "Eurasia"
+    }
+  ],
+  "recommendations": [
+    "Use Glottolog API (https://glottolog.org/resourcemap.json) for real-time enrichment",
+    "Batch update glottocodes for 461 validated ISO codes",
+    "Add glottocode column to bahasa table",
+    "Cross-reference family/classification data"
+  ]
+}
