@@ -92,32 +92,32 @@ export async function GET(request: NextRequest) {
     if (speakersResult.error) throw speakersResult.error
 
     // Process vitalitas counts
-    const vitalitasCounts = vitalitasResult.data.reduce((acc: Record<string, number>, row: any) => {
+    const vitalitasCounts: Record<string, number> = vitalitasResult.data.reduce((acc: Record<string, number>, row: any) => {
       const status = row.status_vitalitas || 'Tidak Diketahui'
       acc[status] = (acc[status] || 0) + 1
       return acc
-    }, {})
+    }, {} as Record<string, number>)
 
     // Process wilayah counts
-    const wilayahCounts = wilayahResult.data.reduce((acc: Record<string, number>, row: any) => {
+    const wilayahCounts: Record<string, number> = wilayahResult.data.reduce((acc: Record<string, number>, row: any) => {
       const w = row.wilayah || 'Tidak Diketahui'
       acc[w] = (acc[w] || 0) + 1
       return acc
-    }, {})
+    }, {} as Record<string, number>)
 
     // Process provinsi counts
-    const provinsiCounts = provinsiResult.data.reduce((acc: Record<string, number>, row: any) => {
+    const provinsiCounts: Record<string, number> = provinsiResult.data.reduce((acc: Record<string, number>, row: any) => {
       const p = row.provinsi || 'Tidak Diketahui'
       acc[p] = (acc[p] || 0) + 1
       return acc
-    }, {})
+    }, {} as Record<string, number>)
 
     // Process EGIDS counts
-    const egidsCounts = egidsResult.data.reduce((acc: Record<string, number>, row: any) => {
+    const egidsCounts: Record<string, number> = egidsResult.data.reduce((acc: Record<string, number>, row: any) => {
       const level = row.egids_level || 'Tidak Diketahui'
       acc[level] = (acc[level] || 0) + 1
       return acc
-    }, {})
+    }, {} as Record<string, number>)
 
     const responseData = {
       success: true,
@@ -132,10 +132,10 @@ export async function GET(request: NextRequest) {
         })),
         wilayah: Object.entries(wilayahCounts)
           .map(([name, value]) => ({ name, value }))
-          .sort((a, b) => b.value - a.value),
+          .sort((a: { name: string; value: number }, b: { name: string; value: number }) => b.value - a.value),
         provinsi: Object.entries(provinsiCounts)
           .map(([name, value]) => ({ name, value }))
-          .sort((a, b) => b.value - a.value)
+          .sort((a: { name: string; value: number }, b: { name: string; value: number }) => b.value - a.value)
           .slice(0, 15),
         topLanguages: topLanguagesResult.data.map((lang: any) => ({
           name: lang.nama_bahasa,
@@ -144,7 +144,7 @@ export async function GET(request: NextRequest) {
         })),
         egids: Object.entries(egidsCounts)
           .map(([name, value]) => ({ name, value }))
-          .sort((a, b) => {
+          .sort((a: { name: string; value: number }, b: { name: string; value: number }) => {
             const aLevel = parseInt(a.name.split(' ')[0]) || 99
             const bLevel = parseInt(b.name.split(' ')[0]) || 99
             return aLevel - bLevel
