@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-06-15T01:32:34.156Z",
+  "statistics": {
+    "total": 510,
+    "egidsVitalitasMismatch": 0,
+    "extinctWithSpeakers": 0,
+    "vigorousWithZeroSpeakers": 0,
+    "duplicateISOCodes": 0
+  },
+  "issues": []
+}

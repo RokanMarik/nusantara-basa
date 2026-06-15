@@ -1,7 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
+import { apiLimiter, rateLimitHeaders } from "@/lib/rate-limit";
 
 export async function GET(request: NextRequest) {
+  const rateLimit = apiLimiter(request);
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests" },
+      { 
+        status: 429,
+        headers: rateLimitHeaders(rateLimit)
+      }
+    );
+  }
+
   const searchParams = request.nextUrl.searchParams;
   const limit = parseInt(searchParams.get("limit") ?? "50");
   const offset = parseInt(searchParams.get("offset") ?? "0");

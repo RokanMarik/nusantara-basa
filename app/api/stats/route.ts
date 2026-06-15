@@ -1,15 +1,41 @@
 import { createClient } from '@supabase/supabase-js'
 import { NextRequest, NextResponse } from 'next/server'
+import { getCache, setCache, TTL } from '@/lib/cache'
+import { apiLimiter, rateLimitHeaders } from '@/lib/rate-limit'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 )
 
+
 export async function GET(request: NextRequest) {
+  // Rate limiting
+  const rateLimit = apiLimiter(request);
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests" },
+      { 
+        status: 429,
+        headers: rateLimitHeaders(rateLimit)
+      }
+    );
+  }
+
   const searchParams = request.nextUrl.searchParams
   const provinsi = searchParams.get('provinsi')
   const wilayah = searchParams.get('wilayah')
+
+  // Generate cache key
+  const cacheKey = `stats:${provinsi || 'all'}:${wilayah || 'all'}`
+  
+  // Check cache first
+  const cached = getCache<any>(cacheKey)
+  if (cached) {
+    return NextResponse.json(cached, {
+      headers: { 'X-Cache': 'HIT' }
+    })
+  }
 
   try {
     // Helper to apply filters
@@ -19,82 +45,86 @@ export async function GET(request: NextRequest) {
       return query
     }
 
-    // Fetch vitalitas distribution
-    let vitalitasQuery = supabase.from('bahasa').select('status_vitalitas').not('status_vitalitas', 'is', null)
-    vitalitasQuery = applyFilters(vitalitasQuery)
-    const { data: vitalitasData, error: vitalitasError } = await vitalitasQuery
-    if (vitalitasError) throw vitalitasError
+    // Execute all queries in parallel
+    const [
+      vitalitasResult,
+      wilayahResult,
+      provinsiResult,
+      topLanguagesResult,
+      egidsResult,
+      totalResult,
+      speakersResult
+    ] = await Promise.all([
+      // Fetch vitalitas distribution
+      applyFilters(supabase.from('bahasa').select('status_vitalitas').not('status_vitalitas', 'is', null)),
+      
+      // Fetch wilayah distribution
+      applyFilters(supabase.from('bahasa').select('wilayah').not('wilayah', 'is', null)),
+      
+      // Fetch provinsi distribution
+      applyFilters(supabase.from('bahasa').select('provinsi').not('provinsi', 'is', null)),
+      
+      // Fetch top 10 languages by speakers
+      applyFilters(supabase
+        .from('bahasa')
+        .select('nama_bahasa, jumlah_penutur, status_vitalitas')
+        .not('jumlah_penutur', 'is', null)
+        .order('jumlah_penutur', { ascending: false })
+        .limit(10)),
+      
+      // Fetch EGIDS distribution
+      applyFilters(supabase.from('bahasa').select('egids_level').not('egids_level', 'is', null)),
+      
+      // Fetch total counts
+      applyFilters(supabase.from('bahasa').select('*', { count: 'exact', head: true })),
+      
+      // Fetch speakers count
+      applyFilters(supabase.from('bahasa').select('*', { count: 'exact', head: true }).not('jumlah_penutur', 'is', null))
+    ])
 
-    const vitalitasCounts = vitalitasData.reduce((acc: Record<string, number>, row) => {
+    // Check for errors
+    if (vitalitasResult.error) throw vitalitasResult.error
+    if (wilayahResult.error) throw wilayahResult.error
+    if (provinsiResult.error) throw provinsiResult.error
+    if (topLanguagesResult.error) throw topLanguagesResult.error
+    if (egidsResult.error) throw egidsResult.error
+    if (totalResult.error) throw totalResult.error
+    if (speakersResult.error) throw speakersResult.error
+
+    // Process vitalitas counts
+    const vitalitasCounts = vitalitasResult.data.reduce((acc: Record<string, number>, row: any) => {
       const status = row.status_vitalitas || 'Tidak Diketahui'
       acc[status] = (acc[status] || 0) + 1
       return acc
     }, {})
 
-    // Fetch wilayah distribution
-    let wilayahQuery = supabase.from('bahasa').select('wilayah').not('wilayah', 'is', null)
-    wilayahQuery = applyFilters(wilayahQuery)
-    const { data: wilayahData, error: wilayahError } = await wilayahQuery
-    if (wilayahError) throw wilayahError
-
-    const wilayahCounts = wilayahData.reduce((acc: Record<string, number>, row) => {
+    // Process wilayah counts
+    const wilayahCounts = wilayahResult.data.reduce((acc: Record<string, number>, row: any) => {
       const w = row.wilayah || 'Tidak Diketahui'
       acc[w] = (acc[w] || 0) + 1
       return acc
     }, {})
 
-    // Fetch provinsi distribution
-    let provinsiQuery = supabase.from('bahasa').select('provinsi').not('provinsi', 'is', null)
-    provinsiQuery = applyFilters(provinsiQuery)
-    const { data: provinsiData, error: provinsiError } = await provinsiQuery
-    if (provinsiError) throw provinsiError
-
-    const provinsiCounts = provinsiData.reduce((acc: Record<string, number>, row) => {
+    // Process provinsi counts
+    const provinsiCounts = provinsiResult.data.reduce((acc: Record<string, number>, row: any) => {
       const p = row.provinsi || 'Tidak Diketahui'
       acc[p] = (acc[p] || 0) + 1
       return acc
     }, {})
 
-    // Fetch top 10 languages by speakers
-    let topQuery = supabase
-      .from('bahasa')
-      .select('nama_bahasa, jumlah_penutur, status_vitalitas')
-      .not('jumlah_penutur', 'is', null)
-      .order('jumlah_penutur', { ascending: false })
-      .limit(10)
-    topQuery = applyFilters(topQuery)
-    const { data: topLanguages, error: topError } = await topQuery
-    if (topError) throw topError
-
-    // Fetch EGIDS distribution
-    let egidsQuery = supabase.from('bahasa').select('egids_level').not('egids_level', 'is', null)
-    egidsQuery = applyFilters(egidsQuery)
-    const { data: egidsData, error: egidsError } = await egidsQuery
-    if (egidsError) throw egidsError
-
-    const egidsCounts = egidsData.reduce((acc: Record<string, number>, row) => {
+    // Process EGIDS counts
+    const egidsCounts = egidsResult.data.reduce((acc: Record<string, number>, row: any) => {
       const level = row.egids_level || 'Tidak Diketahui'
       acc[level] = (acc[level] || 0) + 1
       return acc
     }, {})
 
-    // Fetch total counts
-    let totalQuery = supabase.from('bahasa').select('*', { count: 'exact', head: true })
-    totalQuery = applyFilters(totalQuery)
-    const { count: totalBahasa, error: totalError } = await totalQuery
-    if (totalError) throw totalError
-
-    let speakersQuery = supabase.from('bahasa').select('*', { count: 'exact', head: true }).not('jumlah_penutur', 'is', null)
-    speakersQuery = applyFilters(speakersQuery)
-    const { count: withSpeakers, error: speakersError } = await speakersQuery
-    if (speakersError) throw speakersError
-
-    return NextResponse.json({
+    const responseData = {
       success: true,
       data: {
         total: {
-          bahasa: totalBahasa || 0,
-          withSpeakers: withSpeakers || 0,
+          bahasa: totalResult.count || 0,
+          withSpeakers: speakersResult.count || 0,
         },
         vitalitas: Object.entries(vitalitasCounts).map(([name, value]) => ({
           name,
@@ -107,7 +137,7 @@ export async function GET(request: NextRequest) {
           .map(([name, value]) => ({ name, value }))
           .sort((a, b) => b.value - a.value)
           .slice(0, 15),
-        topLanguages: topLanguages.map((lang: any) => ({
+        topLanguages: topLanguagesResult.data.map((lang: any) => ({
           name: lang.nama_bahasa,
           speakers: lang.jumlah_penutur,
           status: lang.status_vitalitas || 'Tidak Diketahui',
@@ -120,6 +150,13 @@ export async function GET(request: NextRequest) {
             return aLevel - bLevel
           }),
       },
+    }
+
+    // Cache for 1 hour
+    setCache(cacheKey, responseData, TTL.STATS)
+
+    return NextResponse.json(responseData, {
+      headers: { 'X-Cache': 'MISS' }
     })
   } catch (error: any) {
     console.error('Error fetching stats:', error)

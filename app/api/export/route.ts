@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { exportLimiter, rateLimitHeaders } from "@/lib/rate-limit";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://hkeheukewxsvaarxaket.supabase.co",
@@ -7,6 +8,18 @@ const supabase = createClient(
 );
 
 export async function GET(request: NextRequest) {
+  // Rate limiting
+  const rateLimit = exportLimiter(request);
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests" },
+      { 
+        status: 429,
+        headers: rateLimitHeaders(rateLimit)
+      }
+    );
+  }
+
   const format = request.nextUrl.searchParams.get("format") || "json";
   const vitalitas = request.nextUrl.searchParams.get("vitalitas");
   const provinsi = request.nextUrl.searchParams.get("provinsi");
