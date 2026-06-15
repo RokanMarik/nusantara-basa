@@ -1,0 +1,48 @@
+
+> peta-bahasa-indonesia@0.1.0 build
+> prisma generate && next build
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+
+✔ Generated Prisma Client (v5.22.0) to .\node_modules\@prisma\client in 97ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+  ▲ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./app/data-dictionary/page.tsx
+Module not found: Can't resolve '@/components/ui/table'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/data-dictionary/page.tsx
+Module not found: Can't resolve '@/components/ui/alert'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/api-docs/page.tsx
+Error: 
+  [31mx[0m You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
+  [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
+  [31m|[0m 
+  [31m|[0m 
+   ,-[[36;1;4mC:\Users\Rokan Akbar Marik\Documents\projects\nusantara-basa\app\api-docs\page.tsx[0m:1:1]
+ [2m1[0m | import { useState } from 'react'
+   : [31;1m         ^^^^^^^^[0m
+ [2m2[0m | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+ [2m3[0m | import { Badge } from '@/components/ui/badge'
+ [2m4[0m | import { Button } from '@/components/ui/button'
+   `----
+
+Import trace for requested module:
+./app/api-docs/page.tsx
+
+
+> Build failed because of webpack errors

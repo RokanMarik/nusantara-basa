@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextRequest, NextResponse } from 'next/server'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -27,31 +27,21 @@ interface Language {
   wilayah: string
 }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
+export async function GET(request: NextRequest) {
   try {
-    // Fetch all language families with hierarchy
     const { data: families, error: familiesError } = await supabase
       .from('rumpun_bahasa')
       .select(`
         id,
         nama,
         induk_id,
-        level,
-        deskripsi
+        level
       `)
       .order('level', { ascending: true })
       .order('nama', { ascending: true })
 
     if (familiesError) throw familiesError
 
-    // Fetch all languages with their family assignments
     const { data: languages, error: languagesError } = await supabase
       .from('bahasa')
       .select(`
@@ -69,10 +59,8 @@ export default async function handler(
 
     if (languagesError) throw languagesError
 
-    // Build family tree structure
     const familyMap = new Map<string, LanguageFamily>()
     
-    // First pass: create all family nodes
     families.forEach(family => {
       familyMap.set(family.id, {
         id: family.id,
@@ -85,7 +73,6 @@ export default async function handler(
       })
     })
 
-    // Second pass: build parent-child relationships
     families.forEach(family => {
       const node = familyMap.get(family.id)
       if (node && family.induk_id) {
@@ -96,7 +83,6 @@ export default async function handler(
       }
     })
 
-    // Third pass: assign languages to families
     languages.forEach(lang => {
       if (lang.rumpun_bahasa_id) {
         const family = familyMap.get(lang.rumpun_bahasa_id)
@@ -115,7 +101,6 @@ export default async function handler(
       }
     })
 
-    // Calculate language counts (including descendants)
     function calculateCounts(node: LanguageFamily): number {
       let count = node.languages?.length || 0
       
@@ -129,20 +114,16 @@ export default async function handler(
       return count
     }
 
-    // Calculate counts for all families
     familyMap.forEach(family => {
       if (!family.parent_id) {
-        // Root families
         calculateCounts(family)
       }
     })
 
-    // Get root families (no parent)
     const rootFamilies = Array.from(familyMap.values())
       .filter(f => !f.parent_id)
       .sort((a, b) => (b.languageCount || 0) - (a.languageCount || 0))
 
-    // Add summary statistics
     const stats = {
       totalFamilies: families.length,
       totalLanguages: languages.length,
@@ -151,18 +132,17 @@ export default async function handler(
       languagesWithoutFamily: languages.filter(l => !l.rumpun_bahasa_id).length
     }
 
-    return res.status(200).json({
+    return NextResponse.json({
       success: true,
       data: rootFamilies,
       stats,
       allFamilies: Array.from(familyMap.values())
     })
-
   } catch (error: any) {
     console.error('Error fetching language family tree:', error)
-    return res.status(500).json({
-      success: false,
-      error: error.message
-    })
+    return NextResponse.json(
+      { success: false, error: error.message },
+      { status: 500 }
+    )
   }
 }
