@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/Header";
 import { BottomPanel } from "@/components/layout/BottomPanel";
@@ -109,11 +109,11 @@ export default function MapPage() {
           vitalitasFilter={vitalitasFilter}
           onVitalitasChange={setVitalitasFilter}
           rumpunList={rumpunList}
-          bahasaList={bahasaList.map((b) => ({
+          bahasaList={useMemo(() => bahasaList.map((b) => ({
             id: b.id, namaBahasa: b.namaBahasa, namaLokal: b.namaLokal,
             jumlahPenutur: b.jumlahPenutur, statusVitalitas: b.statusVitalitas,
             rumpunNama: b.rumpunNama, lat: b.lat, lng: b.lng,
-          }))}
+          })), [bahasaList])}
           loading={loading}
         />
       </div>

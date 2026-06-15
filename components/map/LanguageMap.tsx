@@ -1,9 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import { LanguageMarkers } from "./LanguageMarkers";
 import type { BahasaMarker } from "@/lib/types";
+import styles from "./LanguageMap.module.css";
 
 interface LanguageMapProps {
   markers: BahasaMarker[];
@@ -12,16 +13,31 @@ interface LanguageMapProps {
 }
 
 export function LanguageMap({ markers, center = [-2.5, 118.0], zoom = 5 }: LanguageMapProps) {
+  // Dynamically load Leaflet CSS only when component mounts
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    document.head.appendChild(link);
+  }, []);
+
   return (
     <MapContainer
       center={center}
       zoom={zoom}
-      className="w-full h-full"
+      className={`w-full h-full ${styles.leafletContainer}`}
       zoomControl={false}
+      // Performance optimizations
+      preferCanvas={true}
     >
       <TileLayer
         attribution='&copy; <a href="https://carto.com/">CARTO</a>'
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        // Tile loading optimizations
+        maxZoom={18}
+        minZoom={3}
+        tileSize={256}
+        zoomOffset={0}
       />
       <LanguageMarkers markers={markers} />
     </MapContainer>

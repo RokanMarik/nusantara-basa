@@ -26,6 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
+      <head>
+        <link rel="preconnect" href="https://a.basemaps.cartocdn.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://b.basemaps.cartocdn.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://c.basemaps.cartocdn.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${notoSans.variable} ${notoSerif.variable} font-sans`}>
         {children}
       </body>
