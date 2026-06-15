@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
 
-// Haversine formula to calculate distance between two coordinates in km
 function calculateDistance(
   lat1: number,
   lon1: number,
   lat2: number,
   lon2: number
 ): number {
-  const R = 6371 // Earth's radius in kilometers
+  const R = 6371
   const dLat = ((lat2 - lat1) * Math.PI) / 180
   const dLon = ((lon2 - lon1) * Math.PI) / 180
   const a =
@@ -21,14 +20,12 @@ function calculateDistance(
   return Math.round(R * c)
 }
 
-// Generate insights based on comparison
 function generateInsights(
   languages: any[],
   proximityMatrix: Record<string, Record<string, number>>
 ): string[] {
   const insights: string[] = []
 
-  // Speaker count insights
   const speakers = languages
     .map((lang: any) => ({
       nama: lang.nama,
@@ -47,59 +44,40 @@ function generateInsights(
     }
   }
 
-  // Vitality insights
   const vitalityStatuses = languages.map((lang: any) => lang.status_vitalitas)
   const uniqueStatuses = [...new Set(vitalityStatuses)]
   if (uniqueStatuses.length === 1) {
-    insights.push(
-      `All languages share the same vitality status: ${uniqueStatuses[0]}`
-    )
+    insights.push(`All languages have the same vitality status: ${uniqueStatuses[0]}`)
   }
 
-  // Geographic insights
   const languageIds = Object.keys(proximityMatrix)
   if (languageIds.length >= 2) {
-    let minDistance = Infinity
-    let maxDistance = 0
-    let closestPair = ''
-    let farthestPair = ''
-
+    let closestPair: [string, string, number] = ['', '', Infinity]
+    
     for (let i = 0; i < languageIds.length; i++) {
       for (let j = i + 1; j < languageIds.length; j++) {
-        const lang1 = languages.find((l: any) => l.id === languageIds[i])
-        const lang2 = languages.find((l: any) => l.id === languageIds[j])
         const distance = proximityMatrix[languageIds[i]][languageIds[j]]
-
-        if (distance && lang1 && lang2) {
-          if (distance < minDistance) {
-            minDistance = distance
-            closestPair = `${lang1.nama} and ${lang2.nama}`
-          }
-          if (distance > maxDistance) {
-            maxDistance = distance
-            farthestPair = `${lang1.nama} and ${lang2.nama}`
-          }
+        if (distance < closestPair[2]) {
+          closestPair = [languageIds[i], languageIds[j], distance]
         }
       }
     }
-
-    if (minDistance !== Infinity) {
-      insights.push(`Closest pair: ${closestPair} (${minDistance} km apart)`)
-    }
-    if (maxDistance > 0) {
-      insights.push(`Farthest pair: ${farthestPair} (${maxDistance} km apart)`)
+    
+    if (closestPair[2] < Infinity) {
+      const lang1 = languages.find(l => l.id === closestPair[0])
+      const lang2 = languages.find(l => l.id === closestPair[1])
+      insights.push(
+        `Closest pair: ${lang1?.nama_bahasa} and ${lang2?.nama_bahasa} (${closestPair[2]} km apart)`
+      )
     }
   }
 
-  // Language family insights
   const families = languages
     .map((lang: any) => lang.rumpun_bahasa?.nama_rumpun)
     .filter(Boolean)
   const uniqueFamilies = [...new Set(families)]
   if (uniqueFamilies.length === 1) {
-    insights.push(
-      `All languages belong to the same language family: ${uniqueFamilies[0]}`
-    )
+    insights.push(`All languages belong to the same family: ${uniqueFamilies[0]}`)
   } else if (uniqueFamilies.length === languages.length) {
     insights.push('All languages belong to different language families')
   }
@@ -112,7 +90,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { languageIds } = body
 
-    // Validate input
     if (!languageIds || !Array.isArray(languageIds)) {
       return NextResponse.json(
         { error: 'languageIds must be an array' },
@@ -134,8 +111,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Fetch all languages
-    const query = supabase
+    const result = await supabase
       .from('bahasa')
       .select(`
         id,
@@ -153,8 +129,10 @@ export async function POST(request: NextRequest) {
         koordinat_pusat,
         rumpun_bahasa(nama_rumpun, parent_id)
       `)
-    
-    const { data: languages, error } = await query.in('id', languageIds)
+      .in('id', languageIds)
+
+    const languages = result.data as any[] | null
+    const error = result.error
 
     if (error) {
       return NextResponse.json(
@@ -170,7 +148,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Calculate geographic proximity if coordinates are available
     const languagesWithCoords = languages.filter(
       (lang: any) => lang.koordinat_pusat
     )
@@ -204,7 +181,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Build comparison metrics
     const metrics = {
       speakers: languages.map((lang: any) => ({
         id: lang.id,
@@ -234,7 +210,6 @@ export async function POST(request: NextRequest) {
       })),
     }
 
-    // Calculate insights
     const insights = generateInsights(languages, proximityMatrix)
 
     return NextResponse.json({
@@ -258,7 +233,7 @@ export async function POST(request: NextRequest) {
       insights,
       metadata: {
         totalLanguages: languages.length,
-        languagesWithSpeakers: languages.filter(
+        languagesWithSpeers: languages.filter(
           (lang: any) => lang.jumlah_penutur > 0
         ).length,
         languagesWithCoordinates: languagesWithCoords.length,
