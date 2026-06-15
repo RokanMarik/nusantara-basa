@@ -1,0 +1,2988 @@
+{
+  "timestamp": "2026-06-15T01:37:17.052Z",
+  "source": "ISO 639-3 Registry (SIL International)",
+  "totalCodes": 510,
+  "valid": 461,
+  "invalid": 49,
+  "validationRate": "90.4%",
+  "scopeAnalysis": {
+    "Individual": 0,
+    "Macrolanguage": 0,
+    "Special": 0
+  },
+  "typeAnalysis": {
+    "living": 440,
+    "extinct": 14,
+    "ancient": 0,
+    "historical": 4,
+    "constructed": 2
+  },
+  "details": {
+    "valid": [
+      {
+        "code": "aax",
+        "name": "Mandobo Atas",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "aaz",
+        "name": "Amarasi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "abf",
+        "name": "Abai Sungai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "abl",
+        "name": "Lampung Nyo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "abs",
+        "name": "Ambonese Malay",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "abu",
+        "name": "Abure",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "abz",
+        "name": "Abui",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ace",
+        "name": "Achinese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "adn",
+        "name": "Adang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "adr",
+        "name": "Adonara",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "afz",
+        "name": "Obokuitai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "air",
+        "name": "Airoran",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "akb",
+        "name": "Batak Angkola",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "akc",
+        "name": "Mpur",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "akq",
+        "name": "Ak",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "aln",
+        "name": "Gheg Albanian",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "amk",
+        "name": "Ambai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "aml",
+        "name": "War-Jaintia",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "amm",
+        "name": "Ama (Papua New Guinea)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "amq",
+        "name": "Amahai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "and",
+        "name": "Ansus",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "anv",
+        "name": "Denya",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "aol",
+        "name": "Alor",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "aoz",
+        "name": "Uab Meto",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "aqt",
+        "name": "Angaité",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "asc",
+        "name": "Casuarina Coast Asmat",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "asl",
+        "name": "Asilulu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "asm",
+        "name": "Assamese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "asy",
+        "name": "Yaosakor Asmat",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "atg",
+        "name": "Ivbie North-Okpela-Arhe",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "atq",
+        "name": "Aralle-Tabulahan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "auu",
+        "name": "Auye",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "awe",
+        "name": "Awetí",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "awu",
+        "name": "Central Awyu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "awv",
+        "name": "Jair Awyu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ayz",
+        "name": "Mai Brat",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ban",
+        "name": "Balinese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bbc",
+        "name": "Batak Toba",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bch",
+        "name": "Bariai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bdb",
+        "name": "Basap",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bdi",
+        "name": "Burun",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bdl",
+        "name": "Indonesian Bajau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bdr",
+        "name": "West Coast Bajau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bdx",
+        "name": "Budong-Budong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "beg",
+        "name": "Belait",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bej",
+        "name": "Beja",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bep",
+        "name": "Besoa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "beu",
+        "name": "Blagar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bew",
+        "name": "Betawi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bfg",
+        "name": "Busang Kayan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bgg",
+        "name": "Bugun",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bgn",
+        "name": "Western Balochi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bgz",
+        "name": "Banggai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bhp",
+        "name": "Bima",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bhq",
+        "name": "Tukang Besi South",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bhv",
+        "name": "Bahau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bhw",
+        "name": "Biak",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bhz",
+        "name": "Bada (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bjn",
+        "name": "Banjar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bkl",
+        "name": "Berik",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bkr",
+        "name": "Bakumpai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bkt",
+        "name": "Boloki",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bkz",
+        "name": "Bungku",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bla",
+        "name": "Siksika",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bld",
+        "name": "Bolango",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "blk",
+        "name": "Pa'o Karen",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "blm",
+        "name": "Beli (South Sudan)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bls",
+        "name": "Balaesang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "blz",
+        "name": "Balantak",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bmq",
+        "name": "Bomu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bnd",
+        "name": "Banda (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bnq",
+        "name": "Bantik",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bnr",
+        "name": "Butmas-Tur",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bnu",
+        "name": "Bentong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bpx",
+        "name": "Palya Bareli",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bqn",
+        "name": "Bulgarian Sign Language",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "brs",
+        "name": "Baras",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bry",
+        "name": "Burui",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "btd",
+        "name": "Batak Dairi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bth",
+        "name": "Biatah Bidayuh",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "btm",
+        "name": "Batak Mandailing",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bts",
+        "name": "Batak Simalungun",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "btx",
+        "name": "Batak Karo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bug",
+        "name": "Buginese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bvt",
+        "name": "Bati (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bvz",
+        "name": "Bauzi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bwu",
+        "name": "Buli (Ghana)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bzp",
+        "name": "Kemberano",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bzq",
+        "name": "Buli (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "bzu",
+        "name": "Burmeso",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "cia",
+        "name": "Cia-Cia",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "cml",
+        "name": "Campalagian",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "cns",
+        "name": "Central Asmat",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dbe",
+        "name": "Dabe",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dbj",
+        "name": "Ida'an",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dem",
+        "name": "Dem",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dkk",
+        "name": "Dakka",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dln",
+        "name": "Darlong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dmr",
+        "name": "East Damar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dna",
+        "name": "Upper Grand Valley Dani",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dni",
+        "name": "Lower Grand Valley Dani",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dnt",
+        "name": "Mid Grand Valley Dani",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dnw",
+        "name": "Western Dani",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dok",
+        "name": "Dondo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "doo",
+        "name": "Dongo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dop",
+        "name": "Lukpa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "drg",
+        "name": "Rungus",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dri",
+        "name": "C'Lela",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dsb",
+        "name": "Lower Sorbian",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "dun",
+        "name": "Dusun Deyah",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ebu",
+        "name": "Embu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "eip",
+        "name": "Eipomek",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ekg",
+        "name": "Ekari",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "emw",
+        "name": "Emplawas",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "end",
+        "name": "Ende",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "eno",
+        "name": "Enggano",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "fau",
+        "name": "Fayu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "frd",
+        "name": "Fordata",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "gal",
+        "name": "Galolen",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "gay",
+        "name": "Gayo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "gbi",
+        "name": "Galela",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ges",
+        "name": "Geser-Gorom",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "gno",
+        "name": "Northern Gondi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "gor",
+        "name": "Gorontalo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "grm",
+        "name": "Kota Marudu Talantang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "grs",
+        "name": "Gresi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "hab",
+        "name": "Hanoi Sign Language",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "had",
+        "name": "Hatam",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "hbu",
+        "name": "Habu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "heg",
+        "name": "Helong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "hit",
+        "name": "Hittite",
+        "scope": "I",
+        "type": "H"
+      },
+      {
+        "code": "hmu",
+        "name": "Hamap",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "hya",
+        "name": "Hya",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "iba",
+        "name": "Iban",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ibl",
+        "name": "Ibaloi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "igo",
+        "name": "Isebe",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ihp",
+        "name": "Iha",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "irh",
+        "name": "Irarutu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "irn",
+        "name": "Irántxe",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "isk",
+        "name": "Ishkashimi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jal",
+        "name": "Yalahatan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jas",
+        "name": "New Caledonian Javanese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jav",
+        "name": "Javanese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jax",
+        "name": "Jambi Malay",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jbj",
+        "name": "Arandai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jel",
+        "name": "Yelmek",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jet",
+        "name": "Manem",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "jmd",
+        "name": "Yamdena",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kaj",
+        "name": "Jju",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kao",
+        "name": "Xaasongaxango",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kap",
+        "name": "Bezhta",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kbg",
+        "name": "Khamba",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kbr",
+        "name": "Kafa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kbx",
+        "name": "Ap Ma",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kcd",
+        "name": "Ngkâlmpw Kanum",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kdx",
+        "name": "Kam",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kem",
+        "name": "Kemak",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kew",
+        "name": "West Kewa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kgr",
+        "name": "Abun",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "khe",
+        "name": "Korowai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "khu",
+        "name": "Nkhumbi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "khy",
+        "name": "Kele (Democratic Republic of Congo)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kjc",
+        "name": "Coastal Konjo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kje",
+        "name": "Kisar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kjp",
+        "name": "Pwo Eastern Karen",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kjr",
+        "name": "Kurudu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kkl",
+        "name": "Kosarek Yale",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "klv",
+        "name": "Maskelynes",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kly",
+        "name": "Kalao",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "klz",
+        "name": "Kabola",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kmi",
+        "name": "Kami (Nigeria)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kna",
+        "name": "Dera (Nigeria)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "knd",
+        "name": "Konda",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "knk",
+        "name": "Kuranko",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "knu",
+        "name": "Kono (Guinea)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "knx",
+        "name": "Kendayan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kod",
+        "name": "Kodi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kpa",
+        "name": "Kutto",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kpm",
+        "name": "Koho",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kps",
+        "name": "Tehit",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kpu",
+        "name": "Kafoa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "krc",
+        "name": "Karachay-Balkar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kri",
+        "name": "Krio",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "krr",
+        "name": "Krung",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kts",
+        "name": "South Muyu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kuv",
+        "name": "Kur",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kvb",
+        "name": "Kubu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kvd",
+        "name": "Kui (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kvo",
+        "name": "Dobel",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kvr",
+        "name": "Kerinci",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kvw",
+        "name": "Wersing",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kwe",
+        "name": "Kwerba",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kwy",
+        "name": "San Salvador Kongo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kxd",
+        "name": "Brunei",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kxq",
+        "name": "Smärky Kanum",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kya",
+        "name": "Kwaya",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kyo",
+        "name": "Kelon",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kyq",
+        "name": "Kenga",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kyw",
+        "name": "Kudmali",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kzi",
+        "name": "Kelabit",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "kzv",
+        "name": "Komyandaret",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "law",
+        "name": "Lauje",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lbw",
+        "name": "Tolaki",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lbx",
+        "name": "Lawangan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lcd",
+        "name": "Lola",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lcf",
+        "name": "Lubu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lew",
+        "name": "Ledo Kaili",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lex",
+        "name": "Luang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lgi",
+        "name": "Lengilu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lhi",
+        "name": "Lahu Shi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lhu",
+        "name": "Lahu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lil",
+        "name": "Lillooet",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lim",
+        "name": "Limburgan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lio",
+        "name": "Liki",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lja",
+        "name": "Golpa",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "lje",
+        "name": "Rampi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ljl",
+        "name": "Li'o",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ljp",
+        "name": "Lampung Api",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lkl",
+        "name": "Laeko-Libuat",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lll",
+        "name": "Lilau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lmd",
+        "name": "Lumun",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lmk",
+        "name": "Lamkang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lmo",
+        "name": "Lombard",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lmy",
+        "name": "Lamboya",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lnd",
+        "name": "Lundayeh",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "loe",
+        "name": "Saluan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lpe",
+        "name": "Lepki",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lra",
+        "name": "Rara Bakati'",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lrg",
+        "name": "Laragia",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "lrr",
+        "name": "Southern Yamphu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lsl",
+        "name": "Latvian Sign Language",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lti",
+        "name": "Leti (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "lva",
+        "name": "Maku'a",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mad",
+        "name": "Madurese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mak",
+        "name": "Makasar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mba",
+        "name": "Higaonon",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mdh",
+        "name": "Maguindanaon",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mdr",
+        "name": "Mandar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mdw",
+        "name": "Mbosi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mea",
+        "name": "Menka",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mej",
+        "name": "Meyah",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mek",
+        "name": "Mekeo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mep",
+        "name": "Miriwoong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mfa",
+        "name": "Pattani Malay",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mfs",
+        "name": "Mexican Sign Language",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mga",
+        "name": "Middle Irish (900-1200)",
+        "scope": "I",
+        "type": "H"
+      },
+      {
+        "code": "mge",
+        "name": "Mango",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mgl",
+        "name": "Maleu-Kilenge",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mhy",
+        "name": "Ma'anyan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mhz",
+        "name": "Mor (Mor Islands)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "min",
+        "name": "Minangkabau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "miy",
+        "name": "Ayutla Mixtec",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mky",
+        "name": "East Makian",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mkz",
+        "name": "Makasae",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mlk",
+        "name": "Ilwana",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mlx",
+        "name": "Malfaxal",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mmd",
+        "name": "Maonan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mnb",
+        "name": "Muna",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mng",
+        "name": "Eastern Mnong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mnn",
+        "name": "Southern Mnong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mnp",
+        "name": "Min Bei Chinese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mnz",
+        "name": "Moni",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "moa",
+        "name": "Mwan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mod",
+        "name": "Mobilian",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "mog",
+        "name": "Mongondow",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mok",
+        "name": "Morori",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mox",
+        "name": "Molima",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mqf",
+        "name": "Momuna",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mqj",
+        "name": "Mamasa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mql",
+        "name": "Mbelime",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mqy",
+        "name": "Manggarai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mrf",
+        "name": "Elseng",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mrw",
+        "name": "Maranao",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "msa",
+        "name": "Malay (macrolanguage)",
+        "scope": "M",
+        "type": "L"
+      },
+      {
+        "code": "msg",
+        "name": "Moraid",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "msi",
+        "name": "Sabah Malay",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "msl",
+        "name": "Molof",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "msy",
+        "name": "Aruamu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mtg",
+        "name": "Una",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mtj",
+        "name": "Moskona",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mtn",
+        "name": "Matagalpa",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "muk",
+        "name": "Mugom",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mvp",
+        "name": "Duri",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mvv",
+        "name": "Tagal Murut",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mwf",
+        "name": "Murrinh-Patha",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mwv",
+        "name": "Mentawai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "mxd",
+        "name": "Modang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nec",
+        "name": "Nedebang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nfr",
+        "name": "Nafaanra",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nia",
+        "name": "Nias",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nij",
+        "name": "Ngaju",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nil",
+        "name": "Nila",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nim",
+        "name": "Nilamba",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "niz",
+        "name": "Ningil",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nke",
+        "name": "Duke",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nks",
+        "name": "North Asmat",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nlk",
+        "name": "Ninia Yali",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "npy",
+        "name": "Napu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nqm",
+        "name": "Ndom",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nti",
+        "name": "Natioro",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nua",
+        "name": "Yuanga",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nul",
+        "name": "Nusa Laut",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "nxg",
+        "name": "Ngad'a",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "nxl",
+        "name": "South Nuaulu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "obi",
+        "name": "Obispeño",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "orm",
+        "name": "Oromo",
+        "scope": "M",
+        "type": "L"
+      },
+      {
+        "code": "osi",
+        "name": "Osing",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "otd",
+        "name": "Ot Danum",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pau",
+        "name": "Palauan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pbi",
+        "name": "Parkwa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pcc",
+        "name": "Bouyei",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pcl",
+        "name": "Pardhi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pdu",
+        "name": "Kayan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pku",
+        "name": "Paku",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ple",
+        "name": "Palu'e",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pmb",
+        "name": "Pambia",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pmf",
+        "name": "Pamona",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pml",
+        "name": "Lingua Franca",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "pna",
+        "name": "Punan Bah-Biau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pnc",
+        "name": "Pannei",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pni",
+        "name": "Aoheng",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pns",
+        "name": "Ponosakan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "poy",
+        "name": "Pogolo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ppk",
+        "name": "Uma",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "prr",
+        "name": "Puri",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "psa",
+        "name": "Asue Awyu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "pse",
+        "name": "Central Malay",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ptu",
+        "name": "Bambam",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "puf",
+        "name": "Punan Merah",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ran",
+        "name": "Riantana",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ret",
+        "name": "Retta",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "rgr",
+        "name": "Resígaro",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "rgu",
+        "name": "Ringgou",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ril",
+        "name": "Riang Lang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "rob",
+        "name": "Tae'",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "saj",
+        "name": "Sahu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sas",
+        "name": "Sasak",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "saw",
+        "name": "Sawi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sbd",
+        "name": "Southern Samo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sbe",
+        "name": "Saliba",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sbg",
+        "name": "Seget",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "scg",
+        "name": "Sanggau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sck",
+        "name": "Sadri",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sda",
+        "name": "Toraja-Sa'dan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sde",
+        "name": "Surubu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sei",
+        "name": "Seri",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "set",
+        "name": "Sentani",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sgr",
+        "name": "Sangisari",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sjn",
+        "name": "Sindarin",
+        "scope": "I",
+        "type": "C"
+      },
+      {
+        "code": "skh",
+        "name": "Sikule",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ski",
+        "name": "Sika",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sko",
+        "name": "Seko Tengah",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "skp",
+        "name": "Sekapan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "skv",
+        "name": "Skou",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sky",
+        "name": "Sikaiana",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sle",
+        "name": "Sholaga",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sll",
+        "name": "Salt-Yui",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "slr",
+        "name": "Salar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "slt",
+        "name": "Sila",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "slu",
+        "name": "Selaru",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "slw",
+        "name": "Sialum",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sly",
+        "name": "Selayar",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "smp",
+        "name": "Samaritan",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "smw",
+        "name": "Sumbawa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sne",
+        "name": "Bau Bidayuh",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "snq",
+        "name": "Sangu (Gabon)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sog",
+        "name": "Sogdian",
+        "scope": "I",
+        "type": "H"
+      },
+      {
+        "code": "soj",
+        "name": "Soi",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "spg",
+        "name": "Sian",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "spm",
+        "name": "Akukem",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "spn",
+        "name": "Sanapaná",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "srh",
+        "name": "Sarikoli",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "srl",
+        "name": "Isirawa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "srw",
+        "name": "Serua",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sry",
+        "name": "Sera",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "stg",
+        "name": "Trieng",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "suk",
+        "name": "Sukuma",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sun",
+        "name": "Sundanese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "swb",
+        "name": "Maore Comorian",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "swt",
+        "name": "Sawila",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "swv",
+        "name": "Shekhawati",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "sya",
+        "name": "Siang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "szp",
+        "name": "Suabo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tbg",
+        "name": "North Tairora",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tbn",
+        "name": "Barro Negro Tunebo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tby",
+        "name": "Tabaru",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tdj",
+        "name": "Tajio",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tdo",
+        "name": "Teme",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tes",
+        "name": "Tengger",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tet",
+        "name": "Tetum",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tfo",
+        "name": "Tefaro",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tih",
+        "name": "Timugon Murut",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tjs",
+        "name": "Southern Tujia",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tlb",
+        "name": "Tobelo",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tlh",
+        "name": "Klingon",
+        "scope": "I",
+        "type": "C"
+      },
+      {
+        "code": "tll",
+        "name": "Tetela",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tlr",
+        "name": "Talise",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tlt",
+        "name": "Sou Nama",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tlv",
+        "name": "Taliabu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tmb",
+        "name": "Katbol",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tmn",
+        "name": "Taman (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tmu",
+        "name": "Iau",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tmy",
+        "name": "Tami",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tni",
+        "name": "Tandia",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tnm",
+        "name": "Tabla",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tnw",
+        "name": "Tonsawang",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "toz",
+        "name": "To",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tpx",
+        "name": "Acatepec Me'phaa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tsg",
+        "name": "Tausug",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ttg",
+        "name": "Tutong",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tuj",
+        "name": "Tugutil",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "tvo",
+        "name": "Tidore",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "twe",
+        "name": "Tewa (Indonesia)",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "twh",
+        "name": "Tai Dón",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "twy",
+        "name": "Tawoyan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "txe",
+        "name": "Totoli",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "txg",
+        "name": "Tangut",
+        "scope": "I",
+        "type": "H"
+      },
+      {
+        "code": "txo",
+        "name": "Toto",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "txs",
+        "name": "Tonsea",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ulm",
+        "name": "Ulumanda'",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "umm",
+        "name": "Umon",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "und",
+        "name": "Undetermined",
+        "scope": "S",
+        "type": "S"
+      },
+      {
+        "code": "urn",
+        "name": "Uruangnirin",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "ury",
+        "name": "Orya",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "vkl",
+        "name": "Kulisusu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "vkt",
+        "name": "Tenggarong Kutai Malay",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wad",
+        "name": "Wamesa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "weo",
+        "name": "Wemale",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wet",
+        "name": "Perai",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wew",
+        "name": "Wejewa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wha",
+        "name": "Sou Upaa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wlo",
+        "name": "Wolio",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wlw",
+        "name": "Walak",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wmh",
+        "name": "Waima'a",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wmt",
+        "name": "Walmajarri",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wnd",
+        "name": "Wandarang",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "wne",
+        "name": "Waneci",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wnk",
+        "name": "Wanukaka",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wnn",
+        "name": "Wunumara",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "wod",
+        "name": "Wolani",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "wor",
+        "name": "Woria",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "woy",
+        "name": "Weyto",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "wri",
+        "name": "Wariyangga",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "wrp",
+        "name": "Waropen",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "xbr",
+        "name": "Kambera",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "xkl",
+        "name": "Mainstream Kenyah",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "xmt",
+        "name": "Matbat",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "xmz",
+        "name": "Mori Bawah",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "xod",
+        "name": "Kokoda",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "xte",
+        "name": "Ketengban",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yac",
+        "name": "Pass Valley Yali",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yap",
+        "name": "Yapese",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yay",
+        "name": "Agwagwune",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yei",
+        "name": "Yeni",
+        "scope": "I",
+        "type": "E"
+      },
+      {
+        "code": "yet",
+        "name": "Yetfa",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yir",
+        "name": "North Awyu",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yka",
+        "name": "Yakan",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yki",
+        "name": "Yoke",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yli",
+        "name": "Angguruk Yali",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "yon",
+        "name": "Yongkom",
+        "scope": "I",
+        "type": "L"
+      },
+      {
+        "code": "zrs",
+        "name": "Mairasi",
+        "scope": "I",
+        "type": "L"
+      }
+    ],
+    "invalid": [
+      {
+        "code": "arf",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "bke",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "cnn",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "dcn",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "dmp",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "dqm",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "drz",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "dwd",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "epu",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "gmk",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "htl",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "idl",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "jkg",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "jli",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "kgm",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "khi",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "kox",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "kxg",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "lmm",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "lmt",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "lyo",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "mld",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "mnt",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "nvt",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "ogn",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "plm",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "pou",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "pts",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "ptz",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "qte",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "rbo",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "rgh",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "rht",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "rjb",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "rkr",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "rnt",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "rnu",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "skk",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "skl",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "smd",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "snb",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "srj",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "tgg",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "tqc",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "ttx",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "udn",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "wko",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "wot",
+        "reason": "Not found in ISO 639-3 registry"
+      },
+      {
+        "code": "zdm",
+        "reason": "Not found in ISO 639-3 registry"
+      }
+    ]
+  }
+}
