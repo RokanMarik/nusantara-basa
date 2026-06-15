@@ -73,7 +73,7 @@ export default function ComparePage() {
     setSearching(true)
     try {
       const response = await fetch(
-        `/api/bahasa?search=${encodeURIComponent(searchQuery)}&limit=10`
+        `/api/bahasa?search=${encodeURIComponent(searchQuery)}&limit=50`
       )
       const data = await response.json()
       setSearchResults(data.data || [])

@@ -151,7 +151,7 @@ export async function POST(request: NextRequest) {
         catatan,
         sumber_referensi,
         koordinat_pusat,
-        rumpun_bahasa(nama_rumpun, induk_rumpun)
+        rumpun_bahasa(nama_rumpun, parent_id)
       `)
       .in('id', languageIds)
 
@@ -229,7 +229,7 @@ export async function POST(request: NextRequest) {
         id: lang.id,
         nama: lang.nama_bahasa,
         family: lang.rumpun_bahasa?.nama_rumpun || 'Unknown',
-        parentFamily: lang.rumpun_bahasa?.induk_rumpun || 'Unknown',
+        parentFamily: lang.rumpun_bahasa?.parent_id || 'Unknown',
       })),
     }
 
