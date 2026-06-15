@@ -27,9 +27,19 @@ interface Bahasa {
   autoSummary: string | null
 }
 
+interface RelatedBahasa {
+  id: string
+  namaBahasa: string
+  jumlahPenutur: number
+  provinsi: string
+}
+
+
 export default function BahasaDetailPage({ params }: { params: { slug: string } }) {
   const [bahasa, setBahasa] = useState<Bahasa | null>(null)
   const [loading, setLoading] = useState(true)
+  const [relatedLanguages, setRelatedLanguages] = useState<RelatedBahasa[]>([])
+
 
   useEffect(() => {
     async function fetchBahasa() {
@@ -38,6 +48,24 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
         if (response.ok) {
           const data = await response.json()
           setBahasa(data)
+          
+          // Fetch related languages if rumpun exists
+          if (data.rumpunBahasa?.nama_rumpun) {
+            try {
+              const relatedResponse = await fetch(
+                `/api/bahasa?search=${encodeURIComponent(data.rumpunBahasa.nama_rumpun)}&limit=4`
+              )
+              if (relatedResponse.ok) {
+                const relatedData = await relatedResponse.json()
+                const related = (relatedData.data || [])
+                  .filter((b: RelatedBahasa) => b.id !== data.id)
+                  .slice(0, 3)
+                setRelatedLanguages(related)
+              }
+            } catch (err) {
+              console.error('Failed to fetch related languages:', err)
+            }
+          }
         }
       } catch (error) {
         console.error('Failed to fetch bahasa:', error)
@@ -48,6 +76,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
 
     fetchBahasa()
   }, [params.slug])
+
 
   if (loading) {
     return (
@@ -290,6 +319,39 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
               Sumber Referensi
             </h2>
             <p className="text-earth-800 leading-relaxed">{bahasa.sumberReferensi}</p>
+          </div>
+        )}
+
+        {/* Related Languages */}
+        {relatedLanguages.length > 0 && (
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-earth-200 mt-8">
+            <h2 className="text-2xl font-bold text-earth-900 mb-4 flex items-center gap-2">
+              <svg className="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              Bahasa Serumpun
+            </h2>
+            <div className="space-y-3">
+              {relatedLanguages.map((related) => (
+                <Link
+                  key={related.id}
+                  href={`/explore/bahasa/${related.id}`}
+                  className="block p-4 rounded-lg border border-earth-200 hover:border-amber-400 hover:bg-amber-50 transition-colors"
+                >
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="font-semibold text-earth-900">{related.namaBahasa}</h3>
+                      <p className="text-sm text-earth-600">{related.provinsi}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-earth-600">
+                        {related.jumlahPenutur > 0 ? `${formatNumber(related.jumlahPenutur)} penutur` : 'Tidak diketahui'}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </main>

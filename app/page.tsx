@@ -47,13 +47,10 @@ export default async function HomePage() {
             Nusantara<span className="text-amber-700">Basa</span>
           </Link>
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/daftar-bahasa" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Daftar</Link>
-            <Link href="/explore/compare" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Compare</Link>
-            <Link href="/explore/map" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Peta</Link>
-            <Link href="/sumber-data" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Sumber</Link>
-            <a href="/api/export?format=csv" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer" aria-label="Export data as CSV">Export</a>
-            <Link href="/dashboard" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Dashboard</Link>
-            <Link href="/explore/map" className="px-4 py-1.5 bg-[#1a1209] text-earth-100 rounded-full text-sm font-bold hover:bg-[#2d1f0e] transition-all duration-200 cursor-pointer">Jelajahi</Link>
+            <Link href="/daftar-bahasa" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Jelajahi</Link>
+            <Link href="/compare" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Bandingkan</Link>
+            <Link href="/sumber-data" className="text-sm text-earth-600 hover:text-earth-700 transition-colors duration-200 cursor-pointer">Tentang</Link>
+            <Link href="/daftar-bahasa" className="px-4 py-1.5 bg-[#1a1209] text-earth-100 rounded-full text-sm font-bold hover:bg-[#2d1f0e] transition-all duration-200 cursor-pointer">Mulai</Link>
           </div>
         </div>
       </nav>
