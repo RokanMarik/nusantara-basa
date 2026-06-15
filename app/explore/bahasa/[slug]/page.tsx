@@ -44,11 +44,11 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
   useEffect(() => {
     async function fetchBahasa() {
       try {
-        const res = await fetch(`/api/bahasa?search=${params.slug}`);
+        const res = await fetch(`/api/bahasa/${params.slug}`);
         if (res.ok) {
           const data = await res.json();
-          if (data.data && data.data.length > 0) {
-            setBahasa(data.data[0]);
+          if (data && data.id) {
+            setBahasa(data);
           }
         }
       } catch (err) {
