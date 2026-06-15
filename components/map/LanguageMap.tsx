@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { LanguageMarkers } from "./LanguageMarkers";
 import type { BahasaMarker } from "@/lib/types";
@@ -13,14 +12,6 @@ interface LanguageMapProps {
 }
 
 export function LanguageMap({ markers, center = [-2.5, 118.0], zoom = 5 }: LanguageMapProps) {
-  // Dynamically load Leaflet CSS only when component mounts
-  useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    document.head.appendChild(link);
-  }, []);
-
   return (
     <MapContainer
       center={center}

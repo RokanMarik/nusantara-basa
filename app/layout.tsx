@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans, Noto_Serif } from "next/font/google";
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
@@ -30,8 +31,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://a.basemaps.cartocdn.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://b.basemaps.cartocdn.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://c.basemaps.cartocdn.com" crossOrigin="anonymous" />
-        <link rel="preload" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" as="style" />
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
       </head>
       <body className={`${notoSans.variable} ${notoSerif.variable} font-sans`}>
         {children}
