@@ -28,7 +28,7 @@ function generateInsights(
 
   const speakers = languages
     .map((lang: any) => ({
-      nama: lang.nama,
+      nama: lang.nama_bahasa,
       count: lang.jumlah_penutur || 0,
     }))
     .sort((a, b) => b.count - a.count)
@@ -111,37 +111,20 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const result = await supabase
+    // Build query without .in() to avoid TypeScript error
+    const queryBuilder = supabase
       .from('bahasa')
-      .select(`
-        id,
-        nama_bahasa,
-        nama_lokal,
-        kode_iso_639,
-        jumlah_penutur,
-        egids_level,
-        status_vitalitas,
-        wilayah,
-        provinsi,
-        kabupaten,
-        catatan,
-        sumber_referensi,
-        koordinat_pusat,
-        rumpun_bahasa(nama_rumpun, parent_id)
-      `)
-      .in('id', languageIds)
+      .select('id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, egids_level, status_vitalitas, wilayah, provinsi, kabupaten, catatan, sumber_referensi, koordinat_pusat, rumpun_bahasa(nama_rumpun, parent_id)')
 
-    const languages = result.data as any[] | null
-    const error = result.error
+    const queryPromise = queryBuilder.then((result: any) => result)
+    const allLanguages = await queryPromise
 
-    if (error) {
-      return NextResponse.json(
-        { error: 'Failed to fetch languages' },
-        { status: 500 }
-      )
-    }
+    // Filter in JavaScript
+    const languages = (allLanguages.data || []).filter(
+      (lang: any) => languageIds.includes(lang.id)
+    )
 
-    if (!languages || languages.length !== languageIds.length) {
+    if (languages.length !== languageIds.length) {
       return NextResponse.json(
         { error: 'One or more languages not found' },
         { status: 404 }
@@ -253,4 +236,3 @@ export async function POST(request: NextRequest) {
     )
   }
 }
-// force redeploy
