@@ -11,14 +11,14 @@ const SpeakerTrendChart = dynamic(
 
 interface Bahasa {
   id: string;
-  nama_bahasa: string;
-  nama_lokal?: string | null;
-  jumlah_penutur?: number | null;
-  status_vitalitas?: string | null;
-  kode_iso_639?: string | null;
-  egids_level?: string | null;
-  rumpun_bahasa?: { nama_rumpun: string } | null;
-  auto_summary?: string | null;
+  namaBahasa: string;
+  namaLokal?: string | null;
+  jumlahPenutur?: number | null;
+  statusVitalitas?: string | null;
+  kodeIso639?: string | null;
+  egidsLevel?: string | null;
+  rumpun?: { nama_rumpun: string } | null;
+  autoSummary?: string | null;
 }
 
 const EGIDS_DESCRIPTIONS: Record<string, string> = {
@@ -47,9 +47,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
         const res = await fetch(`/api/bahasa/${params.slug}`);
         if (res.ok) {
           const data = await res.json();
-          if (data && data.id) {
-            setBahasa(data);
-          }
+          setBahasa(data);
         }
       } catch (err) {
         console.error("Error fetching bahasa:", err);
@@ -111,7 +109,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
                   </Link>
                 </li>
                 <li className="text-earth-400">/</li>
-                <li className="text-earth-900 font-medium">{bahasa.nama_bahasa}</li>
+                <li className="text-earth-900 font-medium">{bahasa.namaBahasa}</li>
               </ol>
             </nav>
 
@@ -119,41 +117,42 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
             <header className="mb-8">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl font-bold bg-orange-500" aria-hidden="true">
-                  {bahasa.nama_bahasa.charAt(0)}
+                  {bahasa.namaBahasa.charAt(0)}
                 </div>
                 <div className="flex-1">
-                  <h1 className="text-3xl md:text-4xl font-bold text-earth-900 mb-1">{bahasa.nama_bahasa}</h1>
-                  {bahasa.nama_lokal && (
-                    <p className="text-earth-700 italic text-lg">{bahasa.nama_lokal}</p>
+                  <h1 className="text-3xl md:text-4xl font-bold text-earth-900 mb-1">{bahasa.namaBahasa}</h1>
+                  {bahasa.namaLokal && (
+                    <p className="text-earth-700 italic text-lg">{bahasa.namaLokal}</p>
                   )}
                   <div className="flex flex-wrap gap-2 mt-2">
-                    {bahasa.status_vitalitas && (
-                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border ${getVitalitasColor(bahasa.status_vitalitas)}`}>
-                        {bahasa.status_vitalitas}
+                    {bahasa.statusVitalitas && (
+                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border ${getVitalitasColor(bahasa.statusVitalitas)}`}>
+                        {bahasa.statusVitalitas}
                       </span>
                     )}
-                    {bahasa.kode_iso_639 && (
+                    {bahasa.kodeIso639 && (
                       <span className="inline-block px-3 py-1 rounded-full text-xs font-mono bg-gray-100 text-gray-700 border border-gray-200">
-                        ISO: {bahasa.kode_iso_639}
+                        ISO: {bahasa.kodeIso639}
                       </span>
                     )}
-                    {bahasa.egids_level && (
+                    {bahasa.egidsLevel && (
                       <span 
                         className="inline-block px-3 py-1 rounded-full text-xs bg-blue-50 text-blue-800 border border-blue-200"
-                        title={EGIDS_DESCRIPTIONS[bahasa.egids_level.split(" - ")[0]] || "EGIDS Level"}
+                        title={EGIDS_DESCRIPTIONS[bahasa.egidsLevel.split(" - ")[0]] || "EGIDS Level"}
                       >
-                        EGIDS: {bahasa.egids_level}
+                        EGIDS: {bahasa.egidsLevel}
+                      </span>
                       </span>
                     )}
-                    {bahasa.rumpun_bahasa && (
+                    {bahasa.rumpun && (
                       <span className="inline-block px-3 py-1 rounded-full text-xs bg-amber-50 text-amber-800 border border-amber-200">
-                        {bahasa.rumpun_bahasa.nama_rumpun}
+                        {bahasa.rumpun.nama_rumpun}
                       </span>
                     )}
                   </div>
                 </div>
               </div>
-              {bahasa.auto_summary && (
+              {bahasa.autoSummary && (
                 <div className="mt-6 bg-white rounded-2xl p-6 border border-earth-300/50 shadow-sm">
                   <h2 className="font-bold text-[#1a1209] mb-3 flex items-center gap-2 text-lg">
                     <svg className="w-5 h-5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,7 +161,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
                     Ringkasan
                   </h2>
                   <div className="text-earth-600 leading-relaxed">
-                    {bahasa.auto_summary.split("\n").map((line: string, i: number) => (
+                    {bahasa.autoSummary.split("\n").map((line: string, i: number) => (
                       <p key={i} className={i > 0 ? "mt-3" : ""}>{line}</p>
                     ))}
                   </div>
@@ -212,28 +211,28 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-earth-600">ISO 639-3</dt>
-                    <dd className="font-mono text-[#1a1209] font-medium">{bahasa.kode_iso_639 ?? "—"}</dd>
+                    <dd className="font-mono text-[#1a1209] font-medium">{bahasa.kodeIso639 ?? "—"}</dd>
                   </div>
-                  {bahasa.rumpun_bahasa && (
+                  {bahasa.rumpun && (
                     <div className="flex justify-between">
                       <dt className="text-earth-600">Rumpun Bahasa</dt>
-                      <dd className="text-[#1a1209] font-medium">{bahasa.rumpun_bahasa.nama_rumpun}</dd>
+                      <dd className="text-[#1a1209] font-medium">{bahasa.rumpun.nama_rumpun}</dd>
                     </div>
                   )}
-                  {bahasa.jumlah_penutur && (
+                  {bahasa.jumlahPenutur && (
                     <div className="flex justify-between">
                       <dt className="text-earth-600">Jumlah Penutur</dt>
                       <dd className="font-bold text-[#1a1209]">
-                        {bahasa.jumlah_penutur.toLocaleString("id-ID")} orang
+                        {bahasa.jumlahPenutur.toLocaleString("id-ID")} orang
                       </dd>
                     </div>
                   )}
-                  {bahasa.status_vitalitas && (
+                  {bahasa.statusVitalitas && (
                     <div className="flex justify-between">
                       <dt className="text-earth-600">Status Vitalitas</dt>
                       <dd>
-                        <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold border ${getVitalitasColor(bahasa.status_vitalitas)}`}>
-                          {bahasa.status_vitalitas}
+                        <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold border ${getVitalitasColor(bahasa.statusVitalitas)}`}>
+                          {bahasa.statusVitalitas}
                         </span>
                       </dd>
                     </div>
@@ -263,7 +262,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
                 </svg>
                 Tren Jumlah Penutur
               </h2>
-              <SpeakerTrendChart bahasaId={bahasa.id} bahasaName={bahasa.nama_bahasa} />
+              <SpeakerTrendChart bahasaId={bahasa.id} bahasaName={bahasa.namaBahasa} />
             </div>
 
             {/* Map Location */}
