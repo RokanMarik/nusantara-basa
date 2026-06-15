@@ -135,7 +135,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Fetch all languages
-    const { data: languages, error }: any = await supabase
+    const { data: languages, error } = await (supabase
       .from('bahasa')
       .select(`
         id,
@@ -153,7 +153,7 @@ export async function POST(request: NextRequest) {
         koordinat_pusat,
         rumpun_bahasa(nama_rumpun, parent_id)
       `)
-      .in('id', languageIds)
+      .in('id', languageIds) as any)
 
     if (error) {
       return NextResponse.json(
