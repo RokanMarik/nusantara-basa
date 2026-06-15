@@ -1,18 +1,71 @@
 import Link from "next/link";
 
+import { supabase } from '@/lib/supabase';
+
 async function getStats() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/stats`, { cache: "no-store" });
-  if (!res.ok) return null;
-  return res.json();
+  try {
+    const { data: bahasaData, error: bahasaError } = await supabase
+      .from('bahasa')
+      .select('id, status_vitalitas');
+    
+    if (bahasaError) return null;
+    
+    const { data: rumpunData, error: rumpunError } = await supabase
+      .from('rumpun')
+      .select('id');
+    
+    if (rumpunError) return null;
+    
+    const { data: lokasiData, error: lokasiError } = await supabase
+      .from('lokasi')
+      .select('provinsi');
+    
+    if (lokasiError) return null;
+    
+    const totalBahasa = bahasaData?.length || 0;
+    const rumpunCount = rumpunData?.length || 0;
+    
+    const provinsiSet = new Set(lokasiData?.map(l => l.provinsi) || []);
+    const provinsi = Array.from(provinsiSet);
+    
+    const vitalitasSet = new Set(bahasaData?.map(b => b.status_vitalitas) || []);
+    const vitalitas = Array.from(vitalitasSet);
+    
+    return {
+      data: {
+        total: { bahasa: totalBahasa },
+        rumpunCount,
+        provinsi,
+        vitalitas
+      }
+    };
+  } catch (error) {
+    return null;
+  }
 }
 
 async function getLanguages() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/bahasa?limit=8`, { cache: "no-store" });
-  if (!res.ok) return [];
-  const data = await res.json();
-  return data.data || [];
+  try {
+    const { data, error } = await supabase
+      .from('bahasa')
+      .select('id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, status_vitalitas, rumpun_bahasa(nama_rumpun)')
+      .order('nama_bahasa')
+      .limit(8);
+    
+    if (error) return [];
+    
+    return (data || []).map((b: any) => ({
+      id: b.id,
+      namaBahasa: b.nama_bahasa,
+      namaLokal: b.nama_lokal,
+      kodeIso639: b.kode_iso_639,
+      jumlahPenutur: b.jumlah_penutur,
+      statusVitalitas: b.status_vitalitas,
+      rumpunNama: b.rumpun_bahasa?.nama_rumpun || null,
+    }));
+  } catch (error) {
+    return [];
+  }
 }
 
 // SVG Icons

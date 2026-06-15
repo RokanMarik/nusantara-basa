@@ -21,20 +21,30 @@ export interface RateLimitResult {
   limit: number;
 }
 
-// Cleanup old entries periodically
-setInterval(() => {
+
+// Lazy cleanup of expired entries
+let lastCleanup = Date.now();
+const CLEANUP_INTERVAL = 60000; // 1 minute
+
+function cleanupExpiredEntries() {
   const now = Date.now();
+  if (now - lastCleanup < CLEANUP_INTERVAL) return;
+  
+  lastCleanup = now;
   for (const [key, entry] of rateLimitStore.entries()) {
     if (now > entry.resetAt) {
       rateLimitStore.delete(key);
     }
   }
-}, 60000); // Clean every minute
+}
 
 export function createRateLimiter(config: RateLimitConfig) {
   const { windowMs, maxRequests, keyGenerator } = config;
 
   return function rateLimit(req: Request): RateLimitResult {
+    // Lazy cleanup of expired entries
+    cleanupExpiredEntries();
+
     const key = keyGenerator 
       ? keyGenerator(req) 
       : req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'anonymous';

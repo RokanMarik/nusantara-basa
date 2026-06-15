@@ -52,6 +52,17 @@ export interface GlobalStats {
   totalLokasi: number;
   vitalitasBreakdown: Record<string, number>;
 }
+export interface LanguageGeoData {
+  id: string;
+  nama_bahasa: string;
+  latitude: number | null;
+  longitude: number | null;
+  provinsi: string | null;
+  kabupaten: string | null;
+  status_vitalitas: string | null;
+  jumlah_penutur: number | null;
+  rumpun_bahasa: string | null;
+}
 
 export const VITALITAS_COLORS: Record<string, string> = {
   aman: "#22c55e",

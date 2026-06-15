@@ -122,7 +122,7 @@ describe('GET /api/geo', () => {
       } as never)
 
       await GET(createRequest('provinsi=Jawa+Barat'))
-      expect(eqMock).toHaveBeenCalledWith('provinsi', 'Jawa Barat')
+      expect(eqMock).toHaveBeenCalledWith('lokasi.provinsi', 'Jawa Barat')
     })
   })
 

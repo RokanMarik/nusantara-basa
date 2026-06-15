@@ -2,6 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { getCache, setCache, TTL } from "@/lib/cache";
 
+// Sanitize user input for PostgREST .or() filter strings
+// PostgREST uses special chars: %, _, \ in ilike patterns
+function sanitizePostgrestFilter(input: string): string {
+  return input.replace(/[%_\\]/g, '\\$&');
+}
+
+
 async function call9Router(query: string) {
   const ninerouterUrl = process.env.NINEROUTER_URL || "http://localhost:20128";
   const ninerouterKey = process.env.NINEROUTER_KEY || "";
@@ -57,11 +64,13 @@ async function keywordFallback(query: string) {
 
   if (!q) return [];
 
+  const safeQ = sanitizePostgrestFilter(q);
+
   // Search lokasi by provinsi/kabupaten
   const { data: lokasiIds } = await supabase
     .from("lokasi")
     .select("bahasa_id")
-    .or(`provinsi.ilike.%${q}%,kabupaten.ilike.%${q}%`);
+    .or(`provinsi.ilike.%${safeQ}%,kabupaten.ilike.%${safeQ}%`);
 
   const idsFromLokasi = new Set((lokasiIds || []).map((l: any) => l.bahasa_id));
 
@@ -69,7 +78,7 @@ async function keywordFallback(query: string) {
   const { data: bahasaByName } = await supabase
     .from("bahasa")
     .select("id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, status_vitalitas, koordinat_pusat, rumpun_bahasa(nama_rumpun)")
-    .or(`nama_bahasa.ilike.%${q}%,nama_lokal.ilike.%${q}%`)
+    .or(`nama_bahasa.ilike.%${safeQ}%,nama_lokal.ilike.%${safeQ}%,kode_iso_639.ilike.%${safeQ}%`)
     .order("nama_bahasa", { ascending: true })
     .limit(50);
 

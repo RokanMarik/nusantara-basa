@@ -1,12 +1,7 @@
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from '@/lib/supabase'
 import { NextRequest, NextResponse } from 'next/server'
 import { getCache, setCache, TTL } from '@/lib/cache'
 import { apiLimiter, rateLimitHeaders } from '@/lib/rate-limit'
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
 
 
 export async function GET(request: NextRequest) {

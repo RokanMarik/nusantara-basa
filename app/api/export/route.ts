@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from "@/lib/supabase";
 import { exportLimiter, rateLimitHeaders } from "@/lib/rate-limit";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://hkeheukewxsvaarxaket.supabase.co",
-  process.env.SUPABASE_SERVICE_ROLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrZWhldWtld3hzdmFhcnhha2V0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDEzOTkzMywiZXhwIjoyMDk1NzE1OTMzfQ.36yS86na5jZYaJEguPDREzrx_qpPOL15zNNxMaeCg20"
-);
 
 export async function GET(request: NextRequest) {
   // Rate limiting
@@ -54,9 +49,10 @@ export async function GET(request: NextRequest) {
     ];
   }
 
-  // Build select query with rumpun_bahasa join
-  const selectFields = selectedFields.includes("rumpun_bahasa") || rumpun
-    ? selectedFields.join(",") + ",rumpun_bahasa(nama_rumpun)"
+  // Build select query with rumpun_bahasa and lokasi joins
+  const needsJoins = rumpun || provinsi || wilayah;
+  const selectFields = needsJoins
+    ? selectedFields.join(",") + ",rumpun_bahasa(nama_rumpun),lokasi(provinsi,kabupaten)"
     : selectedFields.join(",");
 
   let query = supabase
@@ -67,12 +63,6 @@ export async function GET(request: NextRequest) {
   if (vitalitas) {
     query = query.eq("status_vitalitas", vitalitas);
   }
-  if (provinsi) {
-    query = query.eq("provinsi", provinsi);
-  }
-  if (wilayah) {
-    query = query.eq("wilayah", wilayah);
-  }
   if (minPenutur) {
     query = query.gte("jumlah_penutur", parseInt(minPenutur));
   }
@@ -80,10 +70,12 @@ export async function GET(request: NextRequest) {
     query = query.lte("jumlah_penutur", parseInt(maxPenutur));
   }
   if (egids) {
-    query = query.ilike("egids_level", `%${egids}%`);
+    const sanitized = egids.replace(/[%_\\]/g, '\\$&');
+    query = query.ilike("egids_level", `%${sanitized}%`);
   }
   if (search) {
-    query = query.or(`nama_bahasa.ilike.%${search}%,nama_lokal.ilike.%${search}%,kode_iso_639.ilike.%${search}%`);
+    const sanitized = search.replace(/[%_\\]/g, '\\$&');
+    query = query.or(`nama_bahasa.ilike.%${sanitized}%,nama_lokal.ilike.%${sanitized}%,kode_iso_639.ilike.%${sanitized}%`);
   }
 
   const { data, count, error } = await query;
@@ -92,13 +84,18 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  // Apply rumpun filter after query (since it's a join)
+  // Apply post-query filters
   let filteredData = data || [];
   if (rumpun) {
-    filteredData = filteredData.filter((b: any) => 
-      b.rumpun_bahasa?.nama_rumpun === rumpun
-    );
+    filteredData = filteredData.filter((b: any) => b.rumpun_bahasa?.nama_rumpun === rumpun);
   }
+  if (provinsi) {
+    filteredData = filteredData.filter((b: any) => b.lokasi?.some((l: any) => l.provinsi === provinsi));
+  }
+  if (wilayah) {
+    filteredData = filteredData.filter((b: any) => b.lokasi?.some((l: any) => l.kabupaten === wilayah));
+  }
+
 
   const rows = filteredData.map((b: any) => {
     const row: any = {};

@@ -62,17 +62,19 @@ describe('GET /api/bahasa', () => {
   beforeEach(() => {
     vi.clearAllMocks()
     const mockFrom = vi.mocked(supabase.from)
-    mockFrom.mockReturnValue({
+    const mockQuery = {
       select: vi.fn().mockReturnThis(),
       order: vi.fn().mockReturnThis(),
       eq: vi.fn().mockReturnThis(),
       or: vi.fn().mockReturnThis(),
-      range: vi.fn().mockResolvedValue({
+      range: vi.fn().mockReturnThis(),
+      then: vi.fn((resolve) => resolve({
         data: mockBahasaData,
         count: 2,
         error: null,
-      }),
-    } as never)
+      })),
+    }
+    mockFrom.mockReturnValue(mockQuery as never)
   })
 
   describe('rate limiting', () => {
@@ -183,17 +185,19 @@ describe('GET /api/bahasa', () => {
   describe('error handling', () => {
     it('return 500 kalau supabase error', async () => {
       const mockFrom = vi.mocked(supabase.from)
-      mockFrom.mockReturnValue({
+      const mockQuery = {
         select: vi.fn().mockReturnThis(),
         order: vi.fn().mockReturnThis(),
         eq: vi.fn().mockReturnThis(),
         or: vi.fn().mockReturnThis(),
-        range: vi.fn().mockResolvedValue({
+        range: vi.fn().mockReturnThis(),
+        then: vi.fn((resolve) => resolve({
           data: null,
           count: null,
           error: { message: 'Database connection failed' },
-        }),
-      } as never)
+        })),
+      }
+      mockFrom.mockReturnValue(mockQuery as never)
 
       const res = await GET(createRequest())
       expect(res.status).toBe(500)
