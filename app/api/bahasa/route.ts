@@ -24,14 +24,15 @@ export async function GET(request: NextRequest) {
 
   let query = supabase
     .from("bahasa")
-    .select("id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, status_vitalitas, egids_level, rumpun_bahasa(nama_rumpun)", { count: "exact" })
-    .order("nama_bahasa", { ascending: true })
-    .range(offset, offset + limit - 1);
+    .select("id, nama_bahasa, nama_lokal, kode_iso_639, jumlah_penutur, status_vitalitas, egids_level, rumpun_bahasa!inner(nama_rumpun)", { count: "exact" })
+    .order("nama_bahasa", { ascending: true });
 
   if (rumpun) query = query.eq("rumpun_bahasa.nama_rumpun", rumpun);
   if (vitalitas) query = query.eq("status_vitalitas", vitalitas);
   if (egids) query = query.eq("egids_level", egids);
   if (search) query = query.or(`nama_bahasa.ilike.%${search}%,nama_lokal.ilike.%${search}%,kode_iso_639.ilike.%${search}%`);
+
+  query = query.range(offset, offset + limit - 1);
 
   const { data, count, error } = await query;
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });

@@ -3,6 +3,17 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
+interface BahasaLokasi {
+  provinsi: string
+  kabupaten: string | null
+  tipe_wilayah: string | null
+}
+
+interface BahasaRumpun {
+  nama_rumpun: string
+  sub_rumpun: string | null
+}
+
 interface Bahasa {
   id: string
   namaBahasa: string
@@ -11,19 +22,13 @@ interface Bahasa {
   jumlahPenutur: number
   egidsLevel: string
   statusVitalitas: string
-  wilayah: string
-  provinsi: string
-  kabupaten: string | null
   catatan: string | null
-  sumberReferensi: string | null
   koordinatPusat: {
     type: string
     coordinates: [number, number]
   } | null
-  rumpunBahasa: {
-    nama_rumpun: string
-    parent_id: string | null
-  } | null
+  rumpun: BahasaRumpun | null
+  lokasi: BahasaLokasi[]
   autoSummary: string | null
 }
 
@@ -31,7 +36,7 @@ interface RelatedBahasa {
   id: string
   namaBahasa: string
   jumlahPenutur: number
-  provinsi: string
+  rumpunNama: string | null
 }
 
 
@@ -44,16 +49,17 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
   useEffect(() => {
     async function fetchBahasa() {
       try {
-        const response = await fetch('/api/bahasa/' + params.slug)
+        const response = await fetch(`/api/bahasa/${params.slug}`)
         if (response.ok) {
           const data = await response.json()
           setBahasa(data)
-          
-          // Fetch related languages if rumpun exists
-          if (data.rumpunBahasa?.nama_rumpun) {
+
+          // Fetch related languages by searching rumpun name
+          const rumpunName = data.rumpun?.nama_rumpun
+          if (rumpunName) {
             try {
               const relatedResponse = await fetch(
-                `/api/bahasa?search=${encodeURIComponent(data.rumpunBahasa.nama_rumpun)}&limit=4`
+                `/api/bahasa?rumpun=${encodeURIComponent(rumpunName)}&limit=4`
               )
               if (relatedResponse.ok) {
                 const relatedData = await relatedResponse.json()
@@ -109,7 +115,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
     )
   }
 
-  const getVitalitasColor = (status: string) => {
+  const getVitalitasColor = (status: string): string => {
     switch (status.toLowerCase()) {
       case 'aman':
         return 'bg-green-100 text-green-800 border-green-300'
@@ -126,8 +132,8 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
     }
   }
 
-  const formatNumber = (num: number) => {
-    return new Intl.NumberFormat('id-ID').format(num)
+  const formatNumber = (num: number): string => {
+    return new Intl.NumberFormat('id-ID').format(num);
   }
 
   return (
@@ -231,18 +237,28 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
               Informasi Geografis
             </h2>
             <dl className="space-y-3">
-              <div>
-                <dt className="text-sm text-earth-600">Wilayah</dt>
-                <dd className="text-lg text-earth-900">{bahasa.wilayah}</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-earth-600">Provinsi</dt>
-                <dd className="text-lg text-earth-900">{bahasa.provinsi}</dd>
-              </div>
-              {bahasa.kabupaten && (
+              {bahasa.lokasi && bahasa.lokasi.length > 0 && (
+                <>
+                  <div>
+                    <dt className="text-sm text-earth-600">Provinsi</dt>
+                    <dd className="text-lg text-earth-900">
+                      {bahasa.lokasi.map(l => l.provinsi).filter(Boolean).join(', ') || '-'}
+                    </dd>
+                  </div>
+                  {bahasa.lokasi.some(l => l.kabupaten) && (
+                    <div>
+                      <dt className="text-sm text-earth-600">Kabupaten</dt>
+                      <dd className="text-lg text-earth-900">
+                        {bahasa.lokasi.map(l => l.kabupaten).filter(Boolean).join(', ')}
+                      </dd>
+                    </div>
+                  )}
+                </>
+              )}
+              {!bahasa.lokasi?.length && (
                 <div>
-                  <dt className="text-sm text-earth-600">Kabupaten</dt>
-                  <dd className="text-lg text-earth-900">{bahasa.kabupaten}</dd>
+                  <dt className="text-sm text-earth-600">Provinsi</dt>
+                  <dd className="text-lg text-earth-900">-</dd>
                 </div>
               )}
               {bahasa.koordinatPusat && (
@@ -257,6 +273,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
           </div>
 
           {/* Linguistic Information */}
+          {/* Linguistic Information */}
           <div className="bg-white rounded-xl p-6 shadow-sm border border-earth-200">
             <h2 className="text-2xl font-bold text-earth-900 mb-4 flex items-center gap-2">
               <svg className="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -265,10 +282,10 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
               Informasi Linguistik
             </h2>
             <dl className="space-y-3">
-              {bahasa.rumpunBahasa && (
+              {bahasa.rumpun && (
                 <div>
                   <dt className="text-sm text-earth-600">Rumpun Bahasa</dt>
-                  <dd className="text-lg text-earth-900">{bahasa.rumpunBahasa.nama_rumpun}</dd>
+                  <dd className="text-lg text-earth-900">{bahasa.rumpun.nama_rumpun}{bahasa.rumpun.sub_rumpun ? ` (${bahasa.rumpun.sub_rumpun})` : ''}</dd>
                 </div>
               )}
               <div>
@@ -309,18 +326,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
           </div>
         )}
 
-        {/* References */}
-        {bahasa.sumberReferensi && (
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-earth-200">
-            <h2 className="text-2xl font-bold text-earth-900 mb-4 flex items-center gap-2">
-              <svg className="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-              Sumber Referensi
-            </h2>
-            <p className="text-earth-800 leading-relaxed">{bahasa.sumberReferensi}</p>
-          </div>
-        )}
+        {/* Auto Summary (replaces old references section) */}
 
         {/* Related Languages */}
         {relatedLanguages.length > 0 && (
@@ -341,7 +347,7 @@ export default function BahasaDetailPage({ params }: { params: { slug: string } 
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="font-semibold text-earth-900">{related.namaBahasa}</h3>
-                      <p className="text-sm text-earth-600">{related.provinsi}</p>
+                      <p className="text-sm text-earth-600">{related.rumpunNama || '-'}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-earth-600">
