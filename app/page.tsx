@@ -95,10 +95,10 @@ export default async function HomePage() {
         <h2 id="stats-heading" className="sr-only">Statistics</h2>
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {[
-            { label: "Bahasa", value: (stats?.totalBahasa || 398).toString(), tag: "bahasa daerah" },
-            { label: "Rumpun", value: (stats?.totalRumpun || 3).toString(), tag: "keluarga bahasa" },
-            { label: "Wilayah", value: (stats?.totalLokasi || 398).toString(), tag: "sebaran" },
-            { label: "Vitalitas", value: Object.keys(stats?.vitalitasBreakdown || {}).length.toString(), tag: "status" },
+            { label: "Bahasa", value: (stats?.data?.total?.bahasa || 998).toString(), tag: "bahasa daerah" },
+            { label: "Rumpun", value: (stats?.data?.rumpunCount || 10).toString(), tag: "keluarga bahasa" },
+            { label: "Wilayah", value: (stats?.data?.provinsi?.length || 34).toString(), tag: "provinsi" },
+            { label: "Vitalitas", value: (stats?.data?.vitalitas?.length || 5).toString(), tag: "kategori status" },
           ].map((s, i) => (
             <div key={i} className="bg-white border border-earth-300/50 rounded-2xl p-4 md:p-5 hover:shadow-md hover:border-earth-400 transition-all duration-200 cursor-default" role="stat">
               <span className="text-[10px] font-semibold uppercase tracking-widest text-amber-700">{s.tag}</span>
