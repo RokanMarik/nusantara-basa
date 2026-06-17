@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { apiLimiter, rateLimitHeaders } from "@/lib/rate-limit";
+export const dynamic = "force-dynamic";
+
 
 export async function GET(request: NextRequest) {
   const rateLimit = apiLimiter(request);

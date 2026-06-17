@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { getCache, setCache, TTL } from "@/lib/cache";
+export const dynamic = "force-dynamic";
+
 
 export async function GET() {
   const cached = getCache("markers");

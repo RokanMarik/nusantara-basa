@@ -3,7 +3,7 @@
 
 const { createClient } = require('@supabase/supabase-js');
 
-const SUPABASE_URL = "https://hkeheukewxsvaarxaket.supabase.co";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrZWhldWtld3hzdmFhcnhha2V0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDEzOTkzMywiZXhwIjoyMDk1NzE1OTMzfQ.36yS86na5jZYaJEguPDREzrx_qpPOL15zNNxMaeCg20";
 const JINA_API_KEY = "jina_0c540aa7efef42229075a6c58bd5bfbcAAKAJglySqUEUW1yoifWMPN1SN8Z";
 

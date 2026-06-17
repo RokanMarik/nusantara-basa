@@ -13,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Supabase config (from .env)
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://hkeheukewxsvaarxaket.supabase.co';
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrZWhla3VrZXd4c3ZhYXJ4YWtldCIsInJvbGUiOiJzZXJ2aWNlX3JvbGUiLCJpYXQiOjE3ODAxMzk5MzMsImV4cCI6MjA5NTcxNTkzM30.36yS86na5jZYaJEguPDREzrx_qpPOL15zNNxMaeCg20';
 
 async function runMigration() {

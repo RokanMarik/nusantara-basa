@@ -3,7 +3,7 @@
 
 const { createClient } = require('@supabase/supabase-js');
 
-const SUPABASE_URL = "https://hkeheukewxsvaarxaket.supabase.co";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.argv[2];
 const NINEROUTER_URL = process.env.NINEROUTER_URL || "http://localhost:20128";
 const NINEROUTER_KEY = process.env.NINEROUTER_KEY || "";

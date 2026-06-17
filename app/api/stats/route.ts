@@ -2,6 +2,8 @@ import { supabase } from '@/lib/supabase'
 import { NextRequest, NextResponse } from 'next/server'
 import { getCache, setCache, TTL } from '@/lib/cache'
 import { apiLimiter, rateLimitHeaders } from '@/lib/rate-limit'
+export const dynamic = "force-dynamic";
+
 
 
 export async function GET(request: NextRequest) {

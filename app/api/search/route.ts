@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { getCache, setCache, TTL } from "@/lib/cache";
+export const dynamic = "force-dynamic";
+
 
 // Sanitize user input for PostgREST .or() filter strings
 // PostgREST uses special chars: %, _, \ in ilike patterns

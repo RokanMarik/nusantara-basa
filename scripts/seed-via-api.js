@@ -1,7 +1,7 @@
 // Seed data via Supabase REST API (HTTPS port 443 - not blocked)
 // Usage: node seed-via-api.js
 
-const SUPABASE_URL = "https://hkeheukewxsvaarxaket.supabase.co";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.argv[2]; // service_role key from Dashboard → Settings → API
 
 if (!SUPABASE_KEY) {

@@ -1,6 +1,8 @@
 import { supabase } from "@/lib/supabase";
 import { getCache, setCache, TTL } from "@/lib/cache";
 import { apiLimiter, rateLimitHeaders } from "@/lib/rate-limit";
+export const dynamic = "force-dynamic";
+
 
 export interface LanguageGeoData {
   id: string;

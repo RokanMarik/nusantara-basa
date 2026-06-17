@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://hkeheukewxsvaarxaket.supabase.co';
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrZWhla3VrZXd4c3ZhYXJ4YWtldCIsInJvbGUiOiJzZXJ2aWNlX3JvbGUiLCJpYXQiOjE3ODAxMzk5MzMsImV4cCI6MjA5NTcxNTkzM30.36yS86na5jZYaJEguPDREzrx_qpPOL15zNNxMaeCg20';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -89,7 +89,7 @@ async function main() {
   console.log('To add the missing tables, follow these steps:');
   console.log();
   console.log('1. Open Supabase Dashboard:');
-  console.log('   https://app.supabase.com/project/hkeheukewxsvaarxaket');
+  console.log('   https://app.supabase.com/project/your-project');
   console.log();
   console.log('2. Go to SQL Editor:');
   console.log('   Left sidebar → SQL Editor → New Query');
